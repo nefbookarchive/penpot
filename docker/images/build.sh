@@ -23,7 +23,7 @@ docker buildx inspect penpot > /dev/null 2>&1;
 docker run --privileged --rm tonistiigi/binfmt --install all
 
 if [ $? -eq 1 ]; then
-    docker buildx create --name=penpot --use
+    docker buildx create --name=xenpot --use
     docker buildx inspect --bootstrap > /dev/null 2>&1;
 else
     docker buildx use penpot;
