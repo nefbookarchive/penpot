@@ -4,7 +4,7 @@ title: 1.2 Install with Elestio
 
 # Install with Elestio
 
-This section explains how to get Penpot up and running using <a href="https://elest.io/open-source/penpot"
+This section explains how to get Penpot up and running using <a href="https://elest.io/open-source/xenpot"
 target="_blank">Elestio</a>.
 
 This platform offers a fully managed service for on-premise instances of a selection of
@@ -57,7 +57,7 @@ minutes, your changes will be active.
 
 You can find all configuration options in the [Configuration][1] section.
 
-Get in contact with us through <a href="mailto:support@penpot.app">support@penpot.app</a>
+Get in contact with us through <a href="mailto:support@xenpot.app">support@xenpot.app</a>
 if you have any questions or need help.
 
 ## Update Penpot

@@ -41,7 +41,7 @@ export class WorkspacePage extends BaseWebSocketPage {
     await BaseWebSocketPage.mockRPC(
       page,
       "get-team-members?team-id=*",
-      "logged-in-user/get-team-members-your-penpot.json",
+      "logged-in-user/get-team-members-your-xenpot.json",
     );
 
     await BaseWebSocketPage.mockRPC(

@@ -68,7 +68,7 @@
 
         [dprops dref]
         (h/use-sortable
-         :data-type "penpot/shadow-entry"
+         :data-type "xenpot/shadow-entry"
          :on-drop on-drop
          :detect-center? false
          :data {:id (dm/str "shadow-" index)

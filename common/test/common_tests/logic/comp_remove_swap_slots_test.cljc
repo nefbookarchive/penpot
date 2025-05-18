@@ -22,7 +22,7 @@
 
 (t/use-fixtures :each thi/test-fixture)
 
-;; Related .penpot file: common/test/cases/remove-swap-slots.penpot
+;; Related .xenpot file: common/test/cases/remove-swap-slots.xenpot
 (defn- setup-file
   []
   ;; {:frame-red} [:name Frame1]                           # [Component :red]

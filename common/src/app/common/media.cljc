@@ -56,7 +56,7 @@
     "image/svg+xml"      ".svg"
     "image/webp"         ".webp"
     "application/zip"    ".zip"
-    "application/penpot" ".penpot"
+    "application/xenpot" ".xenpot"
     "application/pdf"    ".pdf"
     "text/plain"         ".txt"
     nil))

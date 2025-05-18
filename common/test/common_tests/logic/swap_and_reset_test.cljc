@@ -19,7 +19,7 @@
 
 (t/use-fixtures :each thi/test-fixture)
 
-;; Related .penpot file: common/test/cases/swap-and-reset.penpot
+;; Related .xenpot file: common/test/cases/swap-and-reset.xenpot
 (t/deftest test-swap-and-reset-override
   (letfn [(setup []
             (-> (thf/sample-file :file1)

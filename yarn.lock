@@ -641,9 +641,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"penpot@workspace:.":
+"xenpot@workspace:.":
   version: 0.0.0-use.local
-  resolution: "penpot@workspace:."
+  resolution: "xenpot@workspace:."
   dependencies:
     "@playwright/test": "npm:^1.43.1"
     "@types/node": "npm:^20.12.7"

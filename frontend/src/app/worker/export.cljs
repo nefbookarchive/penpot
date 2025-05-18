@@ -417,7 +417,7 @@
                             :filename (:name file)
                             :mtype (if (= format :binfile-v3)
                                      "application/zip"
-                                     "application/penpot")
+                                     "application/xenpot")
                             :uri uri}))
                  (rx/catch
                   (fn [cause]

@@ -1,5 +1,5 @@
 FROM ubuntu:24.04
-LABEL maintainer="Penpot <docker@penpot.app>"
+LABEL maintainer="Penpot <docker@xenpot.app>"
 
 ARG DEBIAN_FRONTEND=noninteractive
 
@@ -46,9 +46,9 @@ RUN set -ex; \
     rm -rf /var/lib/apt/lists/*;
 
 RUN set -ex; \
-    usermod -l penpot -d /home/penpot -G users -s /bin/bash ubuntu; \
-    passwd penpot -d; \
-    echo "penpot ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+    usermod -l xenpot -d /home/xenpot -G users -s /bin/bash ubuntu; \
+    passwd xenpot -d; \
+    echo "xenpot ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
 RUN set -ex; \
     apt-get -qq update; \

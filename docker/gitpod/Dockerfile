@@ -29,9 +29,9 @@ ENV NODE_VERSION=v16.17.0 \
     LC_ALL=en_US.UTF-8
 
 RUN set -ex; \
-    useradd -m -g users -s /bin/bash penpot; \
-    passwd penpot -d; \
-    echo "penpot ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+    useradd -m -g users -s /bin/bash xenpot; \
+    passwd xenpot -d; \
+    echo "xenpot ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
 RUN set -ex; \
     apt-get -qq update; \
@@ -116,7 +116,7 @@ ENV PATH="/usr/lib/jvm/openjdk16/bin:/usr/local/nodejs/bin:$PATH" \
     PENPOT_SMTP_TLS=false \
     PENPOT_SMTP_DEFAULT_REPLY_TO=no-reply@example.com \
     PENPOT_SMTP_DEFAULT_FROM=no-reply@example.com \
-    PENPOT_DATABASE_URI="postgresql://localhost/penpot" \
+    PENPOT_DATABASE_URI="postgresql://localhost/xenpot" \
     PENPOT_REDIS_URI="redis://localhost/0"
 
 # TODO Retrieve OpenLDAP from rroemhild/docker-test-openldap

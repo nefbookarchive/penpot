@@ -34,11 +34,11 @@
         subscription-is-trial  false
         locale                 (mf/deref i18n/locale)
         profile                (mf/deref refs/profile)
-        penpot-member          (dt/format-date-locale-short (:created-at profile) {:locale locale})
+        xenpot-member          (dt/format-date-locale-short (:created-at profile) {:locale locale})
         ;; TODO get subscription member date
         subscription-member    "January 17, 2024"
-        ;; TODO update url to penpot payments
-        go-to-payments         "https://penpot.app/pricing"]
+        ;; TODO update url to xenpot payments
+        go-to-payments         "https://xenpot.app/pricing"]
 
     (mf/with-effect []
       (dom/set-html-title (tr "subscription.labels")))
@@ -92,8 +92,8 @@
                                    [:span {:class (stl/css :membership-date)} (tr "subscription.settings.support-us-since" subscription-member)]])
 
         [:div {:class (stl/css :membership)}
-         [:span {:class (stl/css :penpot-member)} i/user]
-         [:span {:class (stl/css :membership-date)} (tr "subscription.settings.member-since" penpot-member)]]]]
+         [:span {:class (stl/css :xenpot-member)} i/user]
+         [:span {:class (stl/css :membership-date)} (tr "subscription.settings.member-since" xenpot-member)]]]]
 
       [:div {:class (stl/css :other-subscriptions)}
        [:h3 {:class (stl/css :plan-section-title)} (tr "subscription.settings.other-plans")]

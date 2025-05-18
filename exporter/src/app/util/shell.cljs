@@ -41,7 +41,7 @@
 
 (defn tempfile
   [& {:keys [prefix suffix]
-      :or {prefix "penpot."
+      :or {prefix "xenpot."
            suffix ".tmp"}}]
   (loop [i 0]
     (if (< i 1000)

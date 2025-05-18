@@ -79,7 +79,7 @@
         navigate-to-help
         (mf/use-fn
          (fn []
-           (dom/open-new-window "https://help.penpot.app/user-guide/inspect/")))
+           (dom/open-new-window "https://help.xenpot.app/user-guide/inspect/")))
 
         info-content
         (mf/html [:& attributes {:page-id page-id

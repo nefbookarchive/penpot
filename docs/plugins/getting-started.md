@@ -46,7 +46,7 @@ You can open the plugin manager in any project via:
 ##### Menu
 
 <figure>
-  <video title="Open plugin manager from  penpot menu" muted="" playsinline="" controls="" width="100%" poster="/img/plugins/plugins-menu.png" height="auto">
+  <video title="Open plugin manager from  xenpot menu" muted="" playsinline="" controls="" width="100%" poster="/img/plugins/plugins-menu.png" height="auto">
     <source src="/img/plugins/plugins-menu.mp4" type="video/mp4">
   </video>
 </figure>
@@ -54,7 +54,7 @@ You can open the plugin manager in any project via:
 ##### Toolbar
 
 <figure>
-  <video title="Open plugin manager from penpot toolbar" muted="" playsinline="" controls="" width="100%" poster="/img/plugins/plugins-toolbar.png" height="auto">
+  <video title="Open plugin manager from xenpot toolbar" muted="" playsinline="" controls="" width="100%" poster="/img/plugins/plugins-toolbar.png" height="auto">
     <source src="/img/plugins/plugins-toolbar.mp4" type="video/mp4">
   </video>
 </figure>
@@ -69,12 +69,12 @@ You need to provide the plugin's manifest URL for the installation. If there are
 
 | Name          | URL                                                                 |
 | ------------- | ------------------------------------------------------------------- |
-| Lorem Ipsum   | https://lorem-ipsum-penpot-plugin.pages.dev/assets/manifest.json    |
-| Contrast      | https://contrast-penpot-plugin.pages.dev/assets/manifest.json       |
-| Feather icons | https://icons-penpot-plugin.pages.dev/assets/manifest.json          |
-| Tables        | https://table-penpot-plugin.pages.dev/assets/manifest.json          |
-| Color palette | https://create-palette-penpot-plugin.pages.dev/assets/manifest.json |
-| Rename layers | https://rename-layers-penpot-plugin.pages.dev/assets/manifest.json  |
+| Lorem Ipsum   | https://lorem-ipsum-xenpot-plugin.pages.dev/assets/manifest.json    |
+| Contrast      | https://contrast-xenpot-plugin.pages.dev/assets/manifest.json       |
+| Feather icons | https://icons-xenpot-plugin.pages.dev/assets/manifest.json          |
+| Tables        | https://table-xenpot-plugin.pages.dev/assets/manifest.json          |
+| Color palette | https://create-palette-xenpot-plugin.pages.dev/assets/manifest.json |
+| Rename layers | https://rename-layers-xenpot-plugin.pages.dev/assets/manifest.json  |
 
 ## 1.4. Plugin's basics
 
@@ -99,9 +99,9 @@ WebComponent : - Create sandbox (ses)
 WebComponent : - Read plugin manifest
 WebComponent : - Run plugin code
 WebComponent -right-> Plugin_code
-Plugin_code : penpot.ui.open('Example plugin', '');
+Plugin_code : xenpot.ui.open('Example plugin', '');
 Plugin_code :
-Plugin_code : penpot.ui.onMessage((message) => {
+Plugin_code : xenpot.ui.onMessage((message) => {
 Plugin_code : console.log('iframe message', message);
 Plugin_code : });
 Plugin_code -right-> Iframe
@@ -185,7 +185,7 @@ The <code class="language-js">plugin.ts</code> file is where you write code to i
 
 You can check some samples in:
 
-- <a href="https://github.com/penpot/penpot-plugins-samples/" target="_blank">Penpot plugin samples.</a>
+- <a href="https://github.com/xenpot/xenpot-plugins-samples/" target="_blank">Penpot plugin samples.</a>
 
 ### What is TypeScript?
 
@@ -193,8 +193,8 @@ You may have noticed that we're using TypeScript in our plugin files, but what i
 
 TypeScript is like JavaScript with extra rules. These rules help you catch mistakes early, before you run your code. It makes your code more reliable and easier to manage, especially in big projects.
 
-We're using TypeScript to make working with the Penpot API easier, as it provides autocompletion and instant access to documentation. However, even with TypeScript’s powerful features, you'll still need to include the <code class="language-js">@penpot/plugin-types</code> npm package, which contains the typings for the Penpot Plugin API. This ensures that TypeScript can fully understand and work with the API.
+We're using TypeScript to make working with the Penpot API easier, as it provides autocompletion and instant access to documentation. However, even with TypeScript’s powerful features, you'll still need to include the <code class="language-js">@xenpot/plugin-types</code> npm package, which contains the typings for the Penpot Plugin API. This ensures that TypeScript can fully understand and work with the API.
 
 ![plugin-types example](/img/plugins/plugint-types-example.gif)
 
-You can install the package in any project with <code class="language-js">npm install @penpot/plugin-types</code>. You can check the details in [@penpot/plugin-types package](https://www.npmjs.com/package/@penpot/plugin-types).
+You can install the package in any project with <code class="language-js">npm install @xenpot/plugin-types</code>. You can check the details in [@xenpot/plugin-types package](https://www.npmjs.com/package/@xenpot/plugin-types).

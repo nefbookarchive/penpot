@@ -202,7 +202,7 @@
 
         [dprops dref]
         (h/use-sortable
-         :data-type "penpot/token-set"
+         :data-type "xenpot/token-set"
          :on-drop on-drop
          :data {:index tree-index
                 :is-group true}
@@ -308,7 +308,7 @@
 
         [dprops dref]
         (h/use-sortable
-         :data-type "penpot/token-set"
+         :data-type "xenpot/token-set"
          :on-drag on-drag
          :on-drop on-drop
          :data {:index tree-index

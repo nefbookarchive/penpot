@@ -11,7 +11,7 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "https://github.com/penpot/penpot"
+    "url": "https://github.com/xenpot/xenpot"
   },
   "resolutions": {
     "@vitejs/plugin-react": "^4.2.0"
@@ -102,11 +102,11 @@
     "workerpool": "^9.2.0"
   },
   "dependencies": {
-    "@penpot/draft-js": "portal:./vendor/draft-js",
-    "@penpot/hljs": "portal:./vendor/hljs",
-    "@penpot/mousetrap": "portal:./vendor/mousetrap",
-    "@penpot/svgo": "penpot/svgo#v3.1",
-    "@penpot/text-editor": "portal:./text-editor",
+    "@xenpot/draft-js": "portal:./vendor/draft-js",
+    "@xenpot/hljs": "portal:./vendor/hljs",
+    "@xenpot/mousetrap": "portal:./vendor/mousetrap",
+    "@xenpot/svgo": "xenpot/svgo#v3.1",
+    "@xenpot/text-editor": "portal:./text-editor",
     "@tokens-studio/sd-transforms": "1.2.11",
     "compression": "^1.7.5",
     "date-fns": "^4.1.0",

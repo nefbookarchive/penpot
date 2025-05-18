@@ -1,5 +1,5 @@
 {
-  "name": "@penpot/hljs",
+  "name": "@xenpot/hljs",
   "version": "1.0.0",
   "description": "Penpot Hightlight.js ESM wrapper",
   "main": "index.js",

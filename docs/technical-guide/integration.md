@@ -38,9 +38,9 @@ information and enriches the content with semantic information.
 ### Events list
 
 Unfortunately, we do not have any specific documentation for the webhooks yet.
-For the moment you can use the <a href="https://design.penpot.app/api/_doc"
+For the moment you can use the <a href="https://design.xenpot.app/api/_doc"
 target="_blank">backend API documentation</a>, generated automatically from <a
-href="https://github.com/penpot/penpot/tree/main/backend/src/app/rpc"
+href="https://github.com/xenpot/xenpot/tree/main/backend/src/app/rpc"
 target="_blank">source code</a>, as a guide.
 
 All backend RPC calls labelled as <code class="language-bash">WEBHOOK</code> trigger webhook calls, if
@@ -99,5 +99,5 @@ Having a personal token will allow you to use it instead of your password.
 This is an example of a curl command that you can run at the console to access your Penpot profile using an access token:
 
 ```bash
-curl -H "Authorization: Token <replace-this-with-token>" https://design.penpot.app/api/rpc/command/get-profile
+curl -H "Authorization: Token <replace-this-with-token>" https://design.xenpot.app/api/rpc/command/get-profile
 ```

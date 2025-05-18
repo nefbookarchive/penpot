@@ -65,18 +65,18 @@
 
 (defn- parse-flags
   [global]
-  (let [flags (obj/get global "penpotFlags" "")
+  (let [flags (obj/get global "xenpotFlags" "")
         flags (sequence (map keyword) (str/words flags))]
     (flags/parse flags/default flags)))
 
 (defn- parse-version
   [global]
-  (-> (obj/get global "penpotVersion")
+  (-> (obj/get global "xenpotVersion")
       (v/parse)))
 
 (defn parse-build-date
   [global]
-  (let [date (obj/get global "penpotBuildDate")]
+  (let [date (obj/get global "xenpotBuildDate")]
     (if (= date "%buildDate%")
       "unknown"
       date)))
@@ -86,8 +86,8 @@
 (def default-theme  "default")
 (def default-language "en")
 
-(def translations         (obj/get global "penpotTranslations"))
-(def themes               (obj/get global "penpotThemes"))
+(def translations         (obj/get global "xenpotTranslations"))
+(def themes               (obj/get global "xenpotThemes"))
 
 (def build-date           (parse-build-date global))
 (def flags                (parse-flags global))
@@ -96,13 +96,13 @@
 (def browser              (parse-browser))
 (def platform             (parse-platform))
 
-(def terms-of-service-uri (obj/get global "penpotTermsOfServiceURI"))
-(def privacy-policy-uri   (obj/get global "penpotPrivacyPolicyURI"))
-(def flex-help-uri        (obj/get global "penpotGridHelpURI" "https://help.penpot.app/user-guide/flexible-layouts/"))
-(def grid-help-uri        (obj/get global "penpotGridHelpURI" "https://help.penpot.app/user-guide/flexible-layouts/"))
-(def plugins-list-uri     (obj/get global "penpotPluginsListUri" "https://penpot.app/penpothub/plugins"))
-(def plugins-whitelist    (into #{} (obj/get global "penpotPluginsWhitelist" [])))
-(def templates-uri        (obj/get global "penpotTemplatesUri" "https://penpot.github.io/penpot-files/"))
+(def terms-of-service-uri (obj/get global "xenpotTermsOfServiceURI"))
+(def privacy-policy-uri   (obj/get global "xenpotPrivacyPolicyURI"))
+(def flex-help-uri        (obj/get global "xenpotGridHelpURI" "https://help.xenpot.app/user-guide/flexible-layouts/"))
+(def grid-help-uri        (obj/get global "xenpotGridHelpURI" "https://help.xenpot.app/user-guide/flexible-layouts/"))
+(def plugins-list-uri     (obj/get global "xenpotPluginsListUri" "https://xenpot.app/xenpothub/plugins"))
+(def plugins-whitelist    (into #{} (obj/get global "xenpotPluginsWhitelist" [])))
+(def templates-uri        (obj/get global "xenpotTemplatesUri" "https://xenpot.github.io/xenpot-files/"))
 
 (defn- normalize-uri
   [uri-str]
@@ -114,15 +114,15 @@
       (update :path #(str % "/")))))
 
 (def public-uri
-  (normalize-uri (or (obj/get global "penpotPublicURI")
+  (normalize-uri (or (obj/get global "xenpotPublicURI")
                      (obj/get location "origin"))))
 
 (def rasterizer-uri
-  (or (some-> (obj/get global "penpotRasterizerURI") normalize-uri)
+  (or (some-> (obj/get global "xenpotRasterizerURI") normalize-uri)
       public-uri))
 
 (def worker-uri
-  (obj/get global "penpotWorkerURI" "/js/worker.js"))
+  (obj/get global "xenpotWorkerURI" "/js/worker.js"))
 
 (defn external-feature-flag
   [flag value]

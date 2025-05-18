@@ -3,7 +3,7 @@ msgstr ""
 "PO-Revision-Date: 2024-08-11 20:09+0000\n"
 "Last-Translator: Alhassan Atama <Komputarist@gmail.com>\n"
 "Language-Team: Igbo "
-"<https://hosted.weblate.org/projects/penpot/frontend/ig/>\n"
+"<https://hosted.weblate.org/projects/xenpot/frontend/ig/>\n"
 "Language: ig\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -339,7 +339,7 @@ msgstr "kacha otu"
 
 #: src/app/main/ui/dashboard/file_menu.cljs:308, src/app/main/ui/dashboard/file_menu.cljs:313, src/app/main/ui/workspace/main_menu.cljs:650, src/app/main/ui/workspace/main_menu.cljs:659
 msgid "dashboard.download-binary-file"
-msgstr "Butuo ederede ite mkpịsị (.penpot)"
+msgstr "Butuo ederede ite mkpịsị (.xenpot)"
 
 #: src/app/main/ui/dashboard/file_menu.cljs:318, src/app/main/ui/workspace/main_menu.cljs:668
 msgid "dashboard.download-standard-file"
@@ -355,7 +355,7 @@ msgstr "Mee o yiri  %s ederede"
 
 #: src/app/main/ui/dashboard/file_menu.cljs:249, src/app/main/ui/dashboard/file_menu.cljs:254
 msgid "dashboard.export-binary-multi"
-msgstr "Butuo %s ederede ite mkpịsị (.penpot)"
+msgstr "Butuo %s ederede ite mkpịsị (.xenpot)"
 
 #: src/app/main/ui/workspace/main_menu.cljs:676
 msgid "dashboard.export-frames"
@@ -707,7 +707,7 @@ msgid "dashboard.your-email"
 msgstr "Ozi-n"
 
 #: src/app/main/ui/dashboard/file_menu.cljs:39, src/app/main/ui/dashboard/fonts.cljs:36, src/app/main/ui/dashboard/libraries.cljs:55, src/app/main/ui/dashboard/projects.cljs:348, src/app/main/ui/dashboard/search.cljs:48, src/app/main/ui/dashboard/sidebar.cljs:319, src/app/main/ui/dashboard/team.cljs:531, src/app/main/ui/dashboard/team.cljs:781, src/app/main/ui/dashboard/team.cljs:1045, src/app/main/ui/dashboard/team.cljs:1092
-msgid "dashboard.your-penpot"
+msgid "dashboard.your-xenpot"
 msgstr "Ite mkpịsị. gị"
 
 #: src/app/main/ui/alert.cljs:32
@@ -1235,7 +1235,7 @@ msgid "labels.continue-with"
 msgstr "Gaa n'ihu"
 
 #: src/app/main/ui/viewer/login.cljs:69
-msgid "labels.continue-with-penpot"
+msgid "labels.continue-with-xenpot"
 msgstr "I Nwere Ike ịganihu"
 
 #: src/app/main/ui/dashboard/team.cljs:683

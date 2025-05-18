@@ -136,7 +136,7 @@
 
   (let [stats     (atom {})
         tpoint    (dt/tpoint)
-        factory   (px/thread-factory :virtual false :prefix "penpot/migration/")
+        factory   (px/thread-factory :virtual false :prefix "xenpot/migration/")
         executor  (px/cached-executor :factory factory)
 
         sjobs     (ps/create :permits max-jobs)
@@ -242,7 +242,7 @@
 
   (let [tpoint    (dt/tpoint)
 
-        factory   (px/thread-factory :virtual false :prefix "penpot/cache/")
+        factory   (px/thread-factory :virtual false :prefix "xenpot/cache/")
         executor  (px/cached-executor :factory factory)
 
         sjobs     (ps/create :permits max-jobs)

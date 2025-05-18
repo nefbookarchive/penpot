@@ -216,7 +216,7 @@
   (rds/add-listener sconn (create-listener rcv-ch))
 
   (px/thread
-    {:name "penpot/msgbus/io-loop"
+    {:name "xenpot/msgbus/io-loop"
      :virtual true}
     (try
       (loop []

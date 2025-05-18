@@ -2,7 +2,7 @@
 set -x
 
 DOCKER_CLI_EXPERIMENTAL=enabled
-ORG=${PENPOT_DOCKER_NAMESPACE:-penpotapp};
+ORG=${PENPOT_DOCKER_NAMESPACE:-xenpotapp};
 PLATFORM=${PENPOT_BUILD_PLATFORM:-linux/amd64};
 
 IMAGE=${PENPOT_BUILD_IMAGE:-backend}
@@ -19,14 +19,14 @@ for element in "${TAGS[@]}"; do
     OPTIONS="$OPTIONS -t $DOCKER_IMAGE:$element";
 done
 
-docker buildx inspect penpot > /dev/null 2>&1;
+docker buildx inspect xenpot > /dev/null 2>&1;
 docker run --privileged --rm tonistiigi/binfmt --install all
 
 if [ $? -eq 1 ]; then
     docker buildx create --name=xenpot --use
     docker buildx inspect --bootstrap > /dev/null 2>&1;
 else
-    docker buildx use penpot;
+    docker buildx use xenpot;
     docker buildx inspect --bootstrap  > /dev/null 2>&1;
 fi
 

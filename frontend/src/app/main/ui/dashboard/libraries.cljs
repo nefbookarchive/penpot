@@ -52,7 +52,7 @@
 
     (mf/with-effect [team]
       (let [tname (if (:is-default team)
-                    (tr "dashboard.your-penpot")
+                    (tr "dashboard.your-xenpot")
                     (:name team))]
         (dom/set-html-title (tr "title.dashboard.shared-libraries" tname))))
 

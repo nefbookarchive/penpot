@@ -9,13 +9,13 @@
     <meta property="og:locale" content="en_US">
     <meta property="og:title" content="Penpot | Design Freedom for Teams">
     <meta property="og:description" content="The open-source solution for design and prototyping">
-    <meta property="og:image" content="https://penpot.app/images/workspace-ui.jpg">
+    <meta property="og:image" content="https://xenpot.app/images/workspace-ui.jpg">
     <meta name="twitter:title" content="Penpot | Design Freedom for Teams">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:description" content="The open-source solution for design and prototyping">
-    <meta name="twitter:image" content="https://penpot.app/images/workspace-ui.jpg">
-    <meta name="twitter:site" content="@penpotapp">
-    <meta name="twitter:creator" content="@penpotapp">
+    <meta name="twitter:image" content="https://xenpot.app/images/workspace-ui.jpg">
+    <meta name="twitter:site" content="@xenpotapp">
+    <meta name="twitter:creator" content="@xenpotapp">
     <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
     <link id="theme" href="css/main.css?ts={{& ts}}" rel="stylesheet" type="text/css" />
     {{#isDebug}}
@@ -24,7 +24,7 @@
 
     <link rel="icon" href="images/favicon.png" />
     {{# manifest}}
-    <script>window.penpotWorkerURI="{{& worker_main}}"</script>
+    <script>window.xenpotWorkerURI="{{& worker_main}}"</script>
     <script defer src="{{& config}}"></script>
     <script defer src="{{& polyfills}}"></script>
     {{/manifest}}
@@ -32,9 +32,9 @@
     <script type="module" src="{{& pluginRuntimeUri}}"></script>
 
     <script>
-      window.penpotTranslations = JSON.parse({{& translations}});
-      window.penpotVersion = "%version%";
-      window.penpotBuildDate = "%buildDate%";
+      window.xenpotTranslations = JSON.parse({{& translations}});
+      window.xenpotVersion = "%version%";
+      window.xenpotBuildDate = "%buildDate%";
     </script>
     <!--cookie-consent-->
   </head>

@@ -540,7 +540,7 @@
 
 #?(:clj
    (fres/add-handlers!
-    {:name "penpot/point"
+    {:name "xenpot/point"
      :class Point
      :wfn (fn [n w ^Point o]
             (fres/write-tag! w n 1)

@@ -104,7 +104,7 @@ of the trace.
 
 ### Access to clojure from js console
 
-The penpot namespace of the main application is exported, so that is
+The xenpot namespace of the main application is exported, so that is
 accessible from javascript console in Chrome developer tools. Object
 names and data types are converted to javascript style. For example
 you can emit the event to reset zoom level by typing this at the
@@ -325,7 +325,7 @@ Here's how to run the tests with a headless browser (i.e. within the terminal, n
 2. Go to the frontend folder:
 
 ```bash
-cd penpot/frontend
+cd xenpot/frontend
 ```
 
 3. Run the tests with <code class="language-bash">yarn</code>:
@@ -446,7 +446,7 @@ test("User submits a wrong formatted email", async ({ page }) => {
 
 #### Mocking the back-end
 
-In the penpot repository there are some POMs that are meant to be extended by more specific pages. These include methods that should be useful when you write your own POMs.
+In the xenpot repository there are some POMs that are meant to be extended by more specific pages. These include methods that should be useful when you write your own POMs.
 
 - <code class="language-bash">BasePage</code> contains methods to intercept network requests and return JSON data fixtures.
 

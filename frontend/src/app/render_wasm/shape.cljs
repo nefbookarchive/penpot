@@ -104,7 +104,7 @@
 
   IPrintWithWriter
   (-pr-writer [_ writer _]
-    (-write writer (str "#penpot/shape " (:id delegate)))))
+    (-write writer (str "#xenpot/shape " (:id delegate)))))
 
 ;; --- SHAPE IMPL
 

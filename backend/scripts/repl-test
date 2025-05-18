@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source /home/penpot/environ
+source /home/xenpot/environ
 export PENPOT_FLAGS="$PENPOT_FLAGS disable-backend-worker"
 
 export OPTIONS="

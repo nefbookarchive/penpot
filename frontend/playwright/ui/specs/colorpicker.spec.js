@@ -5,7 +5,7 @@ test.beforeEach(async ({ page }) => {
   await WorkspacePage.init(page);
 });
 
-// Fix for https://tree.taiga.io/project/penpot/issue/7549
+// Fix for https://tree.taiga.io/project/xenpot/issue/7549
 test("Bug 7549 - User clicks on color swatch to display the color picker next to it", async ({
   page,
 }) => {
@@ -175,7 +175,7 @@ test("Gradient stops limit", async ({ page }) => {
   ).toBeDisabled();
 });
 
-// Fix for https://tree.taiga.io/project/penpot/issue/9900
+// Fix for https://tree.taiga.io/project/xenpot/issue/9900
 test("Bug 9900 - Color picker has no inputs for HSV values", async ({
   page,
 }) => {

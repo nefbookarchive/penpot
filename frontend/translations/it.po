@@ -3,7 +3,7 @@ msgstr ""
 "PO-Revision-Date: 2025-03-20 13:42+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Italian "
-"<https://hosted.weblate.org/projects/penpot/frontend/it/>\n"
+"<https://hosted.weblate.org/projects/xenpot/frontend/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -428,7 +428,7 @@ msgstr "Elimina team"
 
 #: src/app/main/ui/dashboard/file_menu.cljs:308, src/app/main/ui/dashboard/file_menu.cljs:313, src/app/main/ui/workspace/main_menu.cljs:650, src/app/main/ui/workspace/main_menu.cljs:659
 msgid "dashboard.download-binary-file"
-msgstr "Scarica il file Penpot (.penpot)"
+msgstr "Scarica il file Penpot (.xenpot)"
 
 #: src/app/main/ui/dashboard/file_menu.cljs:318, src/app/main/ui/workspace/main_menu.cljs:668
 msgid "dashboard.download-standard-file"
@@ -464,7 +464,7 @@ msgid "dashboard.empty-placeholder-libraries"
 msgstr ""
 "Le librerie aggiunte al progetto appariranno qui. Prova a condividere i "
 "tuoi file o ad aggiungerle dal nostro [Librerie e "
-"modelli](https://penpot.app/libraries-templates)."
+"modelli](https://xenpot.app/libraries-templates)."
 
 #: src/app/main/ui/dashboard/placeholder.cljs
 #, markdown, unused
@@ -472,7 +472,7 @@ msgid "dashboard.empty-placeholder-libraries-subtitle"
 msgstr ""
 "Le librerie aggiunte al progetto appariranno qui. Prova a condividere i "
 "tuoi file o ad aggiungerle dal nostro [Librerie e "
-"modelli](https://penpot.app/libraries-templates)."
+"modelli](https://xenpot.app/libraries-templates)."
 
 #: src/app/main/ui/dashboard/placeholder.cljs:73
 msgid "dashboard.empty-placeholder-libraries-subtitle-viewer-role"
@@ -484,7 +484,7 @@ msgstr "Nessuna libreria presente."
 
 #: src/app/main/ui/dashboard/file_menu.cljs:249, src/app/main/ui/dashboard/file_menu.cljs:254
 msgid "dashboard.export-binary-multi"
-msgstr "Scarica %s file Penpot (.penpot)"
+msgstr "Scarica %s file Penpot (.xenpot)"
 
 #: src/app/main/ui/workspace/main_menu.cljs:676
 msgid "dashboard.export-frames"
@@ -620,7 +620,7 @@ msgstr ""
 "È consigliabile caricare unicamente caratteri di cui si è proprietari o dei "
 "quali si possiede la licenza d'uso in Penpot. Ulteriori informazioni sui "
 "diritti dei contenuti sono disponibili nella sezione [Termini di Servizio "
-"di Penpot](https://penpot.app/terms.html). Potresti anche voler "
+"di Penpot](https://xenpot.app/terms.html). Potresti anche voler "
 "approfondire le [licenze dei caratteri](https://www.typography.com/faq)."
 
 #: src/app/main/ui/dashboard/fonts.cljs:208
@@ -1022,7 +1022,7 @@ msgid "dashboard.upgrade-plan.no-limits"
 msgstr "Nessun limite alla creatività"
 
 #: src/app/main/ui/dashboard/sidebar.cljs:969
-msgid "dashboard.upgrade-plan.penpot-free"
+msgid "dashboard.upgrade-plan.xenpot-free"
 msgstr "Penpot Gratis"
 
 #: src/app/main/ui/dashboard/sidebar.cljs:972
@@ -1085,7 +1085,7 @@ msgid "dashboard.your-name"
 msgstr "Il tuo nome"
 
 #: src/app/main/ui/dashboard/file_menu.cljs:39, src/app/main/ui/dashboard/fonts.cljs:36, src/app/main/ui/dashboard/libraries.cljs:55, src/app/main/ui/dashboard/projects.cljs:348, src/app/main/ui/dashboard/search.cljs:48, src/app/main/ui/dashboard/sidebar.cljs:319, src/app/main/ui/dashboard/team.cljs:531, src/app/main/ui/dashboard/team.cljs:781, src/app/main/ui/dashboard/team.cljs:1045, src/app/main/ui/dashboard/team.cljs:1092
-msgid "dashboard.your-penpot"
+msgid "dashboard.your-xenpot"
 msgstr "Il tuo Penpot"
 
 #: src/app/main/ui/alert.cljs:32
@@ -1774,7 +1774,7 @@ msgid "labels.continue-with"
 msgstr "Continua con"
 
 #: src/app/main/ui/viewer/login.cljs:69
-msgid "labels.continue-with-penpot"
+msgid "labels.continue-with-xenpot"
 msgstr "Puoi continuare con un account Penpot"
 
 #: src/app/main/ui/dashboard/team.cljs:683
@@ -2921,7 +2921,7 @@ msgid "not-found.no-permission.if-approves"
 msgstr "Se il proprietario lo consente, sarai invitato al team."
 
 #: src/app/main/ui/static.cljs:249, src/app/main/ui/static.cljs:261
-msgid "not-found.no-permission.penpot-file"
+msgid "not-found.no-permission.xenpot-file"
 msgstr "File Penpot"
 
 #: src/app/main/ui/static.cljs:286, src/app/main/ui/static.cljs:318
@@ -6872,7 +6872,7 @@ msgstr "Apri menu delle versioni"
 #: src/app/main/ui/workspace/sidebar/versions.cljs:365
 #, markdown
 msgid "workspace.versions.warning.subtext"
-msgstr "Se desideri incrementare questo limite, scrivici a [support@penpot.app](%s)"
+msgstr "Se desideri incrementare questo limite, scrivici a [support@xenpot.app](%s)"
 
 #: src/app/main/ui/workspace/sidebar/versions.cljs:361
 msgid "workspace.versions.warning.text"

@@ -424,16 +424,16 @@
    :id ::request-file-access
    :schema schema:request-file-access))
 
-(def request-file-access-yourpenpot
+(def request-file-access-yourxenpot
   "File access on Your Penpot request email."
   (template-factory
-   :id ::request-file-access-yourpenpot
+   :id ::request-file-access-yourxenpot
    :schema schema:request-file-access))
 
-(def request-file-access-yourpenpot-view
+(def request-file-access-yourxenpot-view
   "File access on Your Penpot view mode request email."
   (template-factory
-   :id ::request-file-access-yourpenpot-view
+   :id ::request-file-access-yourxenpot-view
    :schema schema:request-file-access))
 
 (def ^:private schema:request-team-access

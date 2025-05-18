@@ -14,10 +14,10 @@ volumes:
 services:
   main:
     privileged: true
-    image: "penpotapp/devenv:latest"
+    image: "xenpotapp/devenv:latest"
     build:
       context: "."
-    container_name: "penpot-devenv-main"
+    container_name: "xenpot-devenv-main"
     stop_signal: SIGINT
 
     depends_on:
@@ -26,8 +26,8 @@ services:
       # - keycloak
 
     volumes:
-      - "user_data:/home/penpot/"
-      - "${PWD}:/home/penpot/penpot:z"
+      - "user_data:/home/xenpot/"
+      - "${PWD}:/home/xenpot/xenpot:z"
 
     ports:
       - 3447:3447
@@ -89,9 +89,9 @@ services:
     stop_signal: SIGINT
     environment:
       - POSTGRES_INITDB_ARGS=--data-checksums
-      - POSTGRES_DB=penpot
-      - POSTGRES_USER=penpot
-      - POSTGRES_PASSWORD=penpot
+      - POSTGRES_DB=xenpot
+      - POSTGRES_USER=xenpot
+      - POSTGRES_PASSWORD=xenpot
     volumes:
       - ./files/postgresql.conf:/etc/postgresql.conf:z
       - ./files/postgresql_init.sql:/docker-entrypoint-initdb.d/init.sql:z
@@ -99,8 +99,8 @@ services:
 
   redis:
     image: redis:7.2
-    hostname: "penpot-devenv-redis"
-    container_name: "penpot-devenv-redis"
+    hostname: "xenpot-devenv-redis"
+    container_name: "xenpot-devenv-redis"
     restart: always
     volumes:
       - "redis_data:/data"

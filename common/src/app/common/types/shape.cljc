@@ -621,7 +621,7 @@
 
 #?(:clj
    (fres/add-handlers!
-    {:name "penpot/shape"
+    {:name "xenpot/shape"
      :class Shape
      :wfn fres/write-map-like
      :rfn (comp map->Shape fres/read-map-like)}))

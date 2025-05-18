@@ -87,7 +87,7 @@
 
      [:a
       {:class (stl/css :feedback-button-link)
-       :href "https://community.penpot.app"
+       :href "https://community.xenpot.app"
        :target "_blank"}
       (tr "feedback.discourse-go-to")]
      [:hr]
@@ -97,7 +97,7 @@
 
      [:a
       {:class (stl/css :feedback-button-link)
-       :href "https://twitter.com/penpotapp"
+       :href "https://twitter.com/xenpotapp"
        :target "_blank"}
       (tr "feedback.twitter-go-to")]]))
 

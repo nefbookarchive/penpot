@@ -39,7 +39,7 @@
         (path/content new-content)]
 
     (cond
-      ;; https://tree.taiga.io/project/penpot/issue/2366
+      ;; https://tree.taiga.io/project/xenpot/issue/2366
       (nil? shape-id)
       changes
 

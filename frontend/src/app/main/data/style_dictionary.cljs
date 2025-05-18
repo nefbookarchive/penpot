@@ -43,7 +43,7 @@
   {:platforms {:json
                {:transformGroup "tokens-studio"
                 ;; Required: The StyleDictionary API is focused on files even when working in the browser
-                :files [{:format "custom/json" :destination "penpot"}]}}
+                :files [{:format "custom/json" :destination "xenpot"}]}}
    :preprocessors ["tokens-studio"]
    ;; Silences style dictionary logs and errors
    ;; We handle token errors in the UI
@@ -128,7 +128,7 @@
 (defn process-sd-tokens
   "Converts a StyleDictionary dictionary with resolved tokens (aka `sd-tokens`) back to clojure.
   The `get-origin-token` argument should be a function that takes an
-  `sd-token` and returns the original penpot token, so we can merge
+  `sd-token` and returns the original xenpot token, so we can merge
   the resolved attributes back in.
 
   The `sd-token` will have references in `value` replaced with the computed value as a string.
@@ -140,7 +140,7 @@
     type:  'border-radius',
     path: ['token', 'with', 'reference'],
 
-    // The penpot origin token converted to a js object
+    // The xenpot origin token converted to a js object
     original: {
         name:  'token.with.reference',
         value: '{referenced.token}',
@@ -149,7 +149,7 @@
   }
   ```
 
-  We also convert `sd-token` value string into a unit that can be used as penpot shape attributes.
+  We also convert `sd-token` value string into a unit that can be used as xenpot shape attributes.
     - Dimensions like '12px' will be converted into numbers
     - Colors will be validated & converted to hex
 

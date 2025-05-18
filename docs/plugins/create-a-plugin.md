@@ -10,7 +10,7 @@ This guide covers the creation of a Penpot plugin. Penpot offers two ways to kic
 
 <p class="advice">
 Have you got an idea for a new plugin? Great! But first take a look at <a
-href="https://penpot.app/penpothub/plugins">the plugin overview</a> to see if already
+href="https://xenpot.app/xenpothub/plugins">the plugin overview</a> to see if already
 exists, and consider joining efforts with other developers. This does not imply that we
 won't accept plugins that do similar things, since anything can be improved and done in
 different ways.
@@ -18,11 +18,11 @@ different ways.
 
 1. Using a Template:
 
-   - **Typescript template**: Using the <a target="_blank" href="https://github.com/penpot/penpot-plugin-starter-template">Penpot Plugin Starter Template</a>: A basic template with the required files for quickstarting your plugin. This template uses Typescript and Vite.
-   - **Framework templates**: These templates already have everything you need to start <a target="_blank" href="https://github.com/penpot/plugin-examples">developing a plugin using a JavaScript framework. </a>
+   - **Typescript template**: Using the <a target="_blank" href="https://github.com/xenpot/xenpot-plugin-starter-template">Penpot Plugin Starter Template</a>: A basic template with the required files for quickstarting your plugin. This template uses Typescript and Vite.
+   - **Framework templates**: These templates already have everything you need to start <a target="_blank" href="https://github.com/xenpot/plugin-examples">developing a plugin using a JavaScript framework. </a>
 
 <p class="advice">
-In case you'll use any of these templates, you can skip to <a href="#2.7.-step-7.-load-the-plugin-in-penpot">step 2.7</a>
+In case you'll use any of these templates, you can skip to <a href="#2.7.-step-7.-load-the-plugin-in-xenpot">step 2.7</a>
 </p>
 
 2. Creating a plugin from scratch using a major framework.
@@ -31,7 +31,7 @@ In case you'll use any of these templates, you can skip to <a href="#2.7.-step-7
 
 ## 2.1. Step 1. Create a project
 
-Create your own app with the framework of your choice. See examples for each framework <a target="_blank" href="https://github.com/penpot/plugin-examples"> here </a>
+Create your own app with the framework of your choice. See examples for each framework <a target="_blank" href="https://github.com/xenpot/plugin-examples"> here </a>
 
 | Framework | Command                                                     | Version\* |
 | --------- | ----------------------------------------------------------- | --------- |
@@ -45,37 +45,37 @@ _\*: version we used in the examples._
 
 ## 2.2. Step 2. Install Penpot libraries
 
-There are two libraries that can help you with your plugin's development. They are <code class="language-js">@penpot/plugin-styles</code> and <code class="language-js">@penpot/plugin-types</code>.
+There are two libraries that can help you with your plugin's development. They are <code class="language-js">@xenpot/plugin-styles</code> and <code class="language-js">@xenpot/plugin-types</code>.
 
 ### Plugin styles
 
-<code class="language-js">@penpot/plugin-styles</code> contains styles to help build the UI for Penpot plugins. To check the styles go to <a target="_blank" href="https://penpot-plugins-styles.pages.dev/">Plugin styles</a>.
+<code class="language-js">@xenpot/plugin-styles</code> contains styles to help build the UI for Penpot plugins. To check the styles go to <a target="_blank" href="https://xenpot-plugins-styles.pages.dev/">Plugin styles</a>.
 
 ```bash
-npm install @penpot/plugin-styles
+npm install @xenpot/plugin-styles
 ```
 
 You can add the styles to your global CSS file.
 
 ```css
-@import "@penpot/plugin-styles/styles.css";
+@import "@xenpot/plugin-styles/styles.css";
 ```
 
 ### Plugin types
 
-<code class="language-js">@penpot/plugin-types</code> contains the typings for the Penpot Plugin API.
+<code class="language-js">@xenpot/plugin-types</code> contains the typings for the Penpot Plugin API.
 
 ```bash
-npm install @penpot/plugin-types
+npm install @xenpot/plugin-types
 ```
 
-If you're using typescript, don't forget to add <code class="language-js">@penpot/plugin-types</code> to your typings in your <code class="language-js">tsconfig.json</code>.
+If you're using typescript, don't forget to add <code class="language-js">@xenpot/plugin-types</code> to your typings in your <code class="language-js">tsconfig.json</code>.
 
 ```json
 {
   "compilerOptions": {
     [...]
-    "typeRoots": ["./node_modules/@types", "./node_modules/@penpot"],
+    "typeRoots": ["./node_modules/@types", "./node_modules/@xenpot"],
     "types": ["plugin-types"],
   }
 }
@@ -88,7 +88,7 @@ A plugin file is needed to interact with Penpot and its API. You can use either 
 You can start with something like this:
 
 ```ts
-penpot.ui.open("Plugin name", "", {
+xenpot.ui.open("Plugin name", "", {
   width: 500,
   height: 600,
 });
@@ -105,7 +105,7 @@ To enable interaction between your plugin and the Penpot API, you'll need to imp
 To send a message from the Penpot API to your plugin interface, use the following command in <code class="language-js">plugin.ts</code>:
 
 ```js
-penpot.ui.sendMessage(message);
+xenpot.ui.sendMessage(message);
 ```
 
 Here, <code class="language-js">message</code> can be any data or instruction you want to pass to your plugin. This message is dispatched from Penpot and is received by your plugin's iframe.
@@ -139,7 +139,7 @@ parent.postMessage(responseMessage, targetOrigin);
 
 By using these message-based events, any data retrieved through the Penpot API can be communicated to and from your plugin interface seamlessly.
 
-For more detailed information, refer to the [Penpot Plugins API Documentation](https://penpot-plugins-api-doc.pages.dev/).
+For more detailed information, refer to the [Penpot Plugins API Documentation](https://xenpot-plugins-api-doc.pages.dev/).
 
 ## 2.5. Step 5. Build the plugin file
 
@@ -265,7 +265,7 @@ _Note: Write permissions automatically includes its corresponding read permissio
 
 <p class="advice"><b>Serving an application:</b> This refers to making your application accessible over a network, typically for testing or development purposes. <br><br>When using a tool like <a href="https://www.npmjs.com/package/live-server" target="_blank">live-server</a>, a local web server is created on your machine, which serves your application files over HTTP. Most modern frameworks offer their own methods for serving applications, and there are build tools like Vite and Webpack that can handle this process as well. </p>
 
-**You don't need to deploy your plugin just to test it**. Locally serving your plugin is compatible with <code class="language-js">https:\/\/penpot.app/</code>. However, be mindful of potential CORS (Cross-Origin Resource Sharing) issues. To avoid these, ensure your plugin includes the appropriate cross-origin headers. (Find more info about this at the <a target="_blank" href="/plugins/deployment/">Deployment step</a>)
+**You don't need to deploy your plugin just to test it**. Locally serving your plugin is compatible with <code class="language-js">https:\/\/xenpot.app/</code>. However, be mindful of potential CORS (Cross-Origin Resource Sharing) issues. To avoid these, ensure your plugin includes the appropriate cross-origin headers. (Find more info about this at the <a target="_blank" href="/plugins/deployment/">Deployment step</a>)
 
 Serving your plugin will generate a URL that looks something like <code class="language-js">http:\/\/localhost:XXXX</code>, where <code class="language-js">XXXX</code> represents the port number on which the plugin is served. Ensure that both <code class="language-js">http:\/\/localhost:XXXX/manifest.json</code> and <code class="language-js">http:\/\/localhost:XXXX/plugin.js</code> are accessible. If these files are inside a specific folder, the URL should be adjusted accordingly (e.g., <code class="language-js">http:\/\/localhost:XXXX/folder/manifest.json</code>).
 
@@ -275,14 +275,14 @@ You can also open the Plugin manager modal via:
 
 - Menu
   <figure>
-    <video title="Open plugin manager from  penpot menu" muted="" playsinline="" controls="" width="100%" poster="/img/plugins/plugins-menu.png" height="auto">
+    <video title="Open plugin manager from  xenpot menu" muted="" playsinline="" controls="" width="100%" poster="/img/plugins/plugins-menu.png" height="auto">
       <source src="/img/plugins/plugins-menu.mp4" type="video/mp4">
     </video>
   </figure>
 
 - Toolbar
   <figure>
-    <video title="Open plugin manager from penpot toolbar" muted="" playsinline="" controls="" width="100%" poster="/img/plugins/plugins-toolbar.png" height="auto">
+    <video title="Open plugin manager from xenpot toolbar" muted="" playsinline="" controls="" width="100%" poster="/img/plugins/plugins-toolbar.png" height="auto">
       <source src="/img/plugins/plugins-toolbar.mp4" type="video/mp4">
     </video>
   </figure>

@@ -126,7 +126,7 @@
 
 (defn- join-pdf
   [file-id paths]
-  (p/let [prefix (str/concat "penpot.tmp.pdfunite." file-id ".")
+  (p/let [prefix (str/concat "xenpot.tmp.pdfunite." file-id ".")
           path   (sh/tempfile :prefix prefix :suffix ".pdf")]
     (sh/run-cmd! (str "pdfunite " (str/join " " paths) " " path))
     path))

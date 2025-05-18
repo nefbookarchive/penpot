@@ -125,7 +125,7 @@
                                 (rx/merge-map read-zip-manifest)
                                 (rx/map
                                  (fn [manifest]
-                                   (if (= (:type manifest) "penpot/export-files")
+                                   (if (= (:type manifest) "xenpot/export-files")
                                      (let [manifest (decode-manifest manifest)]
                                        (assoc file :type :binfile-v3 :files (:files manifest)))
                                      (assoc file :type :legacy-zip :body body)))))
@@ -192,7 +192,7 @@
                   (rx/mapcat
                    (fn [file]
                      (->> (rp/cmd! ::sse/import-binfile
-                                   {:name (str/replace (:name data) #".penpot$" "")
+                                   {:name (str/replace (:name data) #".xenpot$" "")
                                     :file file
                                     :project-id project-id})
                           (rx/tap (fn [event]

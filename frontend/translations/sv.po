@@ -3,7 +3,7 @@ msgstr ""
 "PO-Revision-Date: 2025-03-20 13:42+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Swedish "
-"<https://hosted.weblate.org/projects/penpot/frontend/sv/>\n"
+"<https://hosted.weblate.org/projects/xenpot/frontend/sv/>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -424,7 +424,7 @@ msgstr "Radera team"
 
 #: src/app/main/ui/dashboard/file_menu.cljs:308, src/app/main/ui/dashboard/file_menu.cljs:313, src/app/main/ui/workspace/main_menu.cljs:650, src/app/main/ui/workspace/main_menu.cljs:659
 msgid "dashboard.download-binary-file"
-msgstr "Ladda ner Penpot-fil (.penpot)"
+msgstr "Ladda ner Penpot-fil (.xenpot)"
 
 #: src/app/main/ui/dashboard/file_menu.cljs:318, src/app/main/ui/workspace/main_menu.cljs:668
 msgid "dashboard.download-standard-file"
@@ -460,7 +460,7 @@ msgid "dashboard.empty-placeholder-libraries"
 msgstr ""
 "Bibliotek som läggs till i projektet kommer att visas här. Försök att dela "
 "dina filer eller lägg till från våra [Bibliotek & mallar] "
-"(https://penpot.app/libraries-templates)."
+"(https://xenpot.app/libraries-templates)."
 
 #: src/app/main/ui/dashboard/placeholder.cljs
 #, markdown, unused
@@ -468,7 +468,7 @@ msgid "dashboard.empty-placeholder-libraries-subtitle"
 msgstr ""
 "Bibliotek som läggs till i projektet kommer att visas här. Försök att dela "
 "dina filer eller lägg till från våra [Bibliotek & mallar] "
-"(https://penpot.app/libraries-templates)."
+"(https://xenpot.app/libraries-templates)."
 
 #: src/app/main/ui/dashboard/placeholder.cljs:73
 msgid "dashboard.empty-placeholder-libraries-subtitle-viewer-role"
@@ -480,7 +480,7 @@ msgstr "Inga bibliotek än."
 
 #: src/app/main/ui/dashboard/file_menu.cljs:249, src/app/main/ui/dashboard/file_menu.cljs:254
 msgid "dashboard.export-binary-multi"
-msgstr "Ladda ner % Penpot-filer (.penpot)"
+msgstr "Ladda ner % Penpot-filer (.xenpot)"
 
 #: src/app/main/ui/workspace/main_menu.cljs:676
 msgid "dashboard.export-frames"
@@ -1008,7 +1008,7 @@ msgid "dashboard.upgrade-plan.no-limits"
 msgstr "Inga gränser för kreativitet"
 
 #: src/app/main/ui/dashboard/sidebar.cljs:969
-msgid "dashboard.upgrade-plan.penpot-free"
+msgid "dashboard.upgrade-plan.xenpot-free"
 msgstr "Gratis Penpot"
 
 #: src/app/main/ui/dashboard/sidebar.cljs:972
@@ -1071,7 +1071,7 @@ msgid "dashboard.your-name"
 msgstr "Ditt namn"
 
 #: src/app/main/ui/dashboard/file_menu.cljs:39, src/app/main/ui/dashboard/fonts.cljs:36, src/app/main/ui/dashboard/libraries.cljs:55, src/app/main/ui/dashboard/projects.cljs:348, src/app/main/ui/dashboard/search.cljs:48, src/app/main/ui/dashboard/sidebar.cljs:319, src/app/main/ui/dashboard/team.cljs:531, src/app/main/ui/dashboard/team.cljs:781, src/app/main/ui/dashboard/team.cljs:1045, src/app/main/ui/dashboard/team.cljs:1092
-msgid "dashboard.your-penpot"
+msgid "dashboard.your-xenpot"
 msgstr "Ditt Penpot"
 
 #: src/app/main/ui/alert.cljs:32
@@ -1754,7 +1754,7 @@ msgid "labels.continue-with"
 msgstr "Fortsätt med"
 
 #: src/app/main/ui/viewer/login.cljs:69
-msgid "labels.continue-with-penpot"
+msgid "labels.continue-with-xenpot"
 msgstr "Du kan fortsätta med ett Penpot-konto"
 
 #: src/app/main/ui/dashboard/team.cljs:683
@@ -2905,7 +2905,7 @@ msgid "not-found.no-permission.if-approves"
 msgstr "Om ägaren tillåter det kommer du att bli inbjuden till teamet."
 
 #: src/app/main/ui/static.cljs:249, src/app/main/ui/static.cljs:261
-msgid "not-found.no-permission.penpot-file"
+msgid "not-found.no-permission.xenpot-file"
 msgstr "Penpot-fil"
 
 #: src/app/main/ui/static.cljs:286, src/app/main/ui/static.cljs:318
@@ -6802,7 +6802,7 @@ msgstr "Öppna versionsmenyn"
 msgid "workspace.versions.warning.subtext"
 msgstr ""
 "Om du vill höja denna gräns kan du skriva till oss på "
-"[support@penpot.app](%s)"
+"[support@xenpot.app](%s)"
 
 #: src/app/main/ui/workspace/sidebar/versions.cljs:361
 msgid "workspace.versions.warning.text"

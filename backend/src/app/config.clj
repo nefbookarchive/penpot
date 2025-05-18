@@ -34,9 +34,9 @@
        v)})
 
 (def default
-  {:database-uri "postgresql://postgres/penpot"
-   :database-username "penpot"
-   :database-password "penpot"
+  {:database-uri "postgresql://postgres/xenpot"
+   :database-username "xenpot"
+   :database-password "xenpot"
 
    :default-blob-version 4
 
@@ -65,7 +65,7 @@
    :profile-bounce-max-age (dt/duration {:days 7})
    :profile-bounce-threshold 10
 
-   :telemetry-uri "https://telemetry.penpot.app/"
+   :telemetry-uri "https://telemetry.xenpot.app/"
 
    :media-max-file-size (* 1024 1024 30) ; 30MiB
 
@@ -264,7 +264,7 @@
 (defn read-config
   "Reads the configuration from enviroment variables and decodes all
   known values."
-  [& {:keys [prefix default] :or {prefix "penpot"}}]
+  [& {:keys [prefix default] :or {prefix "xenpot"}}]
   (->> (read-env prefix)
        (merge default)
        (decode-config)))

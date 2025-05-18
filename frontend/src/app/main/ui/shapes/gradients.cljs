@@ -21,12 +21,12 @@
 (defn- add-metadata!
   [props gradient]
   (-> props
-      (obj/set! "penpot:gradient" "true")
-      (obj/set! "penpot:start-x" (:start-x gradient))
-      (obj/set! "penpot:start-y" (:start-y gradient))
-      (obj/set! "penpot:end-x"   (:end-x gradient))
-      (obj/set! "penpot:end-y"   (:end-y gradient))
-      (obj/set! "penpot:width"   (:width gradient))))
+      (obj/set! "xenpot:gradient" "true")
+      (obj/set! "xenpot:start-x" (:start-x gradient))
+      (obj/set! "xenpot:start-y" (:start-y gradient))
+      (obj/set! "xenpot:end-x"   (:end-x gradient))
+      (obj/set! "xenpot:end-y"   (:end-y gradient))
+      (obj/set! "xenpot:width"   (:width gradient))))
 
 (mf/defc linear-gradient
   {::mf/wrap-props false}

@@ -184,7 +184,7 @@
                                                     :page-id page-id}))))
 
 (defn- value->color
-  "Transform a token color value into penpot color data structure"
+  "Transform a token color value into xenpot color data structure"
   [color]
   (when-let [tc (tinycolor/valid-color color)]
     (let [hex (tinycolor/->hex-string tc)

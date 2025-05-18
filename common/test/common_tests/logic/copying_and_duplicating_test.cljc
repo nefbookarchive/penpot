@@ -71,7 +71,7 @@
   (validator file)
   file)
 
-;; Related .penpot file: common/test/cases/copying-and-duplicating.penpot
+;; Related .xenpot file: common/test/cases/copying-and-duplicating.xenpot
 (t/deftest main-and-first-level-copy
   (-> (setup)
       ;; For each main and first level copy:

@@ -43,7 +43,7 @@ export class BasePage {
       route.fulfill({
         status: 200,
         contentType: "application/javascript",
-        body: `var penpotFlags = "${flags.join(" ")}";`,
+        body: `var xenpotFlags = "${flags.join(" ")}";`,
       }),
     );
   }

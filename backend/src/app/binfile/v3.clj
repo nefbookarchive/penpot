@@ -377,9 +377,9 @@
 
     ;; Write manifest file
     (let [files  (:files @bfc/*state*)
-          params {:type "penpot/export-files"
+          params {:type "xenpot/export-files"
                   :version 1
-                  :generated-by (str "penpot/" (:full cf/version))
+                  :generated-by (str "xenpot/" (:full cf/version))
                   :files (vec (vals files))
                   :relations rels}]
       (write-entry! output "manifest.json" params))))
@@ -399,8 +399,8 @@
   (let [entry (get-zip-entry* input path)]
     (when-not entry
       (ex/raise :type :validation
-                :code :inconsistent-penpot-file
-                :hint "the penpot file seems corrupt, missing underlying zip entry"
+                :code :inconsistent-xenpot-file
+                :hint "the xenpot file seems corrupt, missing underlying zip entry"
                 :path path))
     entry))
 
@@ -423,7 +423,7 @@
       (io/reader :encoding "UTF-8")))
 
 (defn- zip-entry-storage-content
-  "Wraps a ZipFile and ZipEntry into a penpot storage compatible
+  "Wraps a ZipFile and ZipEntry into a xenpot storage compatible
   object and avoid creating temporal objects"
   [input entry]
   (let [hash  (delay (->> entry
@@ -795,8 +795,8 @@
 
         (when (not= id (:id object))
           (ex/raise :type :validation
-                    :code :inconsistent-penpot-file
-                    :hint "the penpot file seems corrupt, found unexpected uuid (storage-object-id)"
+                    :code :inconsistent-xenpot-file
+                    :hint "the xenpot file seems corrupt, found unexpected uuid (storage-object-id)"
                     :expected-id (str id)
                     :found-id (str (:id object))))
 
@@ -808,7 +808,7 @@
 
           (when (not= (:size object) (sto/get-size content))
             (ex/raise :type :validation
-                      :code :inconsistent-penpot-file
+                      :code :inconsistent-xenpot-file
                       :hint "found corrupted storage object: size does not match"
                       :path path
                       :expected-size (:size object)
@@ -816,7 +816,7 @@
 
           (when (not= (:hash object) (sto/get-hash content))
             (ex/raise :type :validation
-                      :code :inconsistent-penpot-file
+                      :code :inconsistent-xenpot-file
                       :hint "found corrupted storage object: hash does not match"
                       :path path
                       :expected-hash (:hash object)
@@ -891,7 +891,7 @@
                      (validate-manifest))
         entries  (read-zip-entries input)]
 
-    (when-not (= "penpot/export-files" (:type manifest))
+    (when-not (= "xenpot/export-files" (:type manifest))
       (ex/raise :type :validation
                 :code :invalid-binfile-v3-manifest
                 :hint "unexpected type on manifest"
@@ -945,7 +945,7 @@
 ;; --- PUBLIC API
 
 (defn export-files!
-  "Do the exportation of a specified file in custom penpot binary
+  "Do the exportation of a specified file in custom xenpot binary
   format. There are some options available for customize the output:
 
   `::bfc/include-libraries`: additionally to the specified file, all the

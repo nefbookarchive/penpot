@@ -46,7 +46,7 @@
 
         [dprops dref] (if (some? on-reorder)
                         (h/use-sortable
-                         :data-type "penpot/stroke-row"
+                         :data-type "xenpot/stroke-row"
                          :on-drop on-drop
                          :disabled @disable-drag
                          :detect-center? false

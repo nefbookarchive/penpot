@@ -3,7 +3,7 @@ msgstr ""
 "PO-Revision-Date: 2025-03-20 13:42+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Croatian "
-"<https://hosted.weblate.org/projects/penpot/frontend/hr/>\n"
+"<https://hosted.weblate.org/projects/xenpot/frontend/hr/>\n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -425,7 +425,7 @@ msgstr "Obriši tim"
 
 #: src/app/main/ui/dashboard/file_menu.cljs:308, src/app/main/ui/dashboard/file_menu.cljs:313, src/app/main/ui/workspace/main_menu.cljs:650, src/app/main/ui/workspace/main_menu.cljs:659
 msgid "dashboard.download-binary-file"
-msgstr "Preuzmi Penpot datoteku (.penpot)"
+msgstr "Preuzmi Penpot datoteku (.xenpot)"
 
 #: src/app/main/ui/dashboard/file_menu.cljs:318, src/app/main/ui/workspace/main_menu.cljs:668
 msgid "dashboard.download-standard-file"
@@ -461,7 +461,7 @@ msgid "dashboard.empty-placeholder-libraries"
 msgstr ""
 "Ovdje će se pojaviti biblioteke dodane projektu. Pokušajte podijeliti svoje "
 "datoteke ili ih dodajte iz naših [biblioteka i "
-"predložaka](https://penpot.app/libraries-templates)."
+"predložaka](https://xenpot.app/libraries-templates)."
 
 #: src/app/main/ui/dashboard/placeholder.cljs
 #, markdown, unused
@@ -469,7 +469,7 @@ msgid "dashboard.empty-placeholder-libraries-subtitle"
 msgstr ""
 "Ovdje će se pojaviti biblioteke dodane projektu. Pokušajte podijeliti svoje "
 "datoteke ili ih dodajte iz naših [biblioteka i "
-"predložaka](https://penpot.app/libraries-templates)."
+"predložaka](https://xenpot.app/libraries-templates)."
 
 #: src/app/main/ui/dashboard/placeholder.cljs:73
 msgid "dashboard.empty-placeholder-libraries-subtitle-viewer-role"
@@ -481,7 +481,7 @@ msgstr "Još nema biblioteka."
 
 #: src/app/main/ui/dashboard/file_menu.cljs:249, src/app/main/ui/dashboard/file_menu.cljs:254
 msgid "dashboard.export-binary-multi"
-msgstr "Preuzmi %s Penpot datoteke (.penpot)"
+msgstr "Preuzmi %s Penpot datoteke (.xenpot)"
 
 #: src/app/main/ui/workspace/main_menu.cljs:676
 msgid "dashboard.export-frames"
@@ -991,7 +991,7 @@ msgid "dashboard.upgrade-plan.no-limits"
 msgstr "Kreativnost nema ograničenja"
 
 #: src/app/main/ui/dashboard/sidebar.cljs:969
-msgid "dashboard.upgrade-plan.penpot-free"
+msgid "dashboard.upgrade-plan.xenpot-free"
 msgstr "Penpot Free"
 
 #: src/app/main/ui/dashboard/sidebar.cljs:972
@@ -1054,7 +1054,7 @@ msgid "dashboard.your-name"
 msgstr "Ime"
 
 #: src/app/main/ui/dashboard/file_menu.cljs:39, src/app/main/ui/dashboard/fonts.cljs:36, src/app/main/ui/dashboard/libraries.cljs:55, src/app/main/ui/dashboard/projects.cljs:348, src/app/main/ui/dashboard/search.cljs:48, src/app/main/ui/dashboard/sidebar.cljs:319, src/app/main/ui/dashboard/team.cljs:531, src/app/main/ui/dashboard/team.cljs:781, src/app/main/ui/dashboard/team.cljs:1045, src/app/main/ui/dashboard/team.cljs:1092
-msgid "dashboard.your-penpot"
+msgid "dashboard.your-xenpot"
 msgstr "Tvoj Penpot"
 
 #: src/app/main/ui/alert.cljs:32
@@ -1141,7 +1141,7 @@ msgstr "E-mail «%s» je prijavljen kao neželjena pošta ili je trajno odbijen.
 msgid "errors.feature-mismatch"
 msgstr ""
 "Čini se da otvarate datoteku koja ima omogućenu značajku '%s', ali je "
-"trenutna verzija penpota ne podržava ili je onemogućena."
+"trenutna verzija xenpota ne podržava ili je onemogućena."
 
 #: src/app/main/errors.cljs:246, src/app/main/errors.cljs:260
 msgid "errors.feature-not-supported"
@@ -1730,7 +1730,7 @@ msgid "labels.continue-with"
 msgstr "Nastavi sa"
 
 #: src/app/main/ui/viewer/login.cljs:69
-msgid "labels.continue-with-penpot"
+msgid "labels.continue-with-xenpot"
 msgstr "Možeš nastaviti s Penpot računom"
 
 #: src/app/main/ui/dashboard/team.cljs:683
@@ -2886,7 +2886,7 @@ msgid "not-found.no-permission.if-approves"
 msgstr "Ako vlasnik to dopusti, bit ćete pozvani u tim."
 
 #: src/app/main/ui/static.cljs:249, src/app/main/ui/static.cljs:261
-msgid "not-found.no-permission.penpot-file"
+msgid "not-found.no-permission.xenpot-file"
 msgstr "Penpot datoteka"
 
 #: src/app/main/ui/static.cljs:286, src/app/main/ui/static.cljs:318
@@ -6830,7 +6830,7 @@ msgstr "Otvori izbornik verzije"
 #: src/app/main/ui/workspace/sidebar/versions.cljs:365
 #, markdown
 msgid "workspace.versions.warning.subtext"
-msgstr "Ako želite povećati ovo ograničenje, pišite nam na [support@penpot.app](%s)"
+msgstr "Ako želite povećati ovo ograničenje, pišite nam na [support@xenpot.app](%s)"
 
 #: src/app/main/ui/workspace/sidebar/versions.cljs:361
 msgid "workspace.versions.warning.text"

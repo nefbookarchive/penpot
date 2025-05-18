@@ -1506,34 +1506,34 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@penpot/draft-js@portal:./vendor/draft-js::locator=frontend%40workspace%3A.":
+"@xenpot/draft-js@portal:./vendor/draft-js::locator=frontend%40workspace%3A.":
   version: 0.0.0-use.local
-  resolution: "@penpot/draft-js@portal:./vendor/draft-js::locator=frontend%40workspace%3A."
+  resolution: "@xenpot/draft-js@portal:./vendor/draft-js::locator=frontend%40workspace%3A."
   dependencies:
-    draft-js: "penpot/draft-js.git#4a99b2a6020b2af97f6dc5fa1b4275ec16b559a0"
+    draft-js: "xenpot/draft-js.git#4a99b2a6020b2af97f6dc5fa1b4275ec16b559a0"
   peerDependencies:
     react: ">=0.17.0"
     react-dom: ">=0.17.0"
   languageName: node
   linkType: soft
 
-"@penpot/hljs@portal:./vendor/hljs::locator=frontend%40workspace%3A.":
+"@xenpot/hljs@portal:./vendor/hljs::locator=frontend%40workspace%3A.":
   version: 0.0.0-use.local
-  resolution: "@penpot/hljs@portal:./vendor/hljs::locator=frontend%40workspace%3A."
+  resolution: "@xenpot/hljs@portal:./vendor/hljs::locator=frontend%40workspace%3A."
   dependencies:
     highlight.js: "npm:^11.10.0"
   languageName: node
   linkType: soft
 
-"@penpot/mousetrap@portal:./vendor/mousetrap::locator=frontend%40workspace%3A.":
+"@xenpot/mousetrap@portal:./vendor/mousetrap::locator=frontend%40workspace%3A.":
   version: 0.0.0-use.local
-  resolution: "@penpot/mousetrap@portal:./vendor/mousetrap::locator=frontend%40workspace%3A."
+  resolution: "@xenpot/mousetrap@portal:./vendor/mousetrap::locator=frontend%40workspace%3A."
   languageName: node
   linkType: soft
 
-"@penpot/svgo@penpot/svgo#v3.1":
+"@xenpot/svgo@xenpot/svgo#v3.1":
   version: 4.0.0
-  resolution: "@penpot/svgo@https://github.com/penpot/svgo.git#commit=a46262c12c0d967708395972c374eb2adead4180"
+  resolution: "@xenpot/svgo@https://github.com/xenpot/svgo.git#commit=a46262c12c0d967708395972c374eb2adead4180"
   dependencies:
     "@trysound/sax": "npm:0.2.0"
     css-select: "npm:^5.1.0"
@@ -1544,9 +1544,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@penpot/text-editor@portal:./text-editor::locator=frontend%40workspace%3A.":
+"@xenpot/text-editor@portal:./text-editor::locator=frontend%40workspace%3A.":
   version: 0.0.0-use.local
-  resolution: "@penpot/text-editor@portal:./text-editor::locator=frontend%40workspace%3A."
+  resolution: "@xenpot/text-editor@portal:./text-editor::locator=frontend%40workspace%3A."
   languageName: node
   linkType: soft
 
@@ -4704,9 +4704,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"draft-js@penpot/draft-js.git#4a99b2a6020b2af97f6dc5fa1b4275ec16b559a0":
+"draft-js@xenpot/draft-js.git#4a99b2a6020b2af97f6dc5fa1b4275ec16b559a0":
   version: 0.11.7
-  resolution: "draft-js@https://github.com/penpot/draft-js.git#commit=4a99b2a6020b2af97f6dc5fa1b4275ec16b559a0"
+  resolution: "draft-js@https://github.com/xenpot/draft-js.git#commit=4a99b2a6020b2af97f6dc5fa1b4275ec16b559a0"
   dependencies:
     fbjs: "npm:^3.0.4"
     immutable: "npm:~3.7.4"
@@ -5689,11 +5689,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "frontend@workspace:."
   dependencies:
-    "@penpot/draft-js": "portal:./vendor/draft-js"
-    "@penpot/hljs": "portal:./vendor/hljs"
-    "@penpot/mousetrap": "portal:./vendor/mousetrap"
-    "@penpot/svgo": "penpot/svgo#v3.1"
-    "@penpot/text-editor": "portal:./text-editor"
+    "@xenpot/draft-js": "portal:./vendor/draft-js"
+    "@xenpot/hljs": "portal:./vendor/hljs"
+    "@xenpot/mousetrap": "portal:./vendor/mousetrap"
+    "@xenpot/svgo": "xenpot/svgo#v3.1"
+    "@xenpot/text-editor": "portal:./text-editor"
     "@playwright/test": "npm:1.48.1"
     "@storybook/addon-essentials": "npm:^8.5.2"
     "@storybook/addon-interactions": "npm:^8.5.2"

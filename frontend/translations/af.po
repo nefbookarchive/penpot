@@ -3,7 +3,7 @@ msgstr ""
 "PO-Revision-Date: 2024-06-17 08:07+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Afrikaans "
-"<https://hosted.weblate.org/projects/penpot/frontend/af/>\n"
+"<https://hosted.weblate.org/projects/xenpot/frontend/af/>\n"
 "Language: af\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -374,7 +374,7 @@ msgstr "Verwyder span"
 
 #: src/app/main/ui/dashboard/file_menu.cljs:308, src/app/main/ui/dashboard/file_menu.cljs:313, src/app/main/ui/workspace/main_menu.cljs:650, src/app/main/ui/workspace/main_menu.cljs:659
 msgid "dashboard.download-binary-file"
-msgstr "Laai Penpot-lêer (.penpot) af"
+msgstr "Laai Penpot-lêer (.xenpot) af"
 
 #: src/app/main/ui/dashboard/file_menu.cljs:318, src/app/main/ui/workspace/main_menu.cljs:668
 msgid "dashboard.download-standard-file"
@@ -390,7 +390,7 @@ msgstr "Dupliseer %s lêers"
 
 #: src/app/main/ui/dashboard/file_menu.cljs:249, src/app/main/ui/dashboard/file_menu.cljs:254
 msgid "dashboard.export-binary-multi"
-msgstr "Laai %s Penpot lêers (.penpot) af"
+msgstr "Laai %s Penpot lêers (.xenpot) af"
 
 #: src/app/main/ui/workspace/main_menu.cljs:676
 msgid "dashboard.export-frames"

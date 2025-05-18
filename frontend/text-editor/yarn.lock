@@ -506,9 +506,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@penpot/text-editor@workspace:.":
+"@xenpot/text-editor@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@penpot/text-editor@workspace:."
+  resolution: "@xenpot/text-editor@workspace:."
   dependencies:
     "@playwright/test": "npm:^1.45.1"
     "@types/node": "npm:^20.14.10"

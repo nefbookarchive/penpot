@@ -551,10 +551,10 @@
     (let [request (upsert-team-access-request conn team-id profile-id)
           factory (cond
                     (and (some? file) (:is-default team) is-viewer)
-                    eml/request-file-access-yourpenpot-view
+                    eml/request-file-access-yourxenpot-view
 
                     (and (some? file) (:is-default team))
-                    eml/request-file-access-yourpenpot
+                    eml/request-file-access-yourxenpot
 
                     (some? file)
                     eml/request-file-access

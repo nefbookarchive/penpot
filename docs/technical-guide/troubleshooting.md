@@ -32,7 +32,7 @@ Other interesting tab in the devtools is the <code class="language-bash">Network
 
 When Penpot crashes, it provides a report with very useful information. Don't miss it!
 
-![Penpot Report](/img/penpot-report.png)
+![Penpot Report](/img/xenpot-report.png)
 
 ## Docker logs
 
@@ -41,23 +41,23 @@ If you are using the Docker installation, this is an easy way to take a look at 
 Check if all containers are up and running:
 
 ```bash
-docker compose -p penpot -f docker-compose.yaml ps
+docker compose -p xenpot -f docker-compose.yaml ps
 ```
 
 Check logs of all Penpot:
 
 ```bash
-docker compose -p penpot -f docker-compose.yaml logs -f
+docker compose -p xenpot -f docker-compose.yaml logs -f
 ```
 
 If there is too much information and you'd like to check just one service at a time:
 
 ```bash
-docker compose -p penpot -f docker-compose.yaml logs penpot-frontend -f
+docker compose -p xenpot -f docker-compose.yaml logs xenpot-frontend -f
 ```
 
 You can always check the logs form a specific container:
 
 ```bash
-docker logs -f penpot-penpot-postgres-1
+docker logs -f xenpot-xenpot-postgres-1
 ```

@@ -213,7 +213,7 @@
                (sort-by (comp str/lower :name))))
 
         importing*       (mf/use-state nil)
-        sample-libraries [{:id "penpot-design-system", :name "Design system example"}
+        sample-libraries [{:id "xenpot-design-system", :name "Design system example"}
                           {:id "wireframing-kit", :name "Wireframe library"}
                           {:id "whiteboarding-kit", :name "Whiteboarding Kit"}]
 
@@ -365,7 +365,7 @@
                (tr "workspace.libraries.empty.no-libraries")
                [:a {:target "_blank"
                     :class (stl/css :sample-libraries-link)
-                    :href "https://penpot.app/libraries-templates"}
+                    :href "https://xenpot.app/libraries-templates"}
                 (tr "workspace.libraries.empty.some-templates")]]
               [:div {:class (stl/css :sample-libraries-container)}
                (tr "workspace.libraries.empty.add-some")

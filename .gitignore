@@ -9,7 +9,7 @@
 *.css.json
 *.jar
 *.orig
-*.penpot
+*.xenpot
 *.css.json
 .calva
 .clj-kondo

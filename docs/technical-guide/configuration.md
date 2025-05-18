@@ -278,7 +278,7 @@ PENPOT_LDAP_STARTTLS: false
 PENPOT_LDAP_BASE_DN: ou=people,dc=planetexpress,dc=com
 PENPOT_LDAP_BIND_DN: cn=admin,dc=planetexpress,dc=com
 PENPOT_LDAP_BIND_PASSWORD: GoodNewsEveryone
-PENPOT_LDAP_USER_QUERY: (&(|(uid=:username)(mail=:username))(memberOf=cn=penpot,ou=groups,dc=my-domain,dc=com))
+PENPOT_LDAP_USER_QUERY: (&(|(uid=:username)(mail=:username))(memberOf=cn=xenpot,ou=groups,dc=my-domain,dc=com))
 PENPOT_LDAP_ATTRS_USERNAME: uid
 PENPOT_LDAP_ATTRS_EMAIL: mail
 PENPOT_LDAP_ATTRS_FULLNAME: cn
@@ -292,13 +292,13 @@ it should point to public URI where users will access the application:
 
 ```bash
 # Backend
-PENPOT_PUBLIC_URI: https://penpot.mycompany.com
+PENPOT_PUBLIC_URI: https://xenpot.mycompany.com
 
 # Frontend
-PENPOT_PUBLIC_URI: https://penpot.mycompany.com
+PENPOT_PUBLIC_URI: https://xenpot.mycompany.com
 
 # Exporter
-PENPOT_PUBLIC_URI: https://penpot.mycompany.com
+PENPOT_PUBLIC_URI: https://xenpot.mycompany.com
 ```
 
 If you're using the official <code class="language-bash">docker-compose.yml</code> you only need to configure the
@@ -426,9 +426,9 @@ Essential database configuration:
 
 ```bash
 # Backend
-PENPOT_DATABASE_USERNAME: penpot
-PENPOT_DATABASE_PASSWORD: penpot
-PENPOT_DATABASE_URI: postgresql://127.0.0.1/penpot
+PENPOT_DATABASE_USERNAME: xenpot
+PENPOT_DATABASE_PASSWORD: xenpot
+PENPOT_DATABASE_URI: postgresql://127.0.0.1/xenpot
 ```
 
 The username and password are optional. These settings should be compatible with the ones
@@ -436,9 +436,9 @@ in the postgres configuration:
 
 ```bash
 # Postgres
-POSTGRES_DATABASE: penpot
-POSTGRES_USER: penpot
-POSTGRES_PASSWORD: penpot
+POSTGRES_DATABASE: xenpot
+POSTGRES_USER: xenpot
+POSTGRES_PASSWORD: xenpot
 ```
 
 ### Storage
@@ -526,8 +526,8 @@ To connect the frontend to the exporter and backend, you need to fill out these 
 
 ```bash
 # Frontend
-PENPOT_BACKEND_URI: http://your-penpot-backend:6060
-PENPOT_EXPORTER_URI: http://your-penpot-exporter:6061
+PENPOT_BACKEND_URI: http://your-xenpot-backend:6060
+PENPOT_EXPORTER_URI: http://your-xenpot-exporter:6061
 ```
 
 These variables are used for generate correct nginx.conf file on container startup.
@@ -558,10 +558,10 @@ __Since version 2.0.0__
 - <code class="language-bash">enable-access-tokens</code>: enables access tokens. More detail about this configuration in [access tokens section][7].
 - <code class="language-bash">disable-google-fonts-provider</code>: disables the google fonts provider.
 
-[1]: /technical-guide/getting-started#configure-penpot-with-elestio
-[2]: /technical-guide/getting-started#configure-penpot-with-docker
+[1]: /technical-guide/getting-started#configure-xenpot-with-elestio
+[2]: /technical-guide/getting-started#configure-xenpot-with-docker
 [3]: /technical-guide/developer/common#dev-environment
-[4]: https://github.com/penpot/penpot/blob/main/docker/images/files/nginx.conf
+[4]: https://github.com/xenpot/xenpot/blob/main/docker/images/files/nginx.conf
 [5]: /technical-guide/getting-started/#using-the-cli-for-administrative-tasks
 [6]: /technical-guide/integration/#webhooks
 [7]: /technical-guide/integration/#access-tokens

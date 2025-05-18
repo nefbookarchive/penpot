@@ -164,7 +164,7 @@ Any attribute that is not in this map will be ignored in synchronizations.
             parser.cljs
 ```
 
-To export a penpot file, basically we use the same system that is used to
+To export a xenpot file, basically we use the same system that is used to
 display shapes in the workspace or viewer. In <code class="language-text">shapes/*.cljs</code> there are
 components that render one shape of each type into a SVG node.
 

@@ -5,8 +5,8 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
-"@penpot/mousetrap@workspace:.":
+"@xenpot/mousetrap@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@penpot/mousetrap@workspace:."
+  resolution: "@xenpot/mousetrap@workspace:."
   languageName: unknown
   linkType: soft

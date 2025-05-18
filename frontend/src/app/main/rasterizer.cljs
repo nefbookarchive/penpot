@@ -46,7 +46,7 @@
     (when (and (object? evdata) (str/starts-with? origin evorigin))
       (let [scope (unchecked-get evdata "scope")
             type  (unchecked-get evdata "type")]
-        (when (= "penpot/rasterizer" scope)
+        (when (= "xenpot/rasterizer" scope)
           (when (= type "ready")
             (set! ready? true)
             (process-queued-messages!))
@@ -80,7 +80,7 @@
         id      (dm/str (uuid/next))
         payload #js {:data data :styles styles :width width :result result}
         message #js {:id id
-                     :scope "penpot/rasterizer"
+                     :scope "xenpot/rasterizer"
                      :payload payload}]
 
     (if ^boolean ready?

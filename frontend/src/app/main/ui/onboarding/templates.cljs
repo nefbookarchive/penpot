@@ -78,12 +78,12 @@
 
        [:div.templates
         [:& template-item
-         {:path "/github/penpot-files/Penpot-Design-system.penpot"
-          :image "https://penpot.app/images/libraries/cover-ds-penpot.jpg"
+         {:path "/github/xenpot-files/Penpot-Design-system.xenpot"
+          :image "https://xenpot.app/images/libraries/cover-ds-xenpot.jpg"
           :name "Penpot Design System"
           :project-id project-id}]
         [:& template-item
-         {:path "/github/penpot-files/Material-Design-Kit.penpot"
-          :image "https://penpot.app/images/libraries/cover-material.jpg"
+         {:path "/github/xenpot-files/Material-Design-Kit.xenpot"
+          :image "https://xenpot.app/images/libraries/cover-material.jpg"
           :name "Material Design Kit"
           :project-id project-id}]]]]]))

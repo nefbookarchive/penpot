@@ -20,7 +20,7 @@
 
 (defn- get-path
   [type id]
-  (path/join sh/tmpdir (str/concat  "penpot.resource." (c/name type) "." id)))
+  (path/join sh/tmpdir (str/concat  "xenpot.resource." (c/name type) "." id)))
 
 (defn create
   "Generates ephimeral resource object."

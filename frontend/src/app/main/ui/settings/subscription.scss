@@ -46,11 +46,11 @@
 }
 
 .subscription-member,
-.penpot-member {
+.xenpot-member {
   @extend .button-icon;
 }
 
-.penpot-member {
+.xenpot-member {
   stroke: var(--icon-foreground);
 }
 

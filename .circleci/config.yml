@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   test-common:
     docker:
-      - image: penpotapp/devenv:latest
+      - image: xenpotapp/devenv:latest
 
     working_directory: ~/repo
     resource_class: medium+
@@ -46,7 +46,7 @@ jobs:
 
   test-frontend:
     docker:
-      - image: penpotapp/devenv:latest
+      - image: xenpotapp/devenv:latest
 
     working_directory: ~/repo
     resource_class: medium+
@@ -94,7 +94,7 @@ jobs:
 
   test-components:
     docker:
-      - image: penpotapp/devenv:latest
+      - image: xenpotapp/devenv:latest
 
     working_directory: ~/repo
     resource_class: medium+
@@ -133,7 +133,7 @@ jobs:
 
   test-integration:
     docker:
-      - image: penpotapp/devenv:latest
+      - image: xenpotapp/devenv:latest
 
     working_directory: ~/repo
     resource_class: large
@@ -163,12 +163,12 @@ jobs:
 
   test-backend:
     docker:
-      - image: penpotapp/devenv:latest
+      - image: xenpotapp/devenv:latest
       - image: cimg/postgres:14.5
         environment:
-          POSTGRES_USER: penpot_test
-          POSTGRES_PASSWORD: penpot_test
-          POSTGRES_DB: penpot_test
+          POSTGRES_USER: xenpot_test
+          POSTGRES_PASSWORD: xenpot_test
+          POSTGRES_DB: xenpot_test
       - image: cimg/redis:7.0.5
 
     working_directory: ~/repo
@@ -207,9 +207,9 @@ jobs:
             clojure -M:dev:test --reporter kaocha.report/documentation
 
           environment:
-            PENPOT_TEST_DATABASE_URI: "postgresql://localhost/penpot_test"
-            PENPOT_TEST_DATABASE_USERNAME: penpot_test
-            PENPOT_TEST_DATABASE_PASSWORD: penpot_test
+            PENPOT_TEST_DATABASE_URI: "postgresql://localhost/xenpot_test"
+            PENPOT_TEST_DATABASE_USERNAME: xenpot_test
+            PENPOT_TEST_DATABASE_PASSWORD: xenpot_test
             PENPOT_TEST_REDIS_URI: "redis://localhost/1"
 
       - save_cache:
@@ -219,7 +219,7 @@ jobs:
 
   test-exporter:
     docker:
-      - image: penpotapp/devenv:latest
+      - image: xenpotapp/devenv:latest
 
     working_directory: ~/repo
     resource_class: medium+
@@ -248,7 +248,7 @@ jobs:
 
   test-render-wasm:
     docker:
-      - image: penpotapp/devenv:latest
+      - image: xenpotapp/devenv:latest
 
     working_directory: ~/repo
     resource_class: medium+
@@ -276,7 +276,7 @@ jobs:
             ./test
 
 workflows:
-  penpot:
+  xenpot:
     jobs:
       - test-frontend
       - test-components

@@ -108,7 +108,7 @@
 
                      (= :finish (:type msg))
                      (let [mtype (if (contains? cf/flags :export-file-v3)
-                                   "application/penpot"
+                                   "application/xenpot"
                                    (:mtype msg))
                            fname (:filename msg)
                            uri   (:uri msg)]

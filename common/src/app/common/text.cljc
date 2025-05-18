@@ -205,7 +205,7 @@
    (reduce (fn [result style]
              (if (str/starts-with? style "PENPOT")
                (if (= style "PENPOT_SELECTION")
-                 (assoc! result :penpot-selection true)
+                 (assoc! result :xenpot-selection true)
                  (let [[_ k v] (str/split style "$$$" 3)]
                    (assoc! result (keyword k) (decode-style-value v))))
                result))

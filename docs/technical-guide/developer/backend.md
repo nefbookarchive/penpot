@@ -105,7 +105,7 @@ repository already comes with base configuration.
 You can run **clj-kondo** as-is (is included in the devenv image):
 
 ```bash
-cd penpot/backend;
+cd xenpot/backend;
 clj-kondo --lint src
 ```
 

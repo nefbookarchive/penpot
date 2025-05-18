@@ -8,7 +8,7 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "https://github.com/penpot/penpot"
+    "url": "https://github.com/xenpot/xenpot"
   },
   "dependencies": {
     "luxon": "^3.4.4",

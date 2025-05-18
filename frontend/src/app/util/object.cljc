@@ -257,7 +257,7 @@
 
 #?(:cljs
    (def type-symbol
-     (js/Symbol.for "penpot.reify:type")))
+     (js/Symbol.for "xenpot.reify:type")))
 
 #?(:cljs
    (defn type-of?

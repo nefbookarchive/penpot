@@ -416,7 +416,7 @@
   (mf/use-callback
    (fn [e]
      (let [component-inst? (mf/ref-val comp-inst-ref)]
-       (when (and (dnd/has-type? e "penpot/component")
+       (when (and (dnd/has-type? e "xenpot/component")
                   (dom/class? (dom/get-target e) "viewport-controls")
                   (not component-inst?))
          (let [point (gpt/point (.-clientX e) (.-clientY e))
@@ -433,8 +433,8 @@
                       (:id component)
                       (gpt/point final-x final-y)
                       {:start-move? true :initial-point viewport-coord :origin "sidebar"})))))
-     (when (or (dnd/has-type? e "penpot/shape")
-               (dnd/has-type? e "penpot/component")
+     (when (or (dnd/has-type? e "xenpot/shape")
+               (dnd/has-type? e "xenpot/component")
                (dnd/has-type? e "Files")
                (dnd/has-type? e "text/uri-list")
                (dnd/has-type? e "text/asset-id"))
@@ -455,8 +455,8 @@
         on-pointer-move (throttle-fn 50 (fn [e] (ts/raf #(on-pointer-move e))))]
     (mf/use-callback
      (fn [e]
-       (when (or (dnd/has-type? e "penpot/shape")
-                 (dnd/has-type? e "penpot/component")
+       (when (or (dnd/has-type? e "xenpot/shape")
+                 (dnd/has-type? e "xenpot/component")
                  (dnd/has-type? e "Files")
                  (dnd/has-type? e "text/uri-list")
                  (dnd/has-type? e "text/asset-id"))
@@ -471,8 +471,8 @@
      (let [point (gpt/point (.-clientX event) (.-clientY event))
            viewport-coord (uwvv/point->viewport point)]
        (cond
-         (dnd/has-type? event "penpot/shape")
-         (let [shape   (dnd/get-data event "penpot/shape")
+         (dnd/has-type? event "xenpot/shape")
+         (let [shape   (dnd/get-data event "xenpot/shape")
                final-x (- (:x viewport-coord) (/ (:width shape) 2))
                final-y (- (:y viewport-coord) (/ (:height shape) 2))]
            (st/emit! (dw/add-shape (-> shape
@@ -480,7 +480,7 @@
                                        (assoc :x final-x)
                                        (assoc :y final-y)))))
 
-         (dnd/has-type? event "penpot/component")
+         (dnd/has-type? event "xenpot/component")
          (let [event (dom/event->native-event event)
                ctrl? (kbd/ctrl? event)
                shift? (kbd/shift? event)

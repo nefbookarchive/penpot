@@ -2357,9 +2357,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"penpot-docs@workspace:.":
+"xenpot-docs@workspace:.":
   version: 0.0.0-use.local
-  resolution: "penpot-docs@workspace:."
+  resolution: "xenpot-docs@workspace:."
   dependencies:
     "@11ty/eleventy": "npm:^2.0.1"
     "@11ty/eleventy-navigation": "npm:^0.3.5"

@@ -5,7 +5,7 @@ desc: Learn about architecture, data models, and development environments. See P
 
 # Common code
 
-In penpot, we take advantage of using the same language in frontend and
+In xenpot, we take advantage of using the same language in frontend and
 backend, to have a bunch of shared code.
 
 Sometimes, we use conditional compilation, for small chunks of code that
@@ -71,7 +71,7 @@ The main ones are:
 * **data** basic data structures and utility functions that could be added to
   Clojure standard library.
 * **math** some mathematic functions that could also be standard.
-* **file_builder** functions to parse the content of a <code class="language-text">.penpot</code> exported file
+* **file_builder** functions to parse the content of a <code class="language-text">.xenpot</code> exported file
   and build a File data structure from it.
 * **logging** functions to generate traces for debugging and usage analysis.
 * **text** an adapter layer over the [DraftJS editor](https://draftjs.org) that

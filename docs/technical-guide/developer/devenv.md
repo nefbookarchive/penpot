@@ -27,7 +27,7 @@ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo s
 
 **The interactive development environment requires some familiarity of [tmux](https://github.com/tmux/tmux/wiki).**
 
-To start it, clone penpot repository, and execute:
+To start it, clone xenpot repository, and execute:
 
 ```bash
 ./manage.sh pull-devenv
@@ -62,7 +62,7 @@ current window.
 For more info: https://tmuxcheatsheet.com/
 
 It may take a minute or so, but once all of the services have started, you can
-connect to penpot by browsing to http://localhost:3449 .
+connect to xenpot by browsing to http://localhost:3449 .
 
 <!-- ## Inside the tmux session -->
 
@@ -90,12 +90,12 @@ process on the frontend application. In order to do this you can split the
 window (`Ctrl+b "`) and execute:
 
 ```bash
-cd penpot/frontend
+cd xenpot/frontend
 npx shadow-cljs cljs-repl main
 ```
 
 In order to have the REPL working you need to have an active browser session
-with the penpot application opened (otherwise, you will get the error
+with the xenpot application opened (otherwise, you will get the error
 `No application has connected to the REPL server.`).
 
 Finally, in case you want to connect to the REPL from your IDE, you can set it
@@ -115,7 +115,7 @@ You can open the broser on http://localhost:6006/ to see it.
 
 For more information about storybook check:
 
-https://help.penpot.app/technical-guide/developer/ui/#storybook
+https://help.xenpot.app/technical-guide/developer/ui/#storybook
 
 ### Exporter
 

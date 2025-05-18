@@ -7,7 +7,7 @@
   "packageManager": "yarn@4.9.1+sha512.f95ce356460e05be48d66401c1ae64ef84d163dd689964962c6888a9810865e39097a5e9de748876c2e0bf89b232d583c33982773e9903ae7a76257270986538",
   "repository": {
     "type": "git",
-    "url": "https://github.com/penpot/penpot"
+    "url": "https://github.com/xenpot/xenpot"
   },
   "dependencies": {
     "archiver": "^7.0.1",
@@ -18,7 +18,7 @@
     "luxon": "^3.5.0",
     "playwright": "^1.50.0",
     "raw-body": "^3.0.0",
-    "svgo": "penpot/svgo#v3.1",
+    "svgo": "xenpot/svgo#v3.1",
     "xml-js": "^1.6.11",
     "xregexp": "^5.1.1"
   },

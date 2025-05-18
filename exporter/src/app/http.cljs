@@ -170,7 +170,7 @@
         server  (create-server handler)
         port    (cf/get :http-server-port 6061)]
     (.listen server port)
-    (l/info :hint "welcome to penpot"
+    (l/info :hint "welcome to xenpot"
             :module "exporter"
             :flags cf/flags
             :version (:full cf/version))

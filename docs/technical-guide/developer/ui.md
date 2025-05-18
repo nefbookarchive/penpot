@@ -489,7 +489,7 @@ Creating an array of static elements and iterating over it to generate DOM may b
 
 ## Penpot Design System
 
-Penpot has started to use a **design system**, which is located at <code class="language-bash">frontend/src/app/main/ui/ds</code>. The components of the design system is published in a Storybook at [hourly.penpot.dev/storybook/](https://hourly.penpot.dev/storybook/) with the contents of the <code class="language-bash">develop</code> branch of the repository.
+Penpot has started to use a **design system**, which is located at <code class="language-bash">frontend/src/app/main/ui/ds</code>. The components of the design system is published in a Storybook at [hourly.xenpot.dev/storybook/](https://hourly.xenpot.dev/storybook/) with the contents of the <code class="language-bash">develop</code> branch of the repository.
 
 <mark>When a UI component is **available in the design system**, use it!</mark>. If it's not available but it's part of the Design System (ask the design folks if you are unsure), then do add it to the design system and Storybook.
 
@@ -553,13 +553,13 @@ For instance, this is how we handle the styles of <code class="language-clojure"
 
 ### Using icons and SVG assets
 
-Please refer to the Storybook [documentation for icons](https://hourly.penpot.dev/storybook/?path=/docs/foundations-assets-icon--docs) and other [SVG assets](https://hourly.penpot.dev/storybook/?path=/docs/foundations-assets-rawsvg--docs) (logos, illustrations, etc.).
+Please refer to the Storybook [documentation for icons](https://hourly.xenpot.dev/storybook/?path=/docs/foundations-assets-icon--docs) and other [SVG assets](https://hourly.xenpot.dev/storybook/?path=/docs/foundations-assets-rawsvg--docs) (logos, illustrations, etc.).
 
 ### Storybook
 
 We use [Storybook](https://storybook.js.org/) to implement and showcase the components of the Design System.
 
-The Storybook is available at the <code class="language-bash">/storybook</code> path in the URL for each environment. For instance, the one built out of our <code class="language-bash">develop</code> branch is available at [hourly.penpot.dev/storybook](https://hourly.penpot.dev/storybook).
+The Storybook is available at the <code class="language-bash">/storybook</code> path in the URL for each environment. For instance, the one built out of our <code class="language-bash">develop</code> branch is available at [hourly.xenpot.dev/storybook](https://hourly.xenpot.dev/storybook).
 
 #### Local development
 
@@ -667,7 +667,7 @@ You can use Storybook's <code class="language-bash">\<Canvas></code> element to 
 
 When including codeblocks, please add code in Clojure syntax (not JSX).
 
-You can find an example MDX file in the [Buttons docs](https://hourly.penpot.dev/storybook/?path=/docs/buttons-docs--docs).
+You can find an example MDX file in the [Buttons docs](https://hourly.xenpot.dev/storybook/?path=/docs/buttons-docs--docs).
 
 ### Replacing a deprecated component
 

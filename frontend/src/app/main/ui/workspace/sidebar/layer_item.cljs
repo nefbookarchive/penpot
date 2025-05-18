@@ -323,7 +323,7 @@
 
         [dprops dref]
         (hooks/use-sortable
-         :data-type "penpot/layer"
+         :data-type "xenpot/layer"
          :on-drop on-drop
          :on-drag on-drag
          :on-hold on-hold

@@ -36,26 +36,26 @@ In frontend, the main <code class="language-text">resources/public/index.html</c
 exists) a file named <code class="language-text">js/config.js</code>, where you can set configuration values
 as javascript global variables. The file is not created by default, so if
 you need it you must create it blank, and set the variables you want, in
-the form <code class="language-bash">penpot\<VariableNameInCamelCase></code>:
+the form <code class="language-bash">xenpot\<VariableNameInCamelCase></code>:
 
 ```js
 (js/config.js)
-var penpotPublicURI = "https://penpot.example.com";
+var xenpotPublicURI = "https://xenpot.example.com";
 
 (config)
-public-uri "https://penpot.example.com"
+public-uri "https://xenpot.example.com"
 ```
 
 ### On premise instances
 
 If you use the official Penpot docker images, as explained in the [Getting
-Started](/technical-guide/getting-started/#start-penpot) section, there is a
-[config.env](https://github.com/penpot/penpot/blob/develop/docker/images/config.env)
+Started](/technical-guide/getting-started/#start-xenpot) section, there is a
+[config.env](https://github.com/xenpot/xenpot/blob/develop/docker/images/config.env)
 file that sets the configuration environment variables. It's the same file for
 backend, exporter and frontend.
 
 For this last one, there is a script
-[nginx-entrypoint.sh](https://github.com/penpot/penpot/blob/develop/docker/images/files/nginx-entrypoint.sh)
+[nginx-entrypoint.sh](https://github.com/xenpot/xenpot/blob/develop/docker/images/files/nginx-entrypoint.sh)
 that reads the environment and generates the <code class="language-text">js/config.js</code> when the container
 is started. This way all configuration is made in the single <code class="language-text">config.env</code> file.
 
@@ -63,12 +63,12 @@ is started. This way all configuration is made in the single <code class="langua
 ### Dev environment
 
 If you use the [developer docker images](/technical-guide/developer/devenv/),
-the [docker-compose.yaml](https://github.com/penpot/penpot/blob/develop/docker/devenv/docker-compose.yaml)
+the [docker-compose.yaml](https://github.com/xenpot/xenpot/blob/develop/docker/devenv/docker-compose.yaml)
 directly sets the environment variables more appropriate for backend and
 exporter development.
 
-Additionally, the backend [start script](https://github.com/penpot/penpot/blob/develop/backend/scripts/start-dev)
-and [repl script](https://github.com/penpot/penpot/blob/develop/backend/scripts/repl) set
+Additionally, the backend [start script](https://github.com/xenpot/xenpot/blob/develop/backend/scripts/start-dev)
+and [repl script](https://github.com/xenpot/xenpot/blob/develop/backend/scripts/repl) set
 some more variables.
 
 The frontend uses only the defaults.
@@ -83,7 +83,7 @@ ignored in git) and define your settings there. Then, just reload the page.
 
 ## System logging
 
-In [app.common.logging](https://github.com/penpot/penpot/blob/develop/common/src/app/common/logging.cljc)
+In [app.common.logging](https://github.com/xenpot/xenpot/blob/develop/common/src/app/common/logging.cljc)
 we have a general system logging utility, that may be used throughout all our
 code to generate execution traces, mainly for debugging.
 
@@ -131,12 +131,12 @@ The logging utility uses a different library for Clojure and Clojurescript. In
 the first case we use [log4j2](https://logging.apache.org/log4j/2.x) to have
 much flexibility.
 
-The configuration is made in [log4j2.xml](https://github.com/penpot/penpot/blob/develop/backend/resources/log4j2.xml)
+The configuration is made in [log4j2.xml](https://github.com/xenpot/xenpot/blob/develop/backend/resources/log4j2.xml)
 file. The Logger used for this is named "app" (there are other loggers for
 other subsystems). The default configuration just outputs all traces of level
 <code class="language-clojure">debug</code> or higher to the console standard output.
 
-There is a different [log4j2-devenv](https://github.com/penpot/penpot/blob/develop/backend/resources/log4j2-devenv.xml)
+There is a different [log4j2-devenv](https://github.com/xenpot/xenpot/blob/develop/backend/resources/log4j2-devenv.xml)
 for the development environment. This one outputs traces of level <code class="language-text">trace</code> or
 higher to a file, and <code class="language-text">debug</code> or higher to a <code class="language-text">zmq</code> queue, that may be
 subscribed for other parts of the application for further processing.
@@ -292,7 +292,7 @@ of brackets <code class="language-bash">[ ]</code> for each suite, a pair of par
 and a dot <code class="language-bash">.</code> for each assertion <code class="language-bash">t/is</code> inside tests.
 
 ```bash
-penpot@c261c95d4623:~/penpot/common$ clojure -M:dev:test
+xenpot@c261c95d4623:~/xenpot/common$ clojure -M:dev:test
 [(...)(............................................................
 .............................)(....................................
 ..)(..........)(.................................)(.)(.............
@@ -350,7 +350,7 @@ and runs all tests or a selection. It is defined in <code class="language-bash">
 First start a REPL:
 
 ```bash
-~/penpot/backend$ scripts/repl
+~/xenpot/backend$ scripts/repl
 ```
 
 And then:

@@ -1,9 +1,9 @@
-import * as penpot from "../../../target/library/penpot.js";
+import * as xenpot from "../../../target/library/xenpot.js";
 
-console.log(penpot);
+console.log(xenpot);
 
 try {
-  const file = penpot.createFile({name: "Test"});
+  const file = xenpot.createFile({name: "Test"});
   file.addPage({name: "Foo Page"})
   const boardId = file.addArtboard({name: "Foo Board"})
   const rectId  = file.addRect({name: "Foo Rect", width:100, height: 200})

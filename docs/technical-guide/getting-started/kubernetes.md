@@ -51,7 +51,7 @@ system.
 To add the Penpot Helm repository, run the following command:
 
 ```bash
-helm repo add penpot http://helm.penpot.app
+helm repo add xenpot http://helm.xenpot.app
 ```
 
 This will add the Penpot repository to your Helm configuration, so you can install all
@@ -63,7 +63,7 @@ the Penpot charts stored there.
 To install the chart with the release name `my-release`:
 
 ```bash
-helm install my-release penpot/penpot
+helm install my-release xenpot/xenpot
 ```
 
 You can customize the installation by specifying each parameter using the `--set key=value[,key=value]`
@@ -74,28 +74,28 @@ helm install my-release \
   --set global.postgresqlEnabled=true \
   --set global.redisEnabled=true \
   --set persistence.assets.enabled=true \
-  penpot/penpot
+  xenpot/xenpot
 ```
 
 Alternatively, a YAML file that specifies the values for the above parameters can be
 provided while installing the chart. For example,
 
 ```bash
-helm install my-release -f values.yaml penpot/penpot
+helm install my-release -f values.yaml xenpot/xenpot
 ```
 
 
 ## Configure Penpot with Helm Chart
 
-In the previous section we have shown how to configure penpot during installation by
+In the previous section we have shown how to configure xenpot during installation by
 using parameters or by using a yaml file.
 
 The default values are defined in the
-<a href="https://github.com/penpot/penpot-helm/blob/main/charts/penpot/values.yaml" target="_blank">`values.yml`</a>
+<a href="https://github.com/xenpot/xenpot-helm/blob/main/charts/xenpot/values.yaml" target="_blank">`values.yml`</a>
 file itself, which you can use as a basis for creating your own settings.
 
 You can also consult the list of parameters on the
-<a href="https://artifacthub.io/packages/helm/penpot/penpot#parameters" target="_blank">ArtifactHub page of the project</a>.
+<a href="https://artifacthub.io/packages/helm/xenpot/xenpot#parameters" target="_blank">ArtifactHub page of the project</a>.
 
 
 ## Upgrade Penpot
@@ -104,7 +104,7 @@ When a new version of Penpot's chart is released, or when you want to change the
 configuration of your release, you can use the helm upgrade command.
 
 ```bash
-helm upgrade my-release -f values.yaml penpot/penpot
+helm upgrade my-release -f values.yaml xenpot/xenpot
 ```
 
 An upgrade takes an existing release and upgrades it according to the information you

@@ -3,7 +3,7 @@ msgstr ""
 "PO-Revision-Date: 2025-03-20 13:42+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Chinese (Traditional Han script) "
-"<https://hosted.weblate.org/projects/penpot/frontend/zh_Hant/>\n"
+"<https://hosted.weblate.org/projects/xenpot/frontend/zh_Hant/>\n"
 "Language: zh_Hant\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -408,7 +408,7 @@ msgstr "刪除團隊"
 
 #: src/app/main/ui/dashboard/file_menu.cljs:308, src/app/main/ui/dashboard/file_menu.cljs:313, src/app/main/ui/workspace/main_menu.cljs:650, src/app/main/ui/workspace/main_menu.cljs:659
 msgid "dashboard.download-binary-file"
-msgstr "下載 Penpot 檔案 (.penpot)"
+msgstr "下載 Penpot 檔案 (.xenpot)"
 
 #: src/app/main/ui/dashboard/file_menu.cljs:318, src/app/main/ui/workspace/main_menu.cljs:668
 msgid "dashboard.download-standard-file"
@@ -442,14 +442,14 @@ msgstr "尚無文件。"
 #, markdown
 msgid "dashboard.empty-placeholder-libraries"
 msgstr ""
-"新增到專案的圖庫將顯示在這裡。請分享您的檔案或從我們的[圖庫和範本](https://penpot.app/libraries-templates)"
+"新增到專案的圖庫將顯示在這裡。請分享您的檔案或從我們的[圖庫和範本](https://xenpot.app/libraries-templates)"
 "中新增。"
 
 #: src/app/main/ui/dashboard/placeholder.cljs
 #, markdown, unused
 msgid "dashboard.empty-placeholder-libraries-subtitle"
 msgstr ""
-"新增到專案的圖庫將顯示在這裡。請分享您的檔案或從我們的[圖庫和範本](https://penpot.app/libraries-templates)"
+"新增到專案的圖庫將顯示在這裡。請分享您的檔案或從我們的[圖庫和範本](https://xenpot.app/libraries-templates)"
 "中新增。"
 
 #: src/app/main/ui/dashboard/placeholder.cljs:73
@@ -462,7 +462,7 @@ msgstr "還沒有圖庫。"
 
 #: src/app/main/ui/dashboard/file_menu.cljs:249, src/app/main/ui/dashboard/file_menu.cljs:254
 msgid "dashboard.export-binary-multi"
-msgstr "下載 %s 個Penpot 檔案 （.penpot）"
+msgstr "下載 %s 個Penpot 檔案 （.xenpot）"
 
 #: src/app/main/ui/workspace/main_menu.cljs:676
 msgid "dashboard.export-frames"
@@ -578,7 +578,7 @@ msgstr ""
 msgid "dashboard.fonts.hero-text2"
 msgstr ""
 "你只能上傳你擁有的或獲許可在Penpot "
-"中使用的字型。如需瞭解更多，請參閱[Penpot的服務條款]（https://penpot.app/terms."
+"中使用的字型。如需瞭解更多，請參閱[Penpot的服務條款]（https://xenpot.app/terms."
 "html）的內容權利部分。您可能還想閱讀有關 [字體許可]（https://www.typography.com/faq） 的資訊。"
 
 #: src/app/main/ui/dashboard/fonts.cljs:208
@@ -969,7 +969,7 @@ msgid "dashboard.upgrade-plan.no-limits"
 msgstr "無建立限制"
 
 #: src/app/main/ui/dashboard/sidebar.cljs:969
-msgid "dashboard.upgrade-plan.penpot-free"
+msgid "dashboard.upgrade-plan.xenpot-free"
 msgstr "Penpot 免費"
 
 #: src/app/main/ui/dashboard/sidebar.cljs:972
@@ -1029,7 +1029,7 @@ msgid "dashboard.your-name"
 msgstr "你的名字"
 
 #: src/app/main/ui/dashboard/file_menu.cljs:39, src/app/main/ui/dashboard/fonts.cljs:36, src/app/main/ui/dashboard/libraries.cljs:55, src/app/main/ui/dashboard/projects.cljs:348, src/app/main/ui/dashboard/search.cljs:48, src/app/main/ui/dashboard/sidebar.cljs:319, src/app/main/ui/dashboard/team.cljs:531, src/app/main/ui/dashboard/team.cljs:781, src/app/main/ui/dashboard/team.cljs:1045, src/app/main/ui/dashboard/team.cljs:1092
-msgid "dashboard.your-penpot"
+msgid "dashboard.your-xenpot"
 msgstr "你的 Penpot"
 
 #: src/app/main/ui/alert.cljs:32
@@ -1690,7 +1690,7 @@ msgid "labels.continue-with"
 msgstr "繼續"
 
 #: src/app/main/ui/viewer/login.cljs:69
-msgid "labels.continue-with-penpot"
+msgid "labels.continue-with-xenpot"
 msgstr "以Penpot帳戶繼續"
 
 #: src/app/main/ui/dashboard/team.cljs:683
@@ -2773,7 +2773,7 @@ msgid "not-found.no-permission.if-approves"
 msgstr "如果團隊老大允許，你會被邀請加入團隊。"
 
 #: src/app/main/ui/static.cljs:249, src/app/main/ui/static.cljs:261
-msgid "not-found.no-permission.penpot-file"
+msgid "not-found.no-permission.xenpot-file"
 msgstr "Penpot 文件"
 
 #: src/app/main/ui/static.cljs:286, src/app/main/ui/static.cljs:318
@@ -6673,7 +6673,7 @@ msgstr "開啟版本選單"
 #: src/app/main/ui/workspace/sidebar/versions.cljs:365
 #, markdown
 msgid "workspace.versions.warning.subtext"
-msgstr "如果您希望提高此限制量，請來信至 [support@penpot.app](%s)"
+msgstr "如果您希望提高此限制量，請來信至 [support@xenpot.app](%s)"
 
 #: src/app/main/ui/workspace/sidebar/versions.cljs:361
 msgid "workspace.versions.warning.text"

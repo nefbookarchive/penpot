@@ -1,5 +1,5 @@
 {
-  "name": "penpot-docs",
+  "name": "xenpot-docs",
   "version": "0.1.0",
   "description": "Documentation about Penpot project.",
   "scripts": {
@@ -11,18 +11,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/penpot/penpot.git"
+    "url": "git://github.com/xenpot/xenpot.git"
   },
   "author": {
     "name": "Penpot",
-    "email": "hello@penpot.app",
-    "url": "https://penpot.app/"
+    "email": "hello@xenpot.app",
+    "url": "https://xenpot.app/"
   },
   "license": "SEE LICENSE IN <../LICENSE>",
   "bugs": {
-    "url": "https://github.com/penpot/penpot/issues"
+    "url": "https://github.com/xenpot/xenpot/issues"
   },
-  "homepage": "https://docs.penpot.app",
+  "homepage": "https://docs.xenpot.app",
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-navigation": "^0.3.5",

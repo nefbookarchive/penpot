@@ -330,7 +330,7 @@
         show-team-hero*     (mf/use-state #(get storage/global ::show-team-hero true))
         show-team-hero?     (deref show-team-hero*)
 
-        is-my-penpot        (= (:default-team-id profile) team-id)
+        is-my-xenpot        (= (:default-team-id profile) team-id)
         is-defalt-team?     (:is-default team)
 
         on-close
@@ -345,7 +345,7 @@
 
     (mf/with-effect [team]
       (let [tname (if (:is-default team)
-                    (tr "dashboard.your-penpot")
+                    (tr "dashboard.your-xenpot")
                     (:name team))]
         (dom/set-html-title (tr "title.dashboard.projects" tname))))
 
@@ -366,7 +366,7 @@
          [:div {:class (stl/css-case :dashboard-container true
                                      :no-bg true
                                      :dashboard-projects true
-                                     :with-team-hero (and (not is-my-penpot)
+                                     :with-team-hero (and (not is-my-xenpot)
                                                           (not is-defalt-team?)
                                                           show-team-hero?
                                                           can-invite))}

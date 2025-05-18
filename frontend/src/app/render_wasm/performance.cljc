@@ -11,7 +11,7 @@
 
 (defn enabled?
   []
-  #?(:clj (= (System/getProperty "penpot.wasm.profile-marks") "true")
+  #?(:clj (= (System/getProperty "xenpot.wasm.profile-marks") "true")
      :cljs false))
 
 (defmacro begin-measure

@@ -134,7 +134,7 @@
         (mf/use-fn
          (mf/deps selected-project)
          (fn [e]
-           (when (dnd/has-type? e "penpot/files")
+           (when (dnd/has-type? e "xenpot/files")
              (dom/prevent-default e)
              (when-not (dnd/from-child? e)
                (when (not= selected-project (:id item))
@@ -143,7 +143,7 @@
         on-drag-over
         (mf/use-fn
          (fn [e]
-           (when (dnd/has-type? e "penpot/files")
+           (when (dnd/has-type? e "xenpot/files")
              (dom/prevent-default e))))
 
         on-drag-leave
@@ -314,9 +314,9 @@
                               :on-key-down handle-select-default
                               :id          "teams-selector-default-team"
                               :class       (stl/css :team-dropdown-item)}
-      [:span {:class (stl/css :penpot-icon)} i/logo-icon]
+      [:span {:class (stl/css :xenpot-icon)} i/logo-icon]
 
-      [:span {:class (stl/css :team-text)} (tr "dashboard.your-penpot")]
+      [:span {:class (stl/css :team-text)} (tr "dashboard.your-xenpot")]
       (when (= (:default-team-id profile) (:id team))
         tick-icon)]
 
@@ -655,7 +655,7 @@
 
        (if (:is-default team)
          [:div {:class (stl/css :team-name)}
-          [:span {:class (stl/css :penpot-icon)} i/logo-icon]
+          [:span {:class (stl/css :xenpot-icon)} i/logo-icon]
           [:span {:class (stl/css :team-text)} (tr "dashboard.default-team-name")]]
 
          [:div {:class (stl/css :team-name)}
@@ -960,7 +960,7 @@
         (mf/use-fn
          (fn []
            (st/emit! (ptk/event ::ev/event {::ev/name "explore-pricing-click" ::ev/origin "dashboard" :section "sidebar"}))
-           (dom/open-new-window "https://penpot.app/pricing")))]
+           (dom/open-new-window "https://xenpot.app/pricing")))]
 
     [:*
      (when (contains? cf/flags :subscriptions)
@@ -970,8 +970,8 @@
      (when (contains? cf/flags :subscriptions-old)
        [:button {:class (stl/css :upgrade-plan-section)
                  :on-click on-power-up-click}
-        [:div {:class (stl/css :penpot-free)}
-         [:span (tr "dashboard.upgrade-plan.penpot-free")]
+        [:div {:class (stl/css :xenpot-free)}
+         [:span (tr "dashboard.upgrade-plan.xenpot-free")]
          [:span {:class (stl/css :no-limits)} (tr "dashboard.upgrade-plan.no-limits")]]
         [:div {:class (stl/css :power-up)}
          (tr "dashboard.upgrade-plan.power-up")]])
@@ -1009,7 +1009,7 @@
 
        [:li {:class (stl/css :profile-dropdown-item)
              :tab-index (if show "0" "-1")
-             :data-url "https://help.penpot.app"
+             :data-url "https://help.xenpot.app"
              :on-click handle-click-url
              :on-key-down handle-keydown-url
              :data-testid "help-center-profile-opt"}
@@ -1017,7 +1017,7 @@
 
        [:li {:tab-index (if show "0" "-1")
              :class (stl/css :profile-dropdown-item)
-             :data-url "https://community.penpot.app"
+             :data-url "https://community.xenpot.app"
              :on-click handle-click-url
              :on-key-down handle-keydown-url}
         (tr "labels.community")]
@@ -1039,7 +1039,7 @@
 
        [:li {:class     (stl/css :profile-dropdown-item)
              :tab-index (if show "0" "-1")
-             :data-url "https://penpot.app/libraries-templates"
+             :data-url "https://xenpot.app/libraries-templates"
              :on-click handle-click-url
              :on-key-down handle-keydown-url
              :data-testid "libraries-templates-profile-opt"}
@@ -1047,14 +1047,14 @@
 
        [:li {:tab-index (if show "0" "-1")
              :class (stl/css :profile-dropdown-item)
-             :data-url "https://github.com/penpot/penpot"
+             :data-url "https://github.com/xenpot/xenpot"
              :on-click handle-click-url
              :on-key-down handle-keydown-url}
         (tr "labels.github-repo")]
 
        [:li {:tab-index (if show "0" "-1")
              :class (stl/css :profile-dropdown-item)
-             :data-url "https://penpot.app/terms"
+             :data-url "https://xenpot.app/terms"
              :on-click handle-click-url
              :on-key-down handle-keydown-url}
         (tr "auth.terms-of-service")]

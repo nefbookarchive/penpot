@@ -90,7 +90,7 @@
 }
 
 // This icon still use the old svg
-.penpot-icon {
+.xenpot-icon {
   @include flexCenter;
 
   svg {
@@ -418,7 +418,7 @@
   cursor: pointer;
 }
 
-.penpot-free {
+.xenpot-free {
   @include t.use-typography("body-medium");
   display: flex;
   flex-direction: column;

@@ -21,7 +21,7 @@
    :host "localhost"
    :http-server-port 6061
    :http-server-host "0.0.0.0"
-   :tempdir "/tmp/penpot-exporter"
+   :tempdir "/tmp/xenpot-exporter"
    :redis-uri "redis://redis/0"})
 
 (def ^:private
@@ -66,7 +66,7 @@
 
 (defn- prepare-config
   []
-  (let [env  (read-env "penpot")
+  (let [env  (read-env "xenpot")
         env  (d/without-nils env)
         data (merge defaults env)
         data (decode-config data)]

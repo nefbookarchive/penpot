@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-export ORGANIZATION="penpotapp";
+export ORGANIZATION="xenpotapp";
 export DEVENV_IMGNAME="$ORGANIZATION/devenv";
-export DEVENV_PNAME="penpotdev";
+export DEVENV_PNAME="xenpotdev";
 
 export CURRENT_USER_ID=$(id -u);
 export CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD);
@@ -23,13 +23,13 @@ function build-devenv {
     pushd docker/devenv;
 
     docker run --privileged --rm tonistiigi/binfmt --install all
-    docker buildx inspect penpot > /dev/null 2>&1;
+    docker buildx inspect xenpot > /dev/null 2>&1;
 
     if [ $? -eq 1 ]; then
-        docker buildx create --name=penpot --use
+        docker buildx create --name=xenpot --use
         docker buildx inspect --bootstrap > /dev/null 2>&1;
     else
-        docker buildx use penpot;
+        docker buildx use xenpot;
         docker buildx inspect --bootstrap  > /dev/null 2>&1;
     fi
 
@@ -87,21 +87,21 @@ function log-devenv {
 }
 
 function run-devenv-tmux {
-    if [[ ! $(docker ps -f "name=penpot-devenv-main" -q) ]]; then
+    if [[ ! $(docker ps -f "name=xenpot-devenv-main" -q) ]]; then
         start-devenv
     fi
 
-    docker exec -ti penpot-devenv-main sudo -EH -u penpot PENPOT_PLUGIN_DEV=$PENPOT_PLUGIN_DEV /home/start-tmux.sh
+    docker exec -ti xenpot-devenv-main sudo -EH -u xenpot PENPOT_PLUGIN_DEV=$PENPOT_PLUGIN_DEV /home/start-tmux.sh
 }
 
 function run-devenv-shell {
-    if [[ ! $(docker ps -f "name=penpot-devenv-main" -q) ]]; then
+    if [[ ! $(docker ps -f "name=xenpot-devenv-main" -q) ]]; then
         start-devenv
     fi
     docker exec -ti \
            -e JAVA_OPTS="$JAVA_OPTS" \
            -e EXTERNAL_UID=$CURRENT_USER_ID \
-           penpot-devenv-main sudo -EH -u penpot bash;
+           xenpot-devenv-main sudo -EH -u xenpot bash;
 }
 
 function build {
@@ -111,14 +111,14 @@ function build {
     pull-devenv-if-not-exists;
     docker volume create ${DEVENV_PNAME}_user_data;
     docker run -t --rm \
-           --mount source=${DEVENV_PNAME}_user_data,type=volume,target=/home/penpot/ \
-           --mount source=`pwd`,type=bind,target=/home/penpot/penpot \
+           --mount source=${DEVENV_PNAME}_user_data,type=volume,target=/home/xenpot/ \
+           --mount source=`pwd`,type=bind,target=/home/xenpot/xenpot \
            -e EXTERNAL_UID=$CURRENT_USER_ID \
            -e BUILD_STORYBOOK=$BUILD_STORYBOOK \
            -e SHADOWCLJS_EXTRA_PARAMS=$SHADOWCLJS_EXTRA_PARAMS \
            -e JAVA_OPTS="$JAVA_OPTS" \
-           -w /home/penpot/penpot/$1 \
-           $DEVENV_IMGNAME:latest sudo -EH -u penpot ./scripts/build $version
+           -w /home/xenpot/xenpot/$1 \
+           $DEVENV_IMGNAME:latest sudo -EH -u xenpot ./scripts/build $version
 
     echo ">> build end: $1"
 }
@@ -201,21 +201,21 @@ function build-docs-bundle {
 function build-frontend-docker-images {
     rsync -avr --delete ./bundles/frontend/ ./docker/images/bundle-frontend/;
     pushd ./docker/images;
-    docker build -t penpotapp/frontend:$CURRENT_BRANCH -t penpotapp/frontend:latest -f Dockerfile.frontend .;
+    docker build -t xenpotapp/frontend:$CURRENT_BRANCH -t xenpotapp/frontend:latest -f Dockerfile.frontend .;
     popd;
 }
 
 function build-backend-docker-images {
     rsync -avr --delete ./bundles/backend/ ./docker/images/bundle-backend/;
     pushd ./docker/images;
-    docker build -t penpotapp/backend:$CURRENT_BRANCH -t penpotapp/backend:latest -f Dockerfile.backend .;
+    docker build -t xenpotapp/backend:$CURRENT_BRANCH -t xenpotapp/backend:latest -f Dockerfile.backend .;
     popd;
 }
 
 function build-exporter-docker-images {
     rsync -avr --delete ./bundles/exporter/ ./docker/images/bundle-exporter/;
     pushd ./docker/images;
-    docker build -t penpotapp/exporter:$CURRENT_BRANCH -t penpotapp/exporter:latest -f Dockerfile.exporter .;
+    docker build -t xenpotapp/exporter:$CURRENT_BRANCH -t xenpotapp/exporter:latest -f Dockerfile.exporter .;
     popd;
 }
 
@@ -245,7 +245,7 @@ function usage {
     echo "- build-backend-docker-images      Build backend docker images."
     echo "- build-exporter-docker-images     Build exporter docker images."
     echo ""
-    echo "- version                          Show penpot's version."
+    echo "- version                          Show xenpot's version."
 }
 
 case $1 in

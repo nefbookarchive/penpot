@@ -9,16 +9,16 @@ This guide explains how to get your own Penpot instance, running on a machine yo
 to test it, use it by you or your team, or even customize and extend it any way you like.
 
 If you need more context you can look at the <a
-href="https://community.penpot.app/t/self-hosting-penpot-i/2336" target="_blank">post
+href="https://community.xenpot.app/t/self-hosting-xenpot-i/2336" target="_blank">post
 about self-hosting</a> in Penpot community.
 
 **There is absolutely no difference between <a
-href="https://design.penpot.app">our SaaS offer</a> for Penpot and your
+href="https://design.xenpot.app">our SaaS offer</a> for Penpot and your
 self-hosted Penpot platform!**
 
 There are three main options for creating a Penpot instance:
 
-1. Using the platform of our partner <a href="https://elest.io/open-source/penpot" target="_blank">Elestio</a>.
+1. Using the platform of our partner <a href="https://elest.io/open-source/xenpot" target="_blank">Elestio</a>.
 2. Using <a href="https://docker.com" target="_blank">Docker</a> tool.
 3. Using <a href="https://kubernetes.io/" target="_blank">Kubernetes</a>.
 

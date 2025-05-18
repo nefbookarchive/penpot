@@ -252,7 +252,7 @@
     (watch [_ _ _]
       (rx/of (rt/nav :settings-feedback {}
                      ::rt/new-window true
-                     ::rt/window-name "penpot-feedback")))))
+                     ::rt/window-name "xenpot-feedback")))))
 
 (defn go-to-dashboard-files
   [& {:keys [project-id team-id] :as options}]

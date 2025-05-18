@@ -3,7 +3,7 @@ msgstr ""
 "PO-Revision-Date: 2024-08-05 19:09+0000\n"
 "Last-Translator: sangpil hwang <h.sangpil@gmail.com>\n"
 "Language-Team: Korean "
-"<https://hosted.weblate.org/projects/penpot/frontend/ko/>\n"
+"<https://hosted.weblate.org/projects/xenpot/frontend/ko/>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -389,7 +389,7 @@ msgstr "팀을 해체해요"
 
 #: src/app/main/ui/dashboard/file_menu.cljs:308, src/app/main/ui/dashboard/file_menu.cljs:313, src/app/main/ui/workspace/main_menu.cljs:650, src/app/main/ui/workspace/main_menu.cljs:659
 msgid "dashboard.download-binary-file"
-msgstr "펜팟 파일(.penpot)을 다운로드해요"
+msgstr "펜팟 파일(.xenpot)을 다운로드해요"
 
 #: src/app/main/ui/dashboard/file_menu.cljs:318, src/app/main/ui/workspace/main_menu.cljs:668
 msgid "dashboard.download-standard-file"
@@ -405,7 +405,7 @@ msgstr "%파일을 복제해요"
 
 #: src/app/main/ui/dashboard/file_menu.cljs:249, src/app/main/ui/dashboard/file_menu.cljs:254
 msgid "dashboard.export-binary-multi"
-msgstr "%s 펜팟 파일 (.penpot) 다운로드 하기"
+msgstr "%s 펜팟 파일 (.xenpot) 다운로드 하기"
 
 #: src/app/main/ui/workspace/main_menu.cljs:676
 msgid "dashboard.export-frames"

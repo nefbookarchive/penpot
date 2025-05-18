@@ -14,8 +14,8 @@
 ;; Keep the list of icons sorted
 (def ^:icon icon-verify (icon-xref :icon-verify))
 (def ^:icon loader (icon-xref :loader))
-(def ^:icon logo (icon-xref :penpot-logo))
-(def ^:icon logo-icon (icon-xref :penpot-logo-icon))
+(def ^:icon logo (icon-xref :xenpot-logo))
+(def ^:icon logo-icon (icon-xref :xenpot-logo-icon))
 (def ^:icon logo-error-screen (icon-xref :logo-error-screen))
 (def ^:icon login-illustration (icon-xref :login-illustration))
 

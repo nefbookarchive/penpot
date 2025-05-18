@@ -217,14 +217,14 @@
                  (some? project-id)
                  (some? team-id))
         (if can-edit?
-          (let [valid-url?    (str/ends-with? template ".penpot")
+          (let [valid-url?    (str/ends-with? template ".xenpot")
 
-                ;; Backwards compatibility, ideally the template should be only the .penpot file name, not the full url
+                ;; Backwards compatibility, ideally the template should be only the .xenpot file name, not the full url
                 template-name (if (str/starts-with? template "http")
                                 (subs template (count cf/templates-uri))
                                 template)
 
-                template-url  (str "/github/penpot-files/" template-name)
+                template-url  (str "/github/xenpot-files/" template-name)
                 on-import     #(st/emit! (dpj/fetch-files project-id)
                                          (dd/fetch-recent-files team-id)
                                          (dd/fetch-projects team-id)

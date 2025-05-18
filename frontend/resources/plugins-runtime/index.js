@@ -8196,7 +8196,7 @@ function ru(t) {
       throw new Error(`Permission ${n} is not granted`);
   };
   return {
-    penpot: {
+    xenpot: {
       ui: {
         open: (n, o, s) => {
           t.openModal(n, o, s);
@@ -8395,7 +8395,7 @@ function nu(t) {
         return k.safeReturn(h);
       } : k.safeReturn(d);
     }
-  }, n = new Proxy(e.penpot, r), o = (c, l) => {
+  }, n = new Proxy(e.xenpot, r), o = (c, l) => {
     const u = {
       ...l,
       credentials: "omit",
@@ -8416,7 +8416,7 @@ function nu(t) {
       return k.safeReturn(f);
     });
   }, s = {
-    penpot: n,
+    xenpot: n,
     fetch: k.harden(o),
     setTimeout: k.harden(
       (...[c, l]) => {

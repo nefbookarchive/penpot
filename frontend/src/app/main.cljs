@@ -73,7 +73,7 @@
             (rx/filter dp/profile-deleted?)
             (rx/map da/logged-out))
 
-       ;; Once profile is fetched, initialize all penpot application
+       ;; Once profile is fetched, initialize all xenpot application
        ;; routes
        (->> stream
             (rx/filter dp/profile-fetched?)

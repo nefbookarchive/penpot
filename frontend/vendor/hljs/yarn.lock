@@ -5,9 +5,9 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
-"@penpot/hljs@workspace:.":
+"@xenpot/hljs@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@penpot/hljs@workspace:."
+  resolution: "@xenpot/hljs@workspace:."
   dependencies:
     highlight.js: "npm:^11.10.0"
   languageName: unknown

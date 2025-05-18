@@ -3,7 +3,7 @@ msgstr ""
 "PO-Revision-Date: 2024-06-17 08:07+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Basque "
-"<https://hosted.weblate.org/projects/penpot/frontend/eu/>\n"
+"<https://hosted.weblate.org/projects/xenpot/frontend/eu/>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -295,7 +295,7 @@ msgstr "Ezabatu taldea"
 
 #: src/app/main/ui/dashboard/file_menu.cljs:308, src/app/main/ui/dashboard/file_menu.cljs:313, src/app/main/ui/workspace/main_menu.cljs:650, src/app/main/ui/workspace/main_menu.cljs:659
 msgid "dashboard.download-binary-file"
-msgstr "Deskargatu Penpot fitxategia (.penpot)"
+msgstr "Deskargatu Penpot fitxategia (.xenpot)"
 
 #: src/app/main/ui/dashboard/file_menu.cljs:318, src/app/main/ui/workspace/main_menu.cljs:668
 msgid "dashboard.download-standard-file"
@@ -311,7 +311,7 @@ msgstr "%s fitxategi bizkoiztu"
 
 #: src/app/main/ui/dashboard/file_menu.cljs:249, src/app/main/ui/dashboard/file_menu.cljs:254
 msgid "dashboard.export-binary-multi"
-msgstr "Deskargatu %s Penpot fitxategi (.penpot)"
+msgstr "Deskargatu %s Penpot fitxategi (.xenpot)"
 
 #: src/app/main/ui/workspace/main_menu.cljs:676
 msgid "dashboard.export-frames"
@@ -745,7 +745,7 @@ msgid "dashboard.your-name"
 msgstr "Izena"
 
 #: src/app/main/ui/dashboard/file_menu.cljs:39, src/app/main/ui/dashboard/fonts.cljs:36, src/app/main/ui/dashboard/libraries.cljs:55, src/app/main/ui/dashboard/projects.cljs:348, src/app/main/ui/dashboard/search.cljs:48, src/app/main/ui/dashboard/sidebar.cljs:319, src/app/main/ui/dashboard/team.cljs:531, src/app/main/ui/dashboard/team.cljs:781, src/app/main/ui/dashboard/team.cljs:1045, src/app/main/ui/dashboard/team.cljs:1092
-msgid "dashboard.your-penpot"
+msgid "dashboard.your-xenpot"
 msgstr "Zure Penpot"
 
 #: src/app/main/ui/alert.cljs:32
@@ -818,7 +818,7 @@ msgstr ""
 msgid "errors.feature-mismatch"
 msgstr ""
 "Badirudi '%s' ezaugarria aktibo duen fitxategi bat irekitzen ari zarela "
-"baina zure penpot frontendak ezin du hori egin edo ezaugarri hori "
+"baina zure xenpot frontendak ezin du hori egin edo ezaugarri hori "
 "desaktibatuta du."
 
 #: src/app/main/errors.cljs:246, src/app/main/errors.cljs:260
@@ -1333,7 +1333,7 @@ msgid "labels.continue-with"
 msgstr "Honekin jarraitu"
 
 #: src/app/main/ui/viewer/login.cljs:69
-msgid "labels.continue-with-penpot"
+msgid "labels.continue-with-xenpot"
 msgstr "Penpot kontu batekin jarraitu dezakezu"
 
 #: src/app/main/ui/dashboard/team.cljs:683

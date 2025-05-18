@@ -6,12 +6,12 @@
     <link rel="icon" href="images/favicon.png" />
 
     <script>
-      window.penpotVersion = "%version%";
-      window.penpotBuildDate = "%buildDate%";
+      window.xenpotVersion = "%version%";
+      window.xenpotBuildDate = "%buildDate%";
     </script>
 
     {{# manifest}}
-    <script>window.penpotWorkerURI="{{& worker_main}}"</script>
+    <script>window.xenpotWorkerURI="{{& worker_main}}"</script>
     <script src="{{& config}}"></script>
     <script src="{{& polyfills}}"></script>
     {{/manifest}}

@@ -7,7 +7,7 @@
 (ns app.util.text-editor
   "Draft related abstraction functions."
   (:require
-   ["@penpot/draft-js" :as impl]
+   ["@xenpot/draft-js" :as impl]
    [app.common.text :as txt]))
 
 ;; --- CONVERSION

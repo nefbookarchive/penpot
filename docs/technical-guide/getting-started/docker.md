@@ -7,8 +7,8 @@ desc: This Penpot technical guide covers self-hosting, Docker installation, conf
 Installing and maintaining a self-hosted Penpot instance requires some technical knowledge:
 Docker and Docker Compose, basic DNS management, and proxy configuration.
 If you're not comfortable with this stack, we encourage you to try
-more straight-forward installations with <a href="https://help.penpot.app/technical-guide/getting-started/elestio/" target="_blank">Elestio</a>
-or use the SAAS at <a href="https://design.penpot.app" targret="_blank">https://design.penpot.app</a>.
+more straight-forward installations with <a href="https://help.xenpot.app/technical-guide/getting-started/elestio/" target="_blank">Elestio</a>
+or use the SAAS at <a href="https://design.xenpot.app" targret="_blank">https://design.xenpot.app</a>.
 </p>
 
 # Install with Docker
@@ -28,21 +28,21 @@ to install and maintain docker.
 
 As a first step you will need to obtain the <code class="language-bash">docker-compose.yaml</code> file. You can download it
 <a
-href="https://raw.githubusercontent.com/penpot/penpot/main/docker/images/docker-compose.yaml"
+href="https://raw.githubusercontent.com/xenpot/xenpot/main/docker/images/docker-compose.yaml"
 target="_blank">from the Penpot repository</a>.
 
 ```bash
-wget https://raw.githubusercontent.com/penpot/penpot/main/docker/images/docker-compose.yaml
+wget https://raw.githubusercontent.com/xenpot/xenpot/main/docker/images/docker-compose.yaml
 ```
 or
 ```bash
-curl -o docker-compose.yaml https://raw.githubusercontent.com/penpot/penpot/main/docker/images/docker-compose.yaml
+curl -o docker-compose.yaml https://raw.githubusercontent.com/xenpot/xenpot/main/docker/images/docker-compose.yaml
 ```
 
 Then simply launch composer:
 
 ```bash
-docker compose -p penpot -f docker-compose.yaml up -d
+docker compose -p xenpot -f docker-compose.yaml up -d
 ```
 
 At the end it will start listening on http://localhost:9001
@@ -56,7 +56,7 @@ If you want to have more control over the version (which is recommended), you ca
 - or passing the envvar in the command line
 
 ```bash
-PENPOT_VERSION=2.4.3 docker compose -p penpot -f docker-compose.yaml up -d
+PENPOT_VERSION=2.4.3 docker compose -p xenpot -f docker-compose.yaml up -d
 ```
 
 ## Stop Penpot
@@ -64,7 +64,7 @@ PENPOT_VERSION=2.4.3 docker compose -p penpot -f docker-compose.yaml up -d
 If you want to stop running Penpot, just type
 
 ```bash
-docker compose -p penpot -f docker-compose.yaml down
+docker compose -p xenpot -f docker-compose.yaml down
 ```
 
 ## Configure Penpot with Docker
@@ -86,11 +86,11 @@ this flag is set in the backend service.
 For instance, if  the registration is disabled, the only way to create a new user is with this script:
 
 ```bash
-docker exec -ti penpot-penpot-backend-1 python3 manage.py create-profile
+docker exec -ti xenpot-xenpot-backend-1 python3 manage.py create-profile
 ```
 
 **NOTE:** the exact container name depends on your docker version and platform.
-For example it could be <code class="language-bash">penpot-penpot-backend-1</code> or <code class="language-bash">penpot_penpot-backend-1</code>.
+For example it could be <code class="language-bash">xenpot-xenpot-backend-1</code> or <code class="language-bash">xenpot_xenpot-backend-1</code>.
 You can check the correct name executing <code class="language-bash">docker ps</code>.
 
 ## Update Penpot
@@ -113,7 +113,7 @@ This will fetch the latest images. When you do <code class="language-bash">docke
 The migration to version 2.0, due to the incorporation of the new v2 components, includes
 an additional process that runs automatically as soon as the application starts. If your
 on-premises Penpot instance contains a significant amount of data (such as hundreds of
-penpot files, especially those utilizing SVG components and assets extensively), this
+xenpot files, especially those utilizing SVG components and assets extensively), this
 process may take a few minutes.
 
 In some cases, such as when the script encounters an error, it may be convenient to run
@@ -127,7 +127,7 @@ docker exec -ti <container-name-or-id> ./run.sh app.migrations.v2
 ```
 
 **IMPORTANT:** this script should be executed on passing from 1.19.x to 2.0.x. Executing
-it on versions greater or equal to 2.1 of penpot will not work correctly. It is known that
+it on versions greater or equal to 2.1 of xenpot will not work correctly. It is known that
 this script is removed since 2.4.3
 
 
@@ -172,21 +172,21 @@ Below, you can see three examples with three different proxys:
 ```bash
 server {
   listen 80;
-  server_name penpot.mycompany.com;
+  server_name xenpot.mycompany.com;
   return 301 https://$host$request_uri;
 }
 
 server {
   listen 443 ssl;
-  server_name penpot.mycompany.com;
+  server_name xenpot.mycompany.com;
 
   # This value should be in sync with the corresponding in the docker-compose.yml
   # PENPOT_HTTP_SERVER_MAX_BODY_SIZE: 31457280
   client_max_body_size 31457280;
 
   # Logs: Configure your logs following the best practices inside your company
-  access_log /path/to/penpot.access.log;
-  error_log /path/to/penpot.error.log;
+  access_log /path/to/xenpot.access.log;
+  error_log /path/to/xenpot.error.log;
 
   # TLS: Configure your TLS following the best practices inside your company
   ssl_certificate /path/to/fullchain;
@@ -217,11 +217,11 @@ For full documentation, go to the [official website][2]
 ### Example with CADDY SERVER
 
 ```bash
-penpot.mycompany.com {
+xenpot.mycompany.com {
         reverse_proxy :9001
         tls /path/to/fullchain.pem /path/to/privkey.pem
         log {
-            output file /path/to/penpot.log
+            output file /path/to/xenpot.log
         }
 }
 ```
@@ -236,5 +236,5 @@ For full documentation, go to the [official website][5]
 [1]: /technical-guide/configuration/
 [2]: https://nginx.org/en/docs/index.html
 [3]: https://caddyserver.com/docs/
-[4]: https://github.com/penpot/penpot/blob/develop/docker/images/docker-compose.yaml
+[4]: https://github.com/xenpot/xenpot/blob/develop/docker/images/docker-compose.yaml
 [5]: https://doc.traefik.io/traefik/

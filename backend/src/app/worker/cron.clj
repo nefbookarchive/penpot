@@ -48,7 +48,7 @@
 (defn- execute-cron-task
   [cfg {:keys [id cron] :as task}]
   (px/thread
-    {:name (str "penpot/cron-task/" id)}
+    {:name (str "xenpot/cron-task/" id)}
     (let [tpoint (dt/tpoint)]
       (try
         (db/tx-run! cfg (fn [{:keys [::db/conn]}]

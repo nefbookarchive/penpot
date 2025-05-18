@@ -163,7 +163,7 @@ Shape <-- Shape : parent
 @enduml
 
 A <code class="language-text">Shape</code> is the most important entity of the model. Represents one of the
-[layers of our design](https://help.penpot.app/user-guide/layer-basics), and it
+[layers of our design](https://help.xenpot.app/user-guide/layer-basics), and it
 corresponds with one SVG node, augmented with Penpot special features.
 
 We have code to render a <code class="language-text">Shape</code> into a SVG tag, with more or less additions

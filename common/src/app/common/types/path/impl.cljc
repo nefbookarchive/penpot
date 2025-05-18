@@ -515,7 +515,7 @@
 
      cljs.core/IPrintWithWriter
      (-pr-writer [this writer _]
-       (cljs.core/-write writer (str "#penpot/path-data \"" (.toString this) "\"")))))
+       (cljs.core/-write writer (str "#xenpot/path-data \"" (.toString this) "\"")))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; SCHEMA
@@ -759,7 +759,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (t/add-handlers!
- {:id "penpot/path-data"
+ {:id "xenpot/path-data"
   :class PathData
   :wfn (fn [^PathData pdata]
          (let [buffer (.-buffer pdata)]
@@ -769,7 +769,7 @@
 
 #?(:clj
    (fres/add-handlers!
-    {:name "penpot/path-data"
+    {:name "xenpot/path-data"
      :class PathData
      :wfn (fn [n w o]
             (fres/write-tag! w n 1)

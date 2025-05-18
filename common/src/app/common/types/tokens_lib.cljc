@@ -1322,7 +1322,7 @@ Will return a value that matches this schema:
           (->> (tree-seq d/ordered-map? vals themes)
                (into [] themes-xform))
 
-          ;; Active themes without exposing hidden penpot theme
+          ;; Active themes without exposing hidden xenpot theme
           active-themes-clear
           (disj active-themes hidden-token-theme-path)
 
@@ -1526,22 +1526,22 @@ Will return a value that matches this schema:
 ;; === Serialization handlers for RPC API (transit) and database (fressian)
 
 (t/add-handlers!
- {:id "penpot/tokens-lib"
+ {:id "xenpot/tokens-lib"
   :class TokensLib
   :wfn deref
   :rfn #(make-tokens-lib %)}
 
- {:id "penpot/token-set"
+ {:id "xenpot/token-set"
   :class TokenSet
   :wfn #(into {} %)
   :rfn #(map->TokenSet %)}
 
- {:id "penpot/token-theme"
+ {:id "xenpot/token-theme"
   :class TokenTheme
   :wfn #(into {} %)
   :rfn #(map->TokenTheme %)}
 
- {:id "penpot/token"
+ {:id "xenpot/token"
   :class Token
   :wfn #(into {} %)
   :rfn #(map->Token %)})
@@ -1613,7 +1613,7 @@ Will return a value that matches this schema:
 
 #?(:clj
    (fres/add-handlers!
-    {:name "penpot/token/v1"
+    {:name "xenpot/token/v1"
      :class Token
      :wfn (fn [n w o]
             (fres/write-tag! w n 1)
@@ -1622,7 +1622,7 @@ Will return a value that matches this schema:
             (let [obj (fres/read-object! r)]
               (map->Token obj)))}
 
-    {:name "penpot/token-set/v1"
+    {:name "xenpot/token-set/v1"
      :class TokenSet
      :wfn (fn [n w o]
             (fres/write-tag! w n 1)
@@ -1631,7 +1631,7 @@ Will return a value that matches this schema:
             (let [obj (fres/read-object! r)]
               (map->TokenSet obj)))}
 
-    {:name "penpot/token-theme/v1"
+    {:name "xenpot/token-theme/v1"
      :class TokenTheme
      :wfn (fn [n w o]
             (fres/write-tag! w n 1)
@@ -1641,14 +1641,14 @@ Will return a value that matches this schema:
               (map->TokenTheme obj)))}
 
     ;; LEGACY TOKENS LIB READERS (with migrations)
-    {:name "penpot/tokens-lib/v1"
+    {:name "xenpot/tokens-lib/v1"
      :rfn read-tokens-lib-v1-0}
 
-    {:name "penpot/tokens-lib/v1.1"
+    {:name "xenpot/tokens-lib/v1.1"
      :rfn read-tokens-lib-v1-1}
 
     ;; CURRENT TOKENS LIB READER & WRITTER
-    {:name "penpot/tokens-lib/v1.2"
+    {:name "xenpot/tokens-lib/v1.2"
      :class TokensLib
      :wfn write-tokens-lib
      :rfn read-tokens-lib}))
