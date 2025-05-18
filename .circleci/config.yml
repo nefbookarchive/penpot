@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   test-common:
     docker:
-      - image: xenpotapp/devenv:latest
+      - image: nefbook/devenv:latest
 
     working_directory: ~/repo
     resource_class: medium+
@@ -46,7 +46,7 @@ jobs:
 
   test-frontend:
     docker:
-      - image: xenpotapp/devenv:latest
+      - image: nefbook/devenv:latest
 
     working_directory: ~/repo
     resource_class: medium+
@@ -94,7 +94,7 @@ jobs:
 
   test-components:
     docker:
-      - image: xenpotapp/devenv:latest
+      - image: nefbook/devenv:latest
 
     working_directory: ~/repo
     resource_class: medium+
@@ -133,7 +133,7 @@ jobs:
 
   test-integration:
     docker:
-      - image: xenpotapp/devenv:latest
+      - image: nefbook/devenv:latest
 
     working_directory: ~/repo
     resource_class: large
@@ -163,7 +163,7 @@ jobs:
 
   test-backend:
     docker:
-      - image: xenpotapp/devenv:latest
+      - image: nefbook/devenv:latest
       - image: cimg/postgres:14.5
         environment:
           POSTGRES_USER: xenpot_test
@@ -219,7 +219,7 @@ jobs:
 
   test-exporter:
     docker:
-      - image: xenpotapp/devenv:latest
+      - image: nefbook/devenv:latest
 
     working_directory: ~/repo
     resource_class: medium+
@@ -248,7 +248,7 @@ jobs:
 
   test-render-wasm:
     docker:
-      - image: xenpotapp/devenv:latest
+      - image: nefbook/devenv:latest
 
     working_directory: ~/repo
     resource_class: medium+

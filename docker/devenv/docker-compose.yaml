@@ -14,7 +14,7 @@ volumes:
 services:
   main:
     privileged: true
-    image: "xenpotapp/devenv:latest"
+    image: "nefbook/devenv:latest"
     build:
       context: "."
     container_name: "xenpot-devenv-main"
