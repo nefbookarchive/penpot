@@ -1,7 +1,7 @@
 version: "3.9"
 
 networks:
-  penpot:
+  xenpot:
 
 volumes:
   penpot_postgres_v15:
@@ -9,7 +9,7 @@ volumes:
 
 services:
 
-  penpot-frontend:
+  xenpot-frontend:
     build:
       context: ../../
       dockerfile: docker/images/Dockerfile.frontend
@@ -19,15 +19,15 @@ services:
     volumes:
       - penpot_assets:/opt/data/assets
     depends_on:
-      - penpot-backend
-      - penpot-exporter
+      - xenpot-backend
+      - xenpot-exporter
     networks:
-      - penpot
+      - xenpot
     environment:
       PENPOT_FLAGS: disable-email-verification enable-smtp enable-prepl-server disable-secure-session-cookies
       PENPOT_PUBLIC_URI: http://localhost:9001
 
-  penpot-backend:
+  xenpot-backend:
     build:
       context: ../../
       dockerfile: docker/images/Dockerfile.backend
@@ -35,17 +35,17 @@ services:
     volumes:
       - penpot_assets:/opt/data/assets
     depends_on:
-      penpot-postgres:
+      xenpot-postgres:
         condition: service_healthy
-      penpot-redis:
+      xenpot-redis:
         condition: service_healthy
     networks:
-      - penpot
+      - xenpot
     environment:
-      PENPOT_DATABASE_URI: postgresql://penpot-postgres/penpot
-      PENPOT_DATABASE_USERNAME: penpot
+      PENPOT_DATABASE_URI: postgresql://xenpot-postgres/xenpot
+      PENPOT_DATABASE_USERNAME: xenpot
       PENPOT_DATABASE_PASSWORD: YourSecurePassword123
-      PENPOT_REDIS_URI: redis://penpot-redis/0
+      PENPOT_REDIS_URI: redis://xenpot-redis/0
       PENPOT_ASSETS_STORAGE_BACKEND: assets-fs
       PENPOT_STORAGE_ASSETS_FS_DIRECTORY: /opt/data/assets
       PENPOT_SMTP_HOST: localhost
@@ -56,22 +56,22 @@ services:
       PENPOT_SMTP_SSL: false
       PENPOT_TELEMETRY_ENABLED: true
 
-  penpot-exporter:
+  xenpot-exporter:
     build:
       context: ../../
       dockerfile: docker/images/Dockerfile.exporter
     restart: always
     networks:
-      - penpot
+      - xenpot
     environment:
-      PENPOT_PUBLIC_URI: http://penpot-frontend:8080
-      PENPOT_REDIS_URI: redis://penpot-redis/0
+      PENPOT_PUBLIC_URI: http://xenpot-frontend:8080
+      PENPOT_REDIS_URI: redis://xenpot-redis/0
 
-  penpot-postgres:
+  xenpot-postgres:
     image: "postgres:15"
     restart: always
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U penpot"]
+      test: ["CMD-SHELL", "pg_isready -U xenpot"]
       interval: 2s
       timeout: 10s
       retries: 5
@@ -79,13 +79,13 @@ services:
     volumes:
       - penpot_postgres_v15:/var/lib/postgresql/data
     networks:
-      - penpot
+      - xenpot
     environment:
-      POSTGRES_DB: penpot
-      POSTGRES_USER: penpot
+      POSTGRES_DB: xenpot
+      POSTGRES_USER: xenpot
       POSTGRES_PASSWORD: YourSecurePassword123
 
-  penpot-redis:
+  xenpot-redis:
     image: redis:7.2
     restart: always
     healthcheck:
@@ -95,4 +95,4 @@ services:
       retries: 5
       start_period: 3s
     networks:
-      - penpot
+      - xenpot

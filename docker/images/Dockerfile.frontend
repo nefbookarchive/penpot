@@ -1,12 +1,12 @@
 FROM nginxinc/nginx-unprivileged:1.28.0
-LABEL maintainer="Penpot <docker@penpot.app>"
+LABEL maintainer="Penpot <docker@xenpot.app>"
 
 USER root
 
 RUN set -ex; \
-    useradd -U -M -u 1001 -s /bin/false -d /opt/penpot penpot; \
+    useradd -U -M -u 1001 -s /bin/false -d /opt/xenpot xenpot; \
     mkdir -p /opt/data/assets; \
-    chown -R penpot:penpot /opt/data;
+    chown -R xenpot:xenpot /opt/data;
 
 ADD ./bundle-frontend/ /var/www/app/
 ADD ./files/config.js /var/www/app/js/config.js
@@ -22,6 +22,6 @@ RUN chown -R 1001:0 /var/cache/nginx; \
     chown -R 1001:0 /var/www; \
     chmod -R g+w /var/www;
 
-USER penpot:penpot
+USER xenpot:xenpot
 ENTRYPOINT ["/bin/bash", "/entrypoint.sh"]
 CMD ["nginx", "-g", "daemon off;"]
