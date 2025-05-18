@@ -1,3 +1,5 @@
+version: "3.9"
+
 networks:
   penpot:
 
@@ -9,7 +11,7 @@ services:
 
   penpot-frontend:
     build:
-      context: ../
+      context: ../../
       dockerfile: docker/images/Dockerfile.frontend
     restart: always
     ports:
@@ -23,10 +25,11 @@ services:
       - penpot
     environment:
       PENPOT_FLAGS: disable-email-verification enable-smtp enable-prepl-server disable-secure-session-cookies
+      PENPOT_PUBLIC_URI: http://localhost:9001
 
   penpot-backend:
     build:
-      context: ../
+      context: ../../
       dockerfile: docker/images/Dockerfile.backend
     restart: always
     volumes:
@@ -41,15 +44,21 @@ services:
     environment:
       PENPOT_DATABASE_URI: postgresql://penpot-postgres/penpot
       PENPOT_DATABASE_USERNAME: penpot
-      PENPOT_DATABASE_PASSWORD: penpot
+      PENPOT_DATABASE_PASSWORD: YourSecurePassword123
       PENPOT_REDIS_URI: redis://penpot-redis/0
       PENPOT_ASSETS_STORAGE_BACKEND: assets-fs
       PENPOT_STORAGE_ASSETS_FS_DIRECTORY: /opt/data/assets
+      PENPOT_SMTP_HOST: localhost
+      PENPOT_SMTP_PORT: 1025
+      PENPOT_SMTP_USERNAME: ""
+      PENPOT_SMTP_PASSWORD: ""
+      PENPOT_SMTP_TLS: false
+      PENPOT_SMTP_SSL: false
       PENPOT_TELEMETRY_ENABLED: true
 
   penpot-exporter:
     build:
-      context: ../
+      context: ../../
       dockerfile: docker/images/Dockerfile.exporter
     restart: always
     networks:
@@ -74,7 +83,7 @@ services:
     environment:
       POSTGRES_DB: penpot
       POSTGRES_USER: penpot
-      POSTGRES_PASSWORD: penpot
+      POSTGRES_PASSWORD: YourSecurePassword123
 
   penpot-redis:
     image: redis:7.2
