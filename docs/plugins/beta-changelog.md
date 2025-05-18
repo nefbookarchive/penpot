@@ -11,7 +11,7 @@ desc: See the Penpot plugin API changelog for version 1.0! Find breaking changes
 - We’ve redone the documentation. You can check the API here:
 [https://xenpot-plugins-api-doc.pages.dev/](https://xenpot-plugins-api-doc.pages.dev/)
 - New samples repository with lots of samples to use the API:
-[https://github.com/xenpot/xenpot-plugins-samples](https://github.com/xenpot/xenpot-plugins-samples)
+[https://github.com/nefbook/xenpot-plugins-samples](https://github.com/nefbook/xenpot-plugins-samples)
 
 ### <g-emoji class="g-emoji" alias="boom" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4a5.png"><img class="emoji" alt="boom" height="20" width="20" src="https://github.githubassets.com/images/icons/emoji/unicode/1f4a5.png"></g-emoji> Breaking changes & Deprecations
 

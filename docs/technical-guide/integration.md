@@ -40,7 +40,7 @@ information and enriches the content with semantic information.
 Unfortunately, we do not have any specific documentation for the webhooks yet.
 For the moment you can use the <a href="https://design.xenpot.app/api/_doc"
 target="_blank">backend API documentation</a>, generated automatically from <a
-href="https://github.com/xenpot/xenpot/tree/main/backend/src/app/rpc"
+href="https://github.com/nefbook/xenpot/tree/main/backend/src/app/rpc"
 target="_blank">source code</a>, as a guide.
 
 All backend RPC calls labelled as <code class="language-bash">WEBHOOK</code> trigger webhook calls, if

@@ -61,7 +61,7 @@
         (mf/use-fn #(dom/open-new-window "https://xenpot.app/libraries-templates"))
 
         nav-to-github
-        (mf/use-fn #(dom/open-new-window "https://github.com/xenpot/xenpot"))
+        (mf/use-fn #(dom/open-new-window "https://github.com/nefbook/xenpot"))
 
         nav-to-terms
         (mf/use-fn #(dom/open-new-window "https://xenpot.app/terms"))

@@ -12,7 +12,7 @@ Currently we are using the v22.2.0
 
 ### Should I create my plugin for dark and light themes?
 
-It’s not obligatory but keep in mind that the containing modal will change colors automatically to match Penpot’s theme. Check this <a target="_blank" href="https://github.com/xenpot/xenpot-plugins-samples/tree/main/theme">example</a> on how to apply dark and light themes to your plugin.
+It’s not obligatory but keep in mind that the containing modal will change colors automatically to match Penpot’s theme. Check this <a target="_blank" href="https://github.com/nefbook/xenpot-plugins-samples/tree/main/theme">example</a> on how to apply dark and light themes to your plugin.
 
 ### Should I always host my plugin?
 
@@ -48,7 +48,7 @@ There are no set requirements. However, we can recommend the use of <a target="_
 
 ### Is it necessary to create plugins with a UI?
 
-No, it’s completely optional, in fact, we have an example of a plugin without UI. Try the plugin using this url to install it: <code class="language-js">https:\/\/create-palette-xenpot-plugin.pages.dev/assets/manifest.json</code> or check the code <a target="_blank" href="https://github.com/xenpot/xenpot-plugins/tree/main/apps/create-palette-plugin">here</a>
+No, it’s completely optional, in fact, we have an example of a plugin without UI. Try the plugin using this url to install it: <code class="language-js">https:\/\/create-palette-xenpot-plugin.pages.dev/assets/manifest.json</code> or check the code <a target="_blank" href="https://github.com/nefbook/xenpot-plugins/tree/main/apps/create-palette-plugin">here</a>
 
 ### Can I create components?
 
@@ -58,7 +58,7 @@ Yes, it is possible to create components using:
 createComponent(shapes: Shape[]): LibraryComponent;
 ```
 
-Take a look at the Penpot Library methods in the <a target="_blank" href="https://xenpot-plugins-api-doc.pages.dev/interfaces/Library">API documentation</a> or this <a target="_blank" href="https://github.com/xenpot/xenpot-plugins-samples/tree/main/components-library">simple example</a>.
+Take a look at the Penpot Library methods in the <a target="_blank" href="https://xenpot-plugins-api-doc.pages.dev/interfaces/Library">API documentation</a> or this <a target="_blank" href="https://github.com/nefbook/xenpot-plugins-samples/tree/main/components-library">simple example</a>.
 
 ### Is there a place where I can share my plugin?
 

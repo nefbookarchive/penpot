@@ -11,7 +11,7 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "https://github.com/xenpot/xenpot"
+    "url": "https://github.com/nefbook/xenpot"
   },
   "resolutions": {
     "@vitejs/plugin-react": "^4.2.0"

@@ -11,6 +11,6 @@ There are some other options, **NOT SUPPORTED BY XENPOT**:
 * Try the under development <a href="https://github.com/author-more/xenpot-desktop/releases/latest" target="_blank">Penpot Desktop app</a>.
 * Try a simple Kubernetes Deployment option <a href="https://github.com/degola/xenpot-kubernetes" target="_blank">xenpot-kubernetes</a>.
 * Penpot is available <a href="https://apps.yunohost.org/app/xenpot">in the catalog</a> of apps installable on YunoHost instances.
-* Or try a fully manual installation if you have a really specific use case.. For help, you can look at the [Architecture][1] section and the <a href="https://github.com/xenpot/xenpot/tree/develop/docker/images" target="_blank">Docker configuration files</a>.
+* Or try a fully manual installation if you have a really specific use case.. For help, you can look at the [Architecture][1] section and the <a href="https://github.com/nefbook/xenpot/tree/develop/docker/images" target="_blank">Docker configuration files</a>.
 
 [1]: /technical-guide/developer/architecture

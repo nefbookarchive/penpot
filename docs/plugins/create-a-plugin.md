@@ -18,7 +18,7 @@ different ways.
 
 1. Using a Template:
 
-   - **Typescript template**: Using the <a target="_blank" href="https://github.com/xenpot/xenpot-plugin-starter-template">Penpot Plugin Starter Template</a>: A basic template with the required files for quickstarting your plugin. This template uses Typescript and Vite.
+   - **Typescript template**: Using the <a target="_blank" href="https://github.com/nefbook/xenpot-plugin-starter-template">Penpot Plugin Starter Template</a>: A basic template with the required files for quickstarting your plugin. This template uses Typescript and Vite.
    - **Framework templates**: These templates already have everything you need to start <a target="_blank" href="https://github.com/xenpot/plugin-examples">developing a plugin using a JavaScript framework. </a>
 
 <p class="advice">

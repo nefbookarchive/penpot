@@ -185,7 +185,7 @@ The <code class="language-js">plugin.ts</code> file is where you write code to i
 
 You can check some samples in:
 
-- <a href="https://github.com/xenpot/xenpot-plugins-samples/" target="_blank">Penpot plugin samples.</a>
+- <a href="https://github.com/nefbook/xenpot-plugins-samples/" target="_blank">Penpot plugin samples.</a>
 
 ### What is TypeScript?
 

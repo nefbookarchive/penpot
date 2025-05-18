@@ -91,7 +91,7 @@ In the previous section we have shown how to configure xenpot during installatio
 using parameters or by using a yaml file.
 
 The default values are defined in the
-<a href="https://github.com/xenpot/xenpot-helm/blob/main/charts/xenpot/values.yaml" target="_blank">`values.yml`</a>
+<a href="https://github.com/nefbook/xenpot-helm/blob/main/charts/xenpot/values.yaml" target="_blank">`values.yml`</a>
 file itself, which you can use as a basis for creating your own settings.
 
 You can also consult the list of parameters on the

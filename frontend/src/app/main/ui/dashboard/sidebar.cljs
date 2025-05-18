@@ -1047,7 +1047,7 @@
 
        [:li {:tab-index (if show "0" "-1")
              :class (stl/css :profile-dropdown-item)
-             :data-url "https://github.com/xenpot/xenpot"
+             :data-url "https://github.com/nefbook/xenpot"
              :on-click handle-click-url
              :on-key-down handle-keydown-url}
         (tr "labels.github-repo")]

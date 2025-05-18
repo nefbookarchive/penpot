@@ -5,7 +5,7 @@ desc: Learn about assets storage, API, object buckets, sharing, and garbage coll
 
 # Assets storage
 
-The [storage.clj](https://github.com/xenpot/xenpot/blob/develop/backend/src/app/storage.clj)
+The [storage.clj](https://github.com/nefbook/xenpot/blob/develop/backend/src/app/storage.clj)
 is a module that manages storage of binary objects. It's a generic utility
 that may be used for any kind of user uploaded files. Currently:
 
