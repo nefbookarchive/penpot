@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-export ORGANIZATION="xenpotapp";
+export ORGANIZATION="nefbook";
 export DEVENV_IMGNAME="$ORGANIZATION/devenv";
 export DEVENV_PNAME="xenpotdev";
 
@@ -201,21 +201,21 @@ function build-docs-bundle {
 function build-frontend-docker-images {
     rsync -avr --delete ./bundles/frontend/ ./docker/images/bundle-frontend/;
     pushd ./docker/images;
-    docker build -t xenpotapp/frontend:$CURRENT_BRANCH -t xenpotapp/frontend:latest -f Dockerfile.frontend .;
+    docker build -t nefbook/frontend:$CURRENT_BRANCH -t nefbook/frontend:latest -f Dockerfile.frontend .;
     popd;
 }
 
 function build-backend-docker-images {
     rsync -avr --delete ./bundles/backend/ ./docker/images/bundle-backend/;
     pushd ./docker/images;
-    docker build -t xenpotapp/backend:$CURRENT_BRANCH -t xenpotapp/backend:latest -f Dockerfile.backend .;
+    docker build -t nefbook/backend:$CURRENT_BRANCH -t nefbook/backend:latest -f Dockerfile.backend .;
     popd;
 }
 
 function build-exporter-docker-images {
     rsync -avr --delete ./bundles/exporter/ ./docker/images/bundle-exporter/;
     pushd ./docker/images;
-    docker build -t xenpotapp/exporter:$CURRENT_BRANCH -t xenpotapp/exporter:latest -f Dockerfile.exporter .;
+    docker build -t nefbook/exporter:$CURRENT_BRANCH -t nefbook/exporter:latest -f Dockerfile.exporter .;
     popd;
 }
 

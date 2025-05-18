@@ -2,7 +2,7 @@
 
 Canvas-based WebAssembly render engine for Penpot.
 
-This is a Rust crate that targets [Emscripten](https://emscripten.org/) (`wasm32-unknown-emscripten`). Underneath, it uses Skia via [custom binaries](https://github.com/xenpot/skia-binaries/releases/) of the [rust-skia crate](https://github.com/rust-skia/rust-skia).
+This is a Rust crate that targets [Emscripten](https://emscripten.org/) (`wasm32-unknown-emscripten`). Underneath, it uses Skia via [custom binaries](https://github.com/penpot/skia-binaries/releases/) of the [rust-skia crate](https://github.com/rust-skia/rust-skia).
 
 ## How to build
 

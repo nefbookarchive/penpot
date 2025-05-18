@@ -19,7 +19,7 @@ different ways.
 1. Using a Template:
 
    - **Typescript template**: Using the <a target="_blank" href="https://github.com/nefbook/xenpot-plugin-starter-template">Penpot Plugin Starter Template</a>: A basic template with the required files for quickstarting your plugin. This template uses Typescript and Vite.
-   - **Framework templates**: These templates already have everything you need to start <a target="_blank" href="https://github.com/xenpot/plugin-examples">developing a plugin using a JavaScript framework. </a>
+   - **Framework templates**: These templates already have everything you need to start <a target="_blank" href="https://github.com/nefbook/plugin-examples">developing a plugin using a JavaScript framework. </a>
 
 <p class="advice">
 In case you'll use any of these templates, you can skip to <a href="#2.7.-step-7.-load-the-plugin-in-xenpot">step 2.7</a>
@@ -31,7 +31,7 @@ In case you'll use any of these templates, you can skip to <a href="#2.7.-step-7
 
 ## 2.1. Step 1. Create a project
 
-Create your own app with the framework of your choice. See examples for each framework <a target="_blank" href="https://github.com/xenpot/plugin-examples"> here </a>
+Create your own app with the framework of your choice. See examples for each framework <a target="_blank" href="https://github.com/nefbook/plugin-examples"> here </a>
 
 | Framework | Command                                                     | Version\* |
 | --------- | ----------------------------------------------------------- | --------- |

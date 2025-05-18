@@ -125,4 +125,4 @@ The first is a basic **Typescript** template with all the essential structure yo
 The second is the same, but uses one of the most popular frameworks like **Angular, Vue, or React**. We've included links to the repositories below:
 
 - <a target="_blank" href="https://github.com/nefbook/xenpot-plugin-starter-template">Plugin Starter Template with plain Typescript</a><br>
-- <a target="_blank" href="https://github.com/xenpot/plugin-examples">Plugin Starter Template using a framework</a>
+- <a target="_blank" href="https://github.com/nefbook/plugin-examples">Plugin Starter Template using a framework</a>
