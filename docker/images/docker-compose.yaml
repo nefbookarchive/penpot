@@ -1,11 +1,19 @@
-version: "3.9"
-
 networks:
   xenpot:
 
 volumes:
   xenpot_postgres_v15:
   xenpot_assets:
+
+x-flags: &xenpot-flags
+  XENPOT_FLAGS: disable-email-verification enable-smtp enable-prepl-server disable-secure-session-cookies
+
+x-uri: &xenpot-public-uri
+  XENPOT_PUBLIC_URI: http://localhost:9001
+
+x-body-size: &xenpot-http-body-size
+  XENPOT_HTTP_SERVER_MAX_BODY_SIZE: 31457280
+  XENPOT_HTTP_SERVER_MAX_MULTIPART_BODY_SIZE: 367001600
 
 services:
 
@@ -24,7 +32,7 @@ services:
     networks:
       - xenpot
     environment:
-      XENPOT_FLAGS: disable-email-verification enable-smtp enable-prepl-server disable-secure-session-cookies
+      << : [*xenpot-flags, *xenpot-http-body-size]
       XENPOT_PUBLIC_URI: http://localhost:9001
 
   xenpot-backend:
@@ -42,6 +50,7 @@ services:
     networks:
       - xenpot
     environment:
+      << : [*xenpot-flags, *xenpot-public-uri, *xenpot-http-body-size]
       XENPOT_DATABASE_URI: postgresql://xenpot-postgres/xenpot
       XENPOT_DATABASE_USERNAME: xenpot
       XENPOT_DATABASE_PASSWORD: YourSecurePassword123
@@ -63,7 +72,10 @@ services:
     restart: always
     networks:
       - xenpot
+    depends_on:
+      - xenpot-redis
     environment:
+      << : [*xenpot-flags, *xenpot-public-uri]
       XENPOT_PUBLIC_URI: http://xenpot-frontend:8080
       XENPOT_REDIS_URI: redis://xenpot-redis/0
 
@@ -94,5 +106,15 @@ services:
       timeout: 3s
       retries: 5
       start_period: 3s
+    networks:
+      - xenpot
+
+  xenpot-mailcatch:
+    image: sj26/mailcatcher:latest
+    restart: always
+    expose:
+      - '1025'
+    ports:
+      - "1080:1080"
     networks:
       - xenpot
