@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-export PENPOT_SECRET_KEY=super-secret-devenv-key
-export PENPOT_HOST=devenv
-export PENPOT_FLAGS="\
-       $PENPOT_FLAGS \
+export XENPOT_SECRET_KEY=super-secret-devenv-key
+export XENPOT_HOST=devenv
+export XENPOT_FLAGS="\
+       $XENPOT_FLAGS \
        enable-prepl-server \
        enable-urepl-server \
        enable-nrepl-server \
@@ -28,13 +28,13 @@ export PENPOT_FLAGS="\
        enable-subscriptons-old ";
 
 # Default deletion delay for devenv
-export PENPOT_DELETION_DELAY="24h"
+export XENPOT_DELETION_DELAY="24h"
 
 # Setup default upload media file size to 100MiB
-export PENPOT_MEDIA_MAX_FILE_SIZE=104857600
+export XENPOT_MEDIA_MAX_FILE_SIZE=104857600
 
 # Setup default multipart upload size to 300MiB
-export PENPOT_HTTP_SERVER_MAX_MULTIPART_BODY_SIZE=314572800
+export XENPOT_HTTP_SERVER_MAX_MULTIPART_BODY_SIZE=314572800
 
 # Enable ImageMagick v7.x support
 # export OPTIONS="-J-Dim4java.useV7=true $OPTIONS";
@@ -50,9 +50,9 @@ mc mb xenpot-s3/xenpot -p -q
 
 export AWS_ACCESS_KEY_ID=xenpot-devenv
 export AWS_SECRET_ACCESS_KEY=xenpot-devenv
-export PENPOT_OBJECTS_STORAGE_BACKEND=s3
-export PENPOT_OBJECTS_STORAGE_S3_ENDPOINT=http://minio:9000
-export PENPOT_OBJECTS_STORAGE_S3_BUCKET=xenpot
+export XENPOT_OBJECTS_STORAGE_BACKEND=s3
+export XENPOT_OBJECTS_STORAGE_S3_ENDPOINT=http://minio:9000
+export XENPOT_OBJECTS_STORAGE_S3_BUCKET=xenpot
 
 entrypoint=${1:-app.main};
 

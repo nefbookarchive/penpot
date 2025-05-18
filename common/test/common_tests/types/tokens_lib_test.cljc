@@ -1240,7 +1240,7 @@
         (ctob/get-children (second node-group2))]
 
     (t/is (= (count themes-list) 5))
-    (t/is (= (:name (nth themes-list 0)) "__PENPOT__HIDDEN__TOKEN__THEME__"))
+    (t/is (= (:name (nth themes-list 0)) "__XENPOT__HIDDEN__TOKEN__THEME__"))
     (t/is (= (:name (nth themes-list 1)) "token-theme-1"))
     (t/is (= (:name (nth themes-list 2)) "token-theme-2"))
     (t/is (= (:name (nth themes-list 3)) "token-theme-3"))
@@ -1254,9 +1254,9 @@
     (t/is (= (ctob/group? (second node-group0)) true))
     (t/is (= (count (second node-group0)) 2))
 
-    (t/is (= (first hidden-theme) "__PENPOT__HIDDEN__TOKEN__THEME__"))
+    (t/is (= (first hidden-theme) "__XENPOT__HIDDEN__TOKEN__THEME__"))
     (t/is (= (ctob/group? (second hidden-theme)) false))
-    (t/is (= (:name (second hidden-theme)) "__PENPOT__HIDDEN__TOKEN__THEME__"))
+    (t/is (= (:name (second hidden-theme)) "__XENPOT__HIDDEN__TOKEN__THEME__"))
 
     (t/is (= (first node-theme1) "token-theme-1"))
     (t/is (= (ctob/group? (second node-theme1)) false))

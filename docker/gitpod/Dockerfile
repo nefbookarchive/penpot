@@ -107,16 +107,16 @@ USER gitpod
 
 ENV PATH="/usr/lib/jvm/openjdk16/bin:/usr/local/nodejs/bin:$PATH" \
     JAVA_HOME=/usr/lib/jvm/openjdk16 \
-    PENPOT_SMTP_ENABLED=true \
-    PENPOT_SMTP_HOST=localhost \
-    PENPOT_SMTP_PORT=1025 \
-    PENPOT_SMTP_USER= \
-    PENPOT_SMTP_PASSWORD= \
-    PENPOT_SMTP_SSL=false \
-    PENPOT_SMTP_TLS=false \
-    PENPOT_SMTP_DEFAULT_REPLY_TO=no-reply@example.com \
-    PENPOT_SMTP_DEFAULT_FROM=no-reply@example.com \
-    PENPOT_DATABASE_URI="postgresql://localhost/xenpot" \
-    PENPOT_REDIS_URI="redis://localhost/0"
+    XENPOT_SMTP_ENABLED=true \
+    XENPOT_SMTP_HOST=localhost \
+    XENPOT_SMTP_PORT=1025 \
+    XENPOT_SMTP_USER= \
+    XENPOT_SMTP_PASSWORD= \
+    XENPOT_SMTP_SSL=false \
+    XENPOT_SMTP_TLS=false \
+    XENPOT_SMTP_DEFAULT_REPLY_TO=no-reply@example.com \
+    XENPOT_SMTP_DEFAULT_FROM=no-reply@example.com \
+    XENPOT_DATABASE_URI="postgresql://localhost/xenpot" \
+    XENPOT_REDIS_URI="redis://localhost/0"
 
 # TODO Retrieve OpenLDAP from rroemhild/docker-test-openldap

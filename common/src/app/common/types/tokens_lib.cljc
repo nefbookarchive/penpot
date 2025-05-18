@@ -502,7 +502,7 @@
   "")
 
 (def hidden-token-theme-name
-  "__PENPOT__HIDDEN__TOKEN__THEME__")
+  "__XENPOT__HIDDEN__TOKEN__THEME__")
 
 (def hidden-token-theme-path
   (token-theme-path hidden-token-theme-group hidden-token-theme-name))

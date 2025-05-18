@@ -197,11 +197,11 @@
 
 (defn display-not-valid
   [code value]
-  (.error js/console (dm/str "[PENPOT PLUGIN] Value not valid: " value ". Code: " code)))
+  (.error js/console (dm/str "[XENPOT PLUGIN] Value not valid: " value ". Code: " code)))
 
 (defn reject-not-valid
   [reject code value]
-  (let [msg (dm/str "[PENPOT PLUGIN] Value not valid: " value ". Code: " code)]
+  (let [msg (dm/str "[XENPOT PLUGIN] Value not valid: " value ". Code: " code)]
     (.error js/console msg)
     (reject msg)))
 

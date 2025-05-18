@@ -91,7 +91,7 @@ function run-devenv-tmux {
         start-devenv
     fi
 
-    docker exec -ti xenpot-devenv-main sudo -EH -u xenpot PENPOT_PLUGIN_DEV=$PENPOT_PLUGIN_DEV /home/start-tmux.sh
+    docker exec -ti xenpot-devenv-main sudo -EH -u xenpot XENPOT_PLUGIN_DEV=$XENPOT_PLUGIN_DEV /home/start-tmux.sh
 }
 
 function run-devenv-shell {
@@ -220,7 +220,7 @@ function build-exporter-docker-images {
 }
 
 function usage {
-    echo "PENPOT build & release manager"
+    echo "XENPOT build & release manager"
     echo "USAGE: $0 OPTION"
     echo "Options:"
     echo "- pull-devenv                      Pulls docker development oriented image"

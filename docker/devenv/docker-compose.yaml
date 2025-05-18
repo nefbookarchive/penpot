@@ -44,28 +44,28 @@ services:
     environment:
       - EXTERNAL_UID=${CURRENT_USER_ID}
       # SMTP setup
-      - PENPOT_SMTP_ENABLED=true
-      - PENPOT_SMTP_DEFAULT_FROM=no-reply@example.com
-      - PENPOT_SMTP_DEFAULT_REPLY_TO=no-reply@example.com
-      - PENPOT_SMTP_HOST=mailer
-      - PENPOT_SMTP_PORT=1025
-      - PENPOT_SMTP_USERNAME=
-      - PENPOT_SMTP_PASSWORD=
-      - PENPOT_SMTP_SSL=false
-      - PENPOT_SMTP_TLS=false
+      - XENPOT_SMTP_ENABLED=true
+      - XENPOT_SMTP_DEFAULT_FROM=no-reply@example.com
+      - XENPOT_SMTP_DEFAULT_REPLY_TO=no-reply@example.com
+      - XENPOT_SMTP_HOST=mailer
+      - XENPOT_SMTP_PORT=1025
+      - XENPOT_SMTP_USERNAME=
+      - XENPOT_SMTP_PASSWORD=
+      - XENPOT_SMTP_SSL=false
+      - XENPOT_SMTP_TLS=false
 
       # LDAP setup
-      - PENPOT_LDAP_HOST=ldap
-      - PENPOT_LDAP_PORT=10389
-      - PENPOT_LDAP_SSL=false
-      - PENPOT_LDAP_STARTTLS=false
-      - PENPOT_LDAP_BASE_DN=ou=people,dc=planetexpress,dc=com
-      - PENPOT_LDAP_BIND_DN=cn=admin,dc=planetexpress,dc=com
-      - PENPOT_LDAP_BIND_PASSWORD=GoodNewsEveryone
-      - PENPOT_LDAP_ATTRS_USERNAME=uid
-      - PENPOT_LDAP_ATTRS_EMAIL=mail
-      - PENPOT_LDAP_ATTRS_FULLNAME=cn
-      - PENPOT_LDAP_ATTRS_PHOTO=jpegPhoto
+      - XENPOT_LDAP_HOST=ldap
+      - XENPOT_LDAP_PORT=10389
+      - XENPOT_LDAP_SSL=false
+      - XENPOT_LDAP_STARTTLS=false
+      - XENPOT_LDAP_BASE_DN=ou=people,dc=planetexpress,dc=com
+      - XENPOT_LDAP_BIND_DN=cn=admin,dc=planetexpress,dc=com
+      - XENPOT_LDAP_BIND_PASSWORD=GoodNewsEveryone
+      - XENPOT_LDAP_ATTRS_USERNAME=uid
+      - XENPOT_LDAP_ATTRS_EMAIL=mail
+      - XENPOT_LDAP_ATTRS_FULLNAME=cn
+      - XENPOT_LDAP_ATTRS_PHOTO=jpegPhoto
 
   minio:
     image: "minio/minio:RELEASE.2025-04-03T14-56-28Z"

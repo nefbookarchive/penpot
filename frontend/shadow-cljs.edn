@@ -74,9 +74,9 @@
                       goog.debug.LOGGING_ENABLED true}
     :compiler-options
     {:fn-invoke-direct true
-     :optimizations #shadow/env ["PENPOT_BUILD_OPTIMIZATIONS" :as :keyword :default :advanced]
+     :optimizations #shadow/env ["XENPOT_BUILD_OPTIMIZATIONS" :as :keyword :default :advanced]
      :output-wrapper true
-     :rename-prefix-namespace "PENPOT"
+     :rename-prefix-namespace "XENPOT"
      :source-map true
      :elide-asserts true
      :anon-fn-naming-policy :off
@@ -108,9 +108,9 @@
    :release
    {:compiler-options
     {:fn-invoke-direct true
-     :optimizations #shadow/env ["PENPOT_BUILD_OPTIMIZATIONS" :as :keyword :default :advanced]
+     :optimizations #shadow/env ["XENPOT_BUILD_OPTIMIZATIONS" :as :keyword :default :advanced]
      :output-wrapper true
-     :rename-prefix-namespace "PENPOT"
+     :rename-prefix-namespace "XENPOT"
      :source-map true
      :elide-asserts true
      :anon-fn-naming-policy :off
@@ -168,7 +168,7 @@
    :release
    {:compiler-options
     {:fn-invoke-direct true
-     :optimizations #shadow/env ["PENPOT_BUILD_OPTIMIZATIONS" :as :keyword :default :advanced]
+     :optimizations #shadow/env ["XENPOT_BUILD_OPTIMIZATIONS" :as :keyword :default :advanced]
      :pretty-print false
      :source-map true
      :elide-asserts true

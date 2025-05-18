@@ -21,12 +21,12 @@ and useful.
 
 In backend and exporter, to change the runtime values you need to set them in
 the process environment, following the rule that an environment variable in the
-form <code class="language-bash">PENPOT_<VARIABLE_NAME_IN_UPPERCASE></code> correspond to a configuration
+form <code class="language-bash">XENPOT_<VARIABLE_NAME_IN_UPPERCASE></code> correspond to a configuration
 variable named <code class="language-bash">variable-name-in-lowercase</code>. Example:
 
 ```bash
 (env)
-PENPOT_ASSETS_STORAGE_BACKEND=assets-s3
+XENPOT_ASSETS_STORAGE_BACKEND=assets-s3
 
 (config)
 assets-storage-backend :assets-s3

@@ -51,12 +51,12 @@ At the end it will start listening on http://localhost:9001
     If you don't change anything, by default this will use the latest image published in dockerhub.
 </p>
 
-If you want to have more control over the version (which is recommended), you can use the PENPOT_VERSION envvar in the common ways:
+If you want to have more control over the version (which is recommended), you can use the XENPOT_VERSION envvar in the common ways:
 - setting the value in the .env file
 - or passing the envvar in the command line
 
 ```bash
-PENPOT_VERSION=2.4.3 docker compose -p xenpot -f docker-compose.yaml up -d
+XENPOT_VERSION=2.4.3 docker compose -p xenpot -f docker-compose.yaml up -d
 ```
 
 ## Stop Penpot
@@ -119,7 +119,7 @@ process may take a few minutes.
 In some cases, such as when the script encounters an error, it may be convenient to run
 the process manually. To do this, you can disable the automatic migration process using
 the <code class="language-bash">disable-v2-migration</code> flag in <code
-class="language-bash">PENPOT_FLAGS</code> environment variable. You can then execute the
+class="language-bash">XENPOT_FLAGS</code> environment variable. You can then execute the
 migration process manually with the following command:
 
 ```bash
@@ -181,7 +181,7 @@ server {
   server_name xenpot.mycompany.com;
 
   # This value should be in sync with the corresponding in the docker-compose.yml
-  # PENPOT_HTTP_SERVER_MAX_BODY_SIZE: 31457280
+  # XENPOT_HTTP_SERVER_MAX_BODY_SIZE: 31457280
   client_max_body_size 31457280;
 
   # Logs: Configure your logs following the best practices inside your company

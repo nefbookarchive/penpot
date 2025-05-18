@@ -69,7 +69,7 @@
     (sts/generate-text-styles shape data {:show-text? false})))
 
 (def default-decorator
-  (ted/create-decorator "PENPOT_SELECTION" selection-component))
+  (ted/create-decorator "XENPOT_SELECTION" selection-component))
 
 (def empty-editor-state
   (ted/create-editor-state nil default-decorator))

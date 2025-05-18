@@ -14,7 +14,7 @@ Penpot is configured using environment variables and flags.
 ## How the configuration works
 
 Penpot is configured using environment variables and flags. **Environment variables** start
-with <code class="language-bash">PENPOT_</code>. **Flags** use the format
+with <code class="language-bash">XENPOT_</code>. **Flags** use the format
 <code class="language-bash"><enable|disable>-<flag-name></code>.
 
 Flags are used to enable/disable a feature or behaviour (registration, feedback),
@@ -23,12 +23,12 @@ Flags and evironment variables are also used together; for example:
 
 ```bash
 # This flag enables the use of SMTP email
-PENPOT_FLAGS: enable-smtp
+XENPOT_FLAGS: enable-smtp
 
 # These environment variables configure the specific SMPT service
 # Backend
-PENPOT_SMTP_HOST: <host>
-PENPOT_SMTP_PORT: 587
+XENPOT_SMTP_HOST: <host>
+XENPOT_SMTP_PORT: 587
 ```
 
 **Flags** are configured in a single list, no matter they affect the backend, the frontend,
@@ -36,11 +36,11 @@ the exporter, or all of them; on the other hand, **environment variables** are c
 each specific service. For example:
 
 ```bash
-PENPOT_FLAGS: enable-login-with-google
+XENPOT_FLAGS: enable-login-with-google
 
 # Backend
-PENPOT_GOOGLE_CLIENT_ID: <client-id>
-PENPOT_GOOGLE_CLIENT_SECRET: <client-secret>
+XENPOT_GOOGLE_CLIENT_ID: <client-id>
+XENPOT_GOOGLE_CLIENT_SECRET: <client-secret>
 ```
 
 Check the configuration guide for [Elestio][1] or [Docker][2]. Additionally, if you are using
@@ -56,7 +56,7 @@ Penpot uses anonymous telemetries from the self-hosted instances to improve the 
 Consider sharing these anonymous telemetries enabling the corresponding flag:
 
 ```bash
-PENPOT_FLAGS: enable-telemetries
+XENPOT_FLAGS: enable-telemetries
 ```
 
 ## Registration and authentication
@@ -81,26 +81,26 @@ or exclude a specific list of domains:
 ```bash
 # Backend
 # comma separated list of domains
-PENPOT_REGISTRATION_DOMAIN_WHITELIST:
+XENPOT_REGISTRATION_DOMAIN_WHITELIST:
 
 # Backend
 # or a file with a domain per line
-PENPOT_EMAIL_DOMAIN_WHITELIST: path/to/whitelist.txt
-PENPOT_EMAIL_DOMAIN_BLACKLIST: path/to/blacklist.txt
+XENPOT_EMAIL_DOMAIN_WHITELIST: path/to/whitelist.txt
+XENPOT_EMAIL_DOMAIN_BLACKLIST: path/to/blacklist.txt
 ```
 
 __Since version 2.1__
 
 Email whitelisting should be explicitly
 enabled with <code class="language-bash">enable-email-whitelist</code> flag. For backward compatibility, we
-autoenable it when <code class="language-bash">PENPOT_REGISTRATION_DOMAIN_WHITELIST</code> is set with
+autoenable it when <code class="language-bash">XENPOT_REGISTRATION_DOMAIN_WHITELIST</code> is set with
 not-empty content.
 
 Penpot also comes with an option to completely disable the registration process;
 for this, use the following flag:
 
 ```bash
-PENPOT_FLAGS: [...] disable-registration
+XENPOT_FLAGS: [...] disable-registration
 ```
 
 This option is only recommended for demo instances, not for production environments.
@@ -129,11 +129,11 @@ https://<your_domain>/api/auth/oauth/gitlab/callback
 Allows integrating with Google as OAuth provider:
 
 ```bash
-PENPOT_FLAGS: [...] enable-login-with-google
+XENPOT_FLAGS: [...] enable-login-with-google
 
 # Backend only:
-PENPOT_GOOGLE_CLIENT_ID: <client-id>
-PENPOT_GOOGLE_CLIENT_SECRET: <client-secret>
+XENPOT_GOOGLE_CLIENT_ID: <client-id>
+XENPOT_GOOGLE_CLIENT_SECRET: <client-secret>
 ```
 
 #### GitLab
@@ -141,12 +141,12 @@ PENPOT_GOOGLE_CLIENT_SECRET: <client-secret>
 Allows integrating with GitLab as OAuth provider:
 
 ```bash
-PENPOT_FLAGS: [...] enable-login-with-gitlab
+XENPOT_FLAGS: [...] enable-login-with-gitlab
 
 # Backend only
-PENPOT_GITLAB_BASE_URI: https://gitlab.com
-PENPOT_GITLAB_CLIENT_ID: <client-id>
-PENPOT_GITLAB_CLIENT_SECRET: <client-secret>
+XENPOT_GITLAB_BASE_URI: https://gitlab.com
+XENPOT_GITLAB_CLIENT_ID: <client-id>
+XENPOT_GITLAB_CLIENT_SECRET: <client-secret>
 ```
 
 #### GitHub
@@ -154,11 +154,11 @@ PENPOT_GITLAB_CLIENT_SECRET: <client-secret>
 Allows integrating with GitHub as OAuth provider:
 
 ```bash
-PENPOT_FLAGS: [...] enable-login-with-github
+XENPOT_FLAGS: [...] enable-login-with-github
 
 # Backend only
-PENPOT_GITHUB_CLIENT_ID: <client-id>
-PENPOT_GITHUB_CLIENT_SECRET: <client-secret>
+XENPOT_GITHUB_CLIENT_ID: <client-id>
+XENPOT_GITHUB_CLIENT_SECRET: <client-secret>
 ```
 
 #### OpenID Connect
@@ -171,28 +171,28 @@ protocol (usually used for SSO).
 All the other options are backend only:
 
 ```bash
-PENPOT_FLAGS: [...] enable-login-with-oidc
+XENPOT_FLAGS: [...] enable-login-with-oidc
 
 # Backend
-PENPOT_OIDC_CLIENT_ID: <client-id>
+XENPOT_OIDC_CLIENT_ID: <client-id>
 
 # Mainly used for auto discovery the openid endpoints
-PENPOT_OIDC_BASE_URI: <uri>
-PENPOT_OIDC_CLIENT_SECRET: <client-id>
+XENPOT_OIDC_BASE_URI: <uri>
+XENPOT_OIDC_CLIENT_SECRET: <client-id>
 
 # Optional backend variables, used mainly if you want override; they are
 # autodiscovered using the standard openid-connect mechanism.
-PENPOT_OIDC_AUTH_URI: <uri>
-PENPOT_OIDC_TOKEN_URI: <uri>
-PENPOT_OIDC_USER_URI: <uri>
+XENPOT_OIDC_AUTH_URI: <uri>
+XENPOT_OIDC_TOKEN_URI: <uri>
+XENPOT_OIDC_USER_URI: <uri>
 
 # Optional list of roles that users are required to have. If no role
 # is provided, roles checking  disabled.
-PENPOT_OIDC_ROLES: "role1 role2"
+XENPOT_OIDC_ROLES: "role1 role2"
 
 # Attribute to use for lookup roles on the user object. Optional, if
 # not provided, the roles checking will be disabled.
-PENPOT_OIDC_ROLES_ATTR:
+XENPOT_OIDC_ROLES_ATTR:
 ```
 <br />
 
@@ -204,7 +204,7 @@ Added the ability to specify custom OIDC scopes.
 # This settings allow overwrite the required scopes, use with caution
 # because Penpot requres at least `name` and `email` attrs found on the
 # user info. Optional, defaults to `openid profile`.
-PENPOT_OIDC_SCOPES: "scope1 scope2"
+XENPOT_OIDC_SCOPES: "scope1 scope2"
 ```
 <br />
 
@@ -216,11 +216,11 @@ the userinfo object for the profile creation.
 ```bash
 # Attribute to use for lookup the name on the user object. Optional,
 # if not perovided, the `name` prop will be used.
-PENPOT_OIDC_NAME_ATTR:
+XENPOT_OIDC_NAME_ATTR:
 
 # Attribute to use for lookup the email on the user object. Optional,
 # if not perovided, the `email` prop will be used.
-PENPOT_OIDC_EMAIL_ATTR:
+XENPOT_OIDC_EMAIL_ATTR:
 ```
 <br />
 
@@ -236,7 +236,7 @@ endpoint.
 # Set the default USER INFO source. Can be `token` or `userinfo`. By default
 # is unset (both will be tried, starting with token).
 
-PENPOT_OIDC_USER_INFO_SOURCE:
+XENPOT_OIDC_USER_INFO_SOURCE:
 ```
 <br />
 
@@ -246,7 +246,7 @@ Allows users to register and login with oidc without having to previously
 register with another method.
 
 ```bash
-PENPOT_FLAGS: [...] enable-oidc-registration
+XENPOT_FLAGS: [...] enable-oidc-registration
 ```
 
 #### Azure Active Directory using OpenID Connect
@@ -255,11 +255,11 @@ Allows integrating with Azure Active Directory as authentication provider:
 
 ```bash
 # Backend & Frontend
-PENPOT_OIDC_CLIENT_ID: <client-id>
+XENPOT_OIDC_CLIENT_ID: <client-id>
 
 # Backend
-PENPOT_OIDC_BASE_URI: https://login.microsoftonline.com/<tenant-id>/v2.0/
-PENPOT_OIDC_CLIENT_SECRET: <client-secret>
+XENPOT_OIDC_BASE_URI: https://login.microsoftonline.com/<tenant-id>/v2.0/
+XENPOT_OIDC_CLIENT_SECRET: <client-secret>
 ```
 
 ### LDAP
@@ -268,41 +268,41 @@ Penpot comes with support for *Lightweight Directory Access Protocol* (LDAP). Th
 example configuration we use internally for testing this authentication backend.
 
 ```bash
-PENPOT_FLAGS: [...] enable-login-with-ldap
+XENPOT_FLAGS: [...] enable-login-with-ldap
 
 # Backend
-PENPOT_LDAP_HOST: ldap
-PENPOT_LDAP_PORT: 10389
-PENPOT_LDAP_SSL: false
-PENPOT_LDAP_STARTTLS: false
-PENPOT_LDAP_BASE_DN: ou=people,dc=planetexpress,dc=com
-PENPOT_LDAP_BIND_DN: cn=admin,dc=planetexpress,dc=com
-PENPOT_LDAP_BIND_PASSWORD: GoodNewsEveryone
-PENPOT_LDAP_USER_QUERY: (&(|(uid=:username)(mail=:username))(memberOf=cn=xenpot,ou=groups,dc=my-domain,dc=com))
-PENPOT_LDAP_ATTRS_USERNAME: uid
-PENPOT_LDAP_ATTRS_EMAIL: mail
-PENPOT_LDAP_ATTRS_FULLNAME: cn
-PENPOT_LDAP_ATTRS_PHOTO: jpegPhoto
+XENPOT_LDAP_HOST: ldap
+XENPOT_LDAP_PORT: 10389
+XENPOT_LDAP_SSL: false
+XENPOT_LDAP_STARTTLS: false
+XENPOT_LDAP_BASE_DN: ou=people,dc=planetexpress,dc=com
+XENPOT_LDAP_BIND_DN: cn=admin,dc=planetexpress,dc=com
+XENPOT_LDAP_BIND_PASSWORD: GoodNewsEveryone
+XENPOT_LDAP_USER_QUERY: (&(|(uid=:username)(mail=:username))(memberOf=cn=xenpot,ou=groups,dc=my-domain,dc=com))
+XENPOT_LDAP_ATTRS_USERNAME: uid
+XENPOT_LDAP_ATTRS_EMAIL: mail
+XENPOT_LDAP_ATTRS_FULLNAME: cn
+XENPOT_LDAP_ATTRS_PHOTO: jpegPhoto
 ```
 
 ## Penpot URI
 
-You will need to set the <code class="language-bash">PENPOT_PUBLIC_URI</code> environment variable in case you go to serve Penpot to the users;
+You will need to set the <code class="language-bash">XENPOT_PUBLIC_URI</code> environment variable in case you go to serve Penpot to the users;
 it should point to public URI where users will access the application:
 
 ```bash
 # Backend
-PENPOT_PUBLIC_URI: https://xenpot.mycompany.com
+XENPOT_PUBLIC_URI: https://xenpot.mycompany.com
 
 # Frontend
-PENPOT_PUBLIC_URI: https://xenpot.mycompany.com
+XENPOT_PUBLIC_URI: https://xenpot.mycompany.com
 
 # Exporter
-PENPOT_PUBLIC_URI: https://xenpot.mycompany.com
+XENPOT_PUBLIC_URI: https://xenpot.mycompany.com
 ```
 
 If you're using the official <code class="language-bash">docker-compose.yml</code> you only need to configure the
-<code class="language-bash">PENPOT_PUBLIC_URI</code> envvar in the top of the file.
+<code class="language-bash">XENPOT_PUBLIC_URI</code> envvar in the top of the file.
 
 <p class="advice">
     If you plan to serve Penpot under different domain than `localhost` without HTTPS,
@@ -330,27 +330,27 @@ Setting up the default FROM and REPLY-TO:
 
 ```bash
 # Backend
-PENPOT_SMTP_DEFAULT_REPLY_TO: Penpot <no-reply@example.com>
-PENPOT_SMTP_DEFAULT_FROM: Penpot <no-reply@example.com>
+XENPOT_SMTP_DEFAULT_REPLY_TO: Penpot <no-reply@example.com>
+XENPOT_SMTP_DEFAULT_FROM: Penpot <no-reply@example.com>
 ```
 
 Enable SMTP:
 
 ```bash
-PENPOT_FLAGS: [...] enable-smtp
+XENPOT_FLAGS: [...] enable-smtp
 
 # Backend
-PENPOT_SMTP_HOST: <host>
-PENPOT_SMTP_PORT: 587
-PENPOT_SMTP_USERNAME: <username>
-PENPOT_SMTP_PASSWORD: <password>
-PENPOT_SMTP_TLS: true
+XENPOT_SMTP_HOST: <host>
+XENPOT_SMTP_PORT: 587
+XENPOT_SMTP_USERNAME: <username>
+XENPOT_SMTP_PASSWORD: <password>
+XENPOT_SMTP_TLS: true
 ```
 
 If you are not using SMTP configuration and want to log the emails in the console, you should use the following flag:
 
 ```bash
-PENPOT_FLAGS: [...] enable-log-emails
+XENPOT_FLAGS: [...] enable-log-emails
 ```
 
 ## Redis
@@ -360,10 +360,10 @@ mainly for websocket notifications coordination.
 
 ```bash
 # Backend
-PENPOT_REDIS_URI: redis://localhost/0
+XENPOT_REDIS_URI: redis://localhost/0
 
 # Exporter
-PENPOT_REDIS_URI: redis://localhost/0
+XENPOT_REDIS_URI: redis://localhost/0
 ```
 
 If you are using the official docker compose file, this is already configurRed.
@@ -374,7 +374,7 @@ Penpot comes with facilities to create a demo environment so you can test the sy
 This is an example of a demo configuration:
 
 ```bash
-PENPOT_FLAGS: disable-registration enable-demo-users enable-demo-warning
+XENPOT_FLAGS: disable-registration enable-demo-users enable-demo-warning
 ```
 
 **disable-registration** prevents any user from registering in the platform.
@@ -389,7 +389,7 @@ Another way to work in a demo environment is allowing users to register but remo
 verification process:
 
 ```bash
-PENPOT_FLAGS: disable-email-verification enable-demo-warning
+XENPOT_FLAGS: disable-email-verification enable-demo-warning
 ```
 
 ## Backend
@@ -398,7 +398,7 @@ This section enumerates the backend only configuration variables.
 
 ### Secret key
 
-The <code class="language-bash">PENPOT_SECRET_KEY</code> envvar serves a master key from which other keys
+The <code class="language-bash">XENPOT_SECRET_KEY</code> envvar serves a master key from which other keys
 for subsystems (eg http sessions, or invitations) are derived.
 
 If you don't use it, all created sessions and invitations will become invalid on container restart
@@ -414,7 +414,7 @@ python3 -c "import secrets; print(secrets.token_urlsafe(64))"
 And configure it:
 ```bash
 # Backend
-PENPOT_SECRET_KEY: my-super-secure-key
+XENPOT_SECRET_KEY: my-super-secure-key
 ```
 
 ### Database
@@ -426,9 +426,9 @@ Essential database configuration:
 
 ```bash
 # Backend
-PENPOT_DATABASE_USERNAME: xenpot
-PENPOT_DATABASE_PASSWORD: xenpot
-PENPOT_DATABASE_URI: postgresql://127.0.0.1/xenpot
+XENPOT_DATABASE_USERNAME: xenpot
+XENPOT_DATABASE_PASSWORD: xenpot
+XENPOT_DATABASE_URI: postgresql://127.0.0.1/xenpot
 ```
 
 The username and password are optional. These settings should be compatible with the ones
@@ -455,8 +455,8 @@ configuration looks like this:
 
 ```bash
 # Backend
-PENPOT_ASSETS_STORAGE_BACKEND: assets-fs
-PENPOT_STORAGE_ASSETS_FS_DIRECTORY: /opt/data/assets
+XENPOT_ASSETS_STORAGE_BACKEND: assets-fs
+XENPOT_STORAGE_ASSETS_FS_DIRECTORY: /opt/data/assets
 ```
 
 The main downside of this backend is the hard dependency on nginx approach to serve files
@@ -478,12 +478,12 @@ This is how configuration looks for S3 backend:
 # Backend
 AWS_ACCESS_KEY_ID: <you-access-key-id-here>
 AWS_SECRET_ACCESS_KEY: <your-secret-access-key-here>
-PENPOT_ASSETS_STORAGE_BACKEND: assets-s3
-PENPOT_STORAGE_ASSETS_S3_REGION: <aws-region>
-PENPOT_STORAGE_ASSETS_S3_BUCKET: <bucket-name>
+XENPOT_ASSETS_STORAGE_BACKEND: assets-s3
+XENPOT_STORAGE_ASSETS_S3_REGION: <aws-region>
+XENPOT_STORAGE_ASSETS_S3_BUCKET: <bucket-name>
 
 # Optional if you want to use it with non AWS, S3 compatible service:
-PENPOT_STORAGE_ASSETS_S3_ENDPOINT: <endpoint-uri>
+XENPOT_STORAGE_ASSETS_S3_ENDPOINT: <endpoint-uri>
 ```
 
 <p class="advice">
@@ -501,11 +501,11 @@ You need to be very careful when configuring automatic versioning, as it can sig
 This is how configuration looks for auto-file-snapshot
 
 ```bash
-PENPOT_FLAGS: enable-auto-file-snapshot               # Enable automatic version saving
+XENPOT_FLAGS: enable-auto-file-snapshot               # Enable automatic version saving
 
 # Backend
-PENPOT_AUTO_FILE_SNAPSHOT_EVERY: 5             # How many save operations trigger the auto-save-version?
-PENPOT_AUTO_FILE_SNAPSHOT_TIIMEOUT: "1h"       # How often is an automatic save forced even if the `every` trigger is not met?
+XENPOT_AUTO_FILE_SNAPSHOT_EVERY: 5             # How many save operations trigger the auto-save-version?
+XENPOT_AUTO_FILE_SNAPSHOT_TIIMEOUT: "1h"       # How often is an automatic save forced even if the `every` trigger is not met?
 ```
 
 Setting custom values for auto-file-snapshot does not change the behaviour for manual versions.
@@ -526,8 +526,8 @@ To connect the frontend to the exporter and backend, you need to fill out these 
 
 ```bash
 # Frontend
-PENPOT_BACKEND_URI: http://your-xenpot-backend:6060
-PENPOT_EXPORTER_URI: http://your-xenpot-exporter:6061
+XENPOT_BACKEND_URI: http://your-xenpot-backend:6060
+XENPOT_EXPORTER_URI: http://your-xenpot-exporter:6061
 ```
 
 These variables are used for generate correct nginx.conf file on container startup.

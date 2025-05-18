@@ -207,10 +207,10 @@ jobs:
             clojure -M:dev:test --reporter kaocha.report/documentation
 
           environment:
-            PENPOT_TEST_DATABASE_URI: "postgresql://localhost/xenpot_test"
-            PENPOT_TEST_DATABASE_USERNAME: xenpot_test
-            PENPOT_TEST_DATABASE_PASSWORD: xenpot_test
-            PENPOT_TEST_REDIS_URI: "redis://localhost/1"
+            XENPOT_TEST_DATABASE_URI: "postgresql://localhost/xenpot_test"
+            XENPOT_TEST_DATABASE_USERNAME: xenpot_test
+            XENPOT_TEST_DATABASE_PASSWORD: xenpot_test
+            XENPOT_TEST_REDIS_URI: "redis://localhost/1"
 
       - save_cache:
           paths:

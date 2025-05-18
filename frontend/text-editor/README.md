@@ -30,7 +30,7 @@ yarn run test:ui
 The editor can be built and updated inside Penpot using the following command:
 
 ```sh
-PENPOT_SOURCE_PATH=/path/to/xenpot/repository yarn build:update
+XENPOT_SOURCE_PATH=/path/to/xenpot/repository yarn build:update
 ```
 
 This command is going to search for the file located in `frontend/src/app/main/ui/workspace/shapes/text/new_editor/TextEditor.js` and update it.

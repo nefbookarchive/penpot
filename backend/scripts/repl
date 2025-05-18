@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-export PENPOT_SECRET_KEY=super-secret-devenv-key
-export PENPOT_HOST=devenv
-export PENPOT_FLAGS="\
-       $PENPOT_FLAGS \
+export XENPOT_SECRET_KEY=super-secret-devenv-key
+export XENPOT_HOST=devenv
+export XENPOT_FLAGS="\
+       $XENPOT_FLAGS \
        enable-login-with-ldap \
        enable-login-with-password
        enable-login-with-oidc \
@@ -35,25 +35,25 @@ export PENPOT_FLAGS="\
        enable-subscriptons-old";
 
 # Default deletion delay for devenv
-export PENPOT_DELETION_DELAY="24h"
+export XENPOT_DELETION_DELAY="24h"
 
 # Setup default upload media file size to 100MiB
-export PENPOT_MEDIA_MAX_FILE_SIZE=104857600
+export XENPOT_MEDIA_MAX_FILE_SIZE=104857600
 
 # Setup default multipart upload size to 300MiB
-export PENPOT_HTTP_SERVER_MAX_MULTIPART_BODY_SIZE=314572800
+export XENPOT_HTTP_SERVER_MAX_MULTIPART_BODY_SIZE=314572800
 
-# export PENPOT_DATABASE_URI="postgresql://172.17.0.1:5432/xenpot"
-# export PENPOT_DATABASE_USERNAME="xenpot"
-# export PENPOT_DATABASE_PASSWORD="xenpot"
-# export PENPOT_DATABASE_READONLY=true
+# export XENPOT_DATABASE_URI="postgresql://172.17.0.1:5432/xenpot"
+# export XENPOT_DATABASE_USERNAME="xenpot"
+# export XENPOT_DATABASE_PASSWORD="xenpot"
+# export XENPOT_DATABASE_READONLY=true
 
-# export PENPOT_DATABASE_URI="postgresql://172.17.0.1:5432/xenpot_pre"
-# export PENPOT_DATABASE_USERNAME="xenpot_pre"
-# export PENPOT_DATABASE_PASSWORD="xenpot_pre"
+# export XENPOT_DATABASE_URI="postgresql://172.17.0.1:5432/xenpot_pre"
+# export XENPOT_DATABASE_USERNAME="xenpot_pre"
+# export XENPOT_DATABASE_PASSWORD="xenpot_pre"
 
-# export PENPOT_LOGGERS_LOKI_URI="http://172.17.0.1:3100/loki/api/v1/push"
-# export PENPOT_AUDIT_LOG_ARCHIVE_URI="http://localhost:6070/api/audit"
+# export XENPOT_LOGGERS_LOKI_URI="http://172.17.0.1:3100/loki/api/v1/push"
+# export XENPOT_AUDIT_LOG_ARCHIVE_URI="http://localhost:6070/api/audit"
 
 # Initialize MINIO config
 mc alias set xenpot-s3/ http://minio:9000 minioadmin minioadmin -q
@@ -67,10 +67,10 @@ mc mb xenpot-s3/xenpot -p -q
 export AWS_ACCESS_KEY_ID=xenpot-devenv
 export AWS_SECRET_ACCESS_KEY=xenpot-devenv
 
-export PENPOT_OBJECTS_STORAGE_BACKEND=s3
-export PENPOT_OBJECTS_STORAGE_S3_ENDPOINT=http://minio:9000
-export PENPOT_OBJECTS_STORAGE_S3_BUCKET=xenpot
-export PENPOT_OBJECTS_STORAGE_FS_DIRECTORY="assets"
+export XENPOT_OBJECTS_STORAGE_BACKEND=s3
+export XENPOT_OBJECTS_STORAGE_S3_ENDPOINT=http://minio:9000
+export XENPOT_OBJECTS_STORAGE_S3_BUCKET=xenpot
+export XENPOT_OBJECTS_STORAGE_FS_DIRECTORY="assets"
 
 export JAVA_OPTS="\
        -Djava.util.logging.manager=org.apache.logging.log4j.jul.LogManager \

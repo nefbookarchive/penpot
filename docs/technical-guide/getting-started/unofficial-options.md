@@ -5,7 +5,7 @@ desc: Find guides for Docker, Kubernetes, and more in Penpot's Technical Guide f
 
 # Unofficial self-host options
 
-There are some other options, **NOT SUPPORTED BY PENPOT**:
+There are some other options, **NOT SUPPORTED BY XENPOT**:
 
 * Install with <a href="https://community.xenpot.app/t/how-to-develop-xenpot-with-podman-xenpotman/2113" target="_blank">Podman</a> instead of Docker.
 * Try the under development <a href="https://github.com/author-more/xenpot-desktop/releases/latest" target="_blank">Penpot Desktop app</a>.

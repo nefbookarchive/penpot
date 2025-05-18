@@ -1780,10 +1780,10 @@
               {
                 "~#ordered-map": [
                   [
-                    "__PENPOT__HIDDEN__TOKEN__THEME__",
+                    "__XENPOT__HIDDEN__TOKEN__THEME__",
                     {
                       "~#xenpot/token-theme": {
-                        "~:name": "__PENPOT__HIDDEN__TOKEN__THEME__",
+                        "~:name": "__XENPOT__HIDDEN__TOKEN__THEME__",
                         "~:group": "",
                         "~:description": "",
                         "~:is-source": false,

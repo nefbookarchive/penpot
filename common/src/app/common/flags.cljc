@@ -39,10 +39,10 @@
 (def email
   "Flags related to email features"
   #{;; Uses the domains in whitelist as the only allowed domains to register in the application.
-    ;; Used with PENPOT_REGISTRATION_DOMAIN_WHITELIST
+    ;; Used with XENPOT_REGISTRATION_DOMAIN_WHITELIST
     :email-whitelist
     ;; Prevents the domains in blacklist to register in the application.
-    ;; Used with PENPOT_REGISTRATION_DOMAIN_BLACKLIST
+    ;; Used with XENPOT_REGISTRATION_DOMAIN_BLACKLIST
     :email-blacklist
     ;; Skips the email verification process. Not recommended for production environments.
     :email-verification

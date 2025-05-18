@@ -185,7 +185,7 @@
   [key val]
   (let [k (d/name key)
         v (encode-style-value val)]
-    (str "PENPOT$$$" k "$$$" v)))
+    (str "XENPOT$$$" k "$$$" v)))
 
 (defn decode-style
   [style]
@@ -203,8 +203,8 @@
   [styles]
   (persistent!
    (reduce (fn [result style]
-             (if (str/starts-with? style "PENPOT")
-               (if (= style "PENPOT_SELECTION")
+             (if (str/starts-with? style "XENPOT")
+               (if (= style "XENPOT_SELECTION")
                  (assoc! result :xenpot-selection true)
                  (let [[_ k v] (str/split style "$$$" 3)]
                    (assoc! result (keyword k) (decode-style-value v))))
@@ -217,7 +217,7 @@
   key/val pair of data."
   [styles]
   (->> styles
-       (filter #(str/starts-with? (get % :style) "PENPOT$$$"))
+       (filter #(str/starts-with? (get % :style) "XENPOT$$$"))
        (map (fn [item]
               (let [[_ k v] (-> (get item :style)
                                 (str/split "$$$" 3))]

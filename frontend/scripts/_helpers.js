@@ -429,7 +429,7 @@ async function generateTemplates() {
   };
 
   const pluginRuntimeUri =
-    process.env.PENPOT_PLUGIN_DEV === "true"
+    process.env.XENPOT_PLUGIN_DEV === "true"
       ? "http://localhost:4200/index.js?ts=" + manifest.ts
       : "plugins-runtime/index.js?ts=" + manifest.ts;
 
