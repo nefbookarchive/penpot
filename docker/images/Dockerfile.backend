@@ -1,5 +1,5 @@
 FROM ubuntu:24.04
-LABEL maintainer="Penpot <docker@xenpot.app>"
+LABEL maintainer="Xenpot <hello@nefbook.com>"
 
 ENV LANG='en_US.UTF-8' \
     LC_ALL='en_US.UTF-8' \

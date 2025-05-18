@@ -4,8 +4,8 @@ networks:
   xenpot:
 
 volumes:
-  penpot_postgres_v15:
-  penpot_assets:
+  xenpot_postgres_v15:
+  xenpot_assets:
 
 services:
 
@@ -17,15 +17,15 @@ services:
     ports:
       - "9001:8080"
     volumes:
-      - penpot_assets:/opt/data/assets
+      - xenpot_assets:/opt/data/assets
     depends_on:
       - xenpot-backend
       - xenpot-exporter
     networks:
       - xenpot
     environment:
-      PENPOT_FLAGS: disable-email-verification enable-smtp enable-prepl-server disable-secure-session-cookies
-      PENPOT_PUBLIC_URI: http://localhost:9001
+      XENPOT_FLAGS: disable-email-verification enable-smtp enable-prepl-server disable-secure-session-cookies
+      XENPOT_PUBLIC_URI: http://localhost:9001
 
   xenpot-backend:
     build:
@@ -33,7 +33,7 @@ services:
       dockerfile: docker/images/Dockerfile.backend
     restart: always
     volumes:
-      - penpot_assets:/opt/data/assets
+      - xenpot_assets:/opt/data/assets
     depends_on:
       xenpot-postgres:
         condition: service_healthy
@@ -42,19 +42,19 @@ services:
     networks:
       - xenpot
     environment:
-      PENPOT_DATABASE_URI: postgresql://xenpot-postgres/xenpot
-      PENPOT_DATABASE_USERNAME: xenpot
-      PENPOT_DATABASE_PASSWORD: YourSecurePassword123
-      PENPOT_REDIS_URI: redis://xenpot-redis/0
-      PENPOT_ASSETS_STORAGE_BACKEND: assets-fs
-      PENPOT_STORAGE_ASSETS_FS_DIRECTORY: /opt/data/assets
-      PENPOT_SMTP_HOST: localhost
-      PENPOT_SMTP_PORT: 1025
-      PENPOT_SMTP_USERNAME: ""
-      PENPOT_SMTP_PASSWORD: ""
-      PENPOT_SMTP_TLS: false
-      PENPOT_SMTP_SSL: false
-      PENPOT_TELEMETRY_ENABLED: true
+      XENPOT_DATABASE_URI: postgresql://xenpot-postgres/xenpot
+      XENPOT_DATABASE_USERNAME: xenpot
+      XENPOT_DATABASE_PASSWORD: YourSecurePassword123
+      XENPOT_REDIS_URI: redis://xenpot-redis/0
+      XENPOT_ASSETS_STORAGE_BACKEND: assets-fs
+      XENPOT_STORAGE_ASSETS_FS_DIRECTORY: /opt/data/assets
+      XENPOT_SMTP_HOST: localhost
+      XENPOT_SMTP_PORT: 1025
+      XENPOT_SMTP_USERNAME: ""
+      XENPOT_SMTP_PASSWORD: ""
+      XENPOT_SMTP_TLS: false
+      XENPOT_SMTP_SSL: false
+      XENPOT_TELEMETRY_ENABLED: true
 
   xenpot-exporter:
     build:
@@ -64,8 +64,8 @@ services:
     networks:
       - xenpot
     environment:
-      PENPOT_PUBLIC_URI: http://xenpot-frontend:8080
-      PENPOT_REDIS_URI: redis://xenpot-redis/0
+      XENPOT_PUBLIC_URI: http://xenpot-frontend:8080
+      XENPOT_REDIS_URI: redis://xenpot-redis/0
 
   xenpot-postgres:
     image: "postgres:15"
@@ -77,7 +77,7 @@ services:
       retries: 5
       start_period: 2s
     volumes:
-      - penpot_postgres_v15:/var/lib/postgresql/data
+      - xenpot_postgres_v15:/var/lib/postgresql/data
     networks:
       - xenpot
     environment:
