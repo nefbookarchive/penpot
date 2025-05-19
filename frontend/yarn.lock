@@ -395,11 +395,9 @@ __metadata:
   linkType: hard
 
 "@babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.17.8, @babel/runtime@npm:^7.7.2, @babel/runtime@npm:^7.8.7":
-  version: 7.26.0
-  resolution: "@babel/runtime@npm:7.26.0"
-  dependencies:
-    regenerator-runtime: "npm:^0.14.0"
-  checksum: 10c0/12c01357e0345f89f4f7e8c0e81921f2a3e3e101f06e8eaa18a382b517376520cd2fa8c237726eb094dab25532855df28a7baaf1c26342b52782f6936b07c287
+  version: 7.27.1
+  resolution: "@babel/runtime@npm:7.27.1"
+  checksum: 10c0/530a7332f86ac5a7442250456823a930906911d895c0b743bf1852efc88a20a016ed4cd26d442d0ca40ae6d5448111e02a08dd638a4f1064b47d080e2875dc05
   languageName: node
   linkType: hard
 
@@ -1505,50 +1503,6 @@ __metadata:
   checksum: 10c0/9bad727d8b11e5d150ec47459254544c583adaa47d047b8ef65e1c74aede1a0767dc7fc6b8997649dae07318d6ef39caba6a1c405d306398d5bcd47074ec5d29
   languageName: node
   linkType: hard
-
-"@xenpot/draft-js@portal:./vendor/draft-js::locator=frontend%40workspace%3A.":
-  version: 0.0.0-use.local
-  resolution: "@xenpot/draft-js@portal:./vendor/draft-js::locator=frontend%40workspace%3A."
-  dependencies:
-    draft-js: "xenpot/draft-js.git#4a99b2a6020b2af97f6dc5fa1b4275ec16b559a0"
-  peerDependencies:
-    react: ">=0.17.0"
-    react-dom: ">=0.17.0"
-  languageName: node
-  linkType: soft
-
-"@xenpot/hljs@portal:./vendor/hljs::locator=frontend%40workspace%3A.":
-  version: 0.0.0-use.local
-  resolution: "@xenpot/hljs@portal:./vendor/hljs::locator=frontend%40workspace%3A."
-  dependencies:
-    highlight.js: "npm:^11.10.0"
-  languageName: node
-  linkType: soft
-
-"@xenpot/mousetrap@portal:./vendor/mousetrap::locator=frontend%40workspace%3A.":
-  version: 0.0.0-use.local
-  resolution: "@xenpot/mousetrap@portal:./vendor/mousetrap::locator=frontend%40workspace%3A."
-  languageName: node
-  linkType: soft
-
-"@xenpot/svgo@xenpot/svgo#v3.1":
-  version: 4.0.0
-  resolution: "@xenpot/svgo@https://github.com/penpot/svgo.git#commit=a46262c12c0d967708395972c374eb2adead4180"
-  dependencies:
-    "@trysound/sax": "npm:0.2.0"
-    css-select: "npm:^5.1.0"
-    css-tree: "npm:^3.1.0"
-    csso: "npm:^5.0.5"
-    lodash: "npm:^4.17.21"
-  checksum: 10c0/db5f81c99dec2765721d73b69bb30594869ebf657380dfb46709c79775b6c0dc1af678fe9fe51bbe2272a2c78d19c2694a12ec6578bcc41235fa4aff475c9416
-  languageName: node
-  linkType: hard
-
-"@xenpot/text-editor@portal:./text-editor::locator=frontend%40workspace%3A.":
-  version: 0.0.0-use.local
-  resolution: "@xenpot/text-editor@portal:./text-editor::locator=frontend%40workspace%3A."
-  languageName: node
-  linkType: soft
 
 "@pkgjs/parseargs@npm:^0.11.0":
   version: 0.11.0
@@ -2866,6 +2820,50 @@ __metadata:
   checksum: 10c0/d4a29ecd8f6c24c790e4c009f313a044d89e664e331bc9c3cfb57fe1380fb1d2999706dbbfc291f067d6c489602e76d00435309fbc906197c0d01f831ca17d64
   languageName: node
   linkType: hard
+
+"@xenpot/draft-js@portal:./vendor/draft-js::locator=frontend%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "@xenpot/draft-js@portal:./vendor/draft-js::locator=frontend%40workspace%3A."
+  dependencies:
+    draft-js: "xenpot/draft-js.git#4a99b2a6020b2af97f6dc5fa1b4275ec16b559a0"
+  peerDependencies:
+    react: ">=0.17.0"
+    react-dom: ">=0.17.0"
+  languageName: node
+  linkType: soft
+
+"@xenpot/hljs@portal:./vendor/hljs::locator=frontend%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "@xenpot/hljs@portal:./vendor/hljs::locator=frontend%40workspace%3A."
+  dependencies:
+    highlight.js: "npm:^11.10.0"
+  languageName: node
+  linkType: soft
+
+"@xenpot/mousetrap@portal:./vendor/mousetrap::locator=frontend%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "@xenpot/mousetrap@portal:./vendor/mousetrap::locator=frontend%40workspace%3A."
+  languageName: node
+  linkType: soft
+
+"@xenpot/svgo@xenpot/svgo#v3.1":
+  version: 4.0.0
+  resolution: "@xenpot/svgo@https://github.com/penpot/svgo.git#commit=a46262c12c0d967708395972c374eb2adead4180"
+  dependencies:
+    "@trysound/sax": "npm:0.2.0"
+    css-select: "npm:^5.1.0"
+    css-tree: "npm:^3.1.0"
+    csso: "npm:^5.0.5"
+    lodash: "npm:^4.17.21"
+  checksum: 10c0/db5f81c99dec2765721d73b69bb30594869ebf657380dfb46709c79775b6c0dc1af678fe9fe51bbe2272a2c78d19c2694a12ec6578bcc41235fa4aff475c9416
+  languageName: node
+  linkType: hard
+
+"@xenpot/text-editor@portal:./text-editor::locator=frontend%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "@xenpot/text-editor@portal:./text-editor::locator=frontend%40workspace%3A."
+  languageName: node
+  linkType: soft
 
 "@xmldom/xmldom@npm:^0.8.10":
   version: 0.8.10
@@ -5689,11 +5687,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "frontend@workspace:."
   dependencies:
-    "@xenpot/draft-js": "portal:./vendor/draft-js"
-    "@xenpot/hljs": "portal:./vendor/hljs"
-    "@xenpot/mousetrap": "portal:./vendor/mousetrap"
-    "@xenpot/svgo": "xenpot/svgo#v3.1"
-    "@xenpot/text-editor": "portal:./text-editor"
     "@playwright/test": "npm:1.48.1"
     "@storybook/addon-essentials": "npm:^8.5.2"
     "@storybook/addon-interactions": "npm:^8.5.2"
@@ -5705,6 +5698,11 @@ __metadata:
     "@storybook/test-runner": "npm:^0.21.0"
     "@tokens-studio/sd-transforms": "npm:1.2.11"
     "@types/node": "npm:^22.12.0"
+    "@xenpot/draft-js": "portal:./vendor/draft-js"
+    "@xenpot/hljs": "portal:./vendor/hljs"
+    "@xenpot/mousetrap": "portal:./vendor/mousetrap"
+    "@xenpot/svgo": "xenpot/svgo#v3.1"
+    "@xenpot/text-editor": "portal:./text-editor"
     autoprefixer: "npm:^10.4.20"
     compression: "npm:^1.7.5"
     concurrently: "npm:^9.1.2"
@@ -9727,13 +9725,6 @@ __metadata:
     indent-string: "npm:^4.0.0"
     strip-indent: "npm:^3.0.0"
   checksum: 10c0/d64a6b5c0b50eb3ddce3ab770f866658a2b9998c678f797919ceb1b586bab9259b311407280bd80b804e2a7c7539b19238ae6a2a20c843f1a7fcff21d48c2eae
-  languageName: node
-  linkType: hard
-
-"regenerator-runtime@npm:^0.14.0":
-  version: 0.14.1
-  resolution: "regenerator-runtime@npm:0.14.1"
-  checksum: 10c0/1b16eb2c4bceb1665c89de70dcb64126a22bc8eb958feef3cd68fe11ac6d2a4899b5cd1b80b0774c7c03591dc57d16631a7f69d2daa2ec98100e2f29f7ec4cc4
   languageName: node
   linkType: hard
 
