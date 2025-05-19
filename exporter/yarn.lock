@@ -572,7 +572,7 @@ __metadata:
     raw-body: "npm:^3.0.0"
     shadow-cljs: "npm:3.0.5"
     source-map-support: "npm:^0.5.21"
-    svgo: "xenpot/svgo#v3.1"
+    svgo: "penpot/svgo#v3.1"
     xml-js: "npm:^1.6.11"
     xregexp: "npm:^5.1.1"
   languageName: unknown
@@ -1539,7 +1539,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"svgo@xenpot/svgo#v3.1":
+"svgo@penpot/svgo#v3.1":
   version: 4.0.0
   resolution: "svgo@https://github.com/penpot/svgo.git#commit=a46262c12c0d967708395972c374eb2adead4180"
   dependencies:
