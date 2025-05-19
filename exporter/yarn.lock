@@ -1541,7 +1541,7 @@ __metadata:
 
 "svgo@xenpot/svgo#v3.1":
   version: 4.0.0
-  resolution: "svgo@https://github.com/nefbook/svgo.git#commit=a46262c12c0d967708395972c374eb2adead4180"
+  resolution: "svgo@https://github.com/penpot/svgo.git#commit=a46262c12c0d967708395972c374eb2adead4180"
   dependencies:
     "@trysound/sax": "npm:0.2.0"
     css-select: "npm:^5.1.0"
